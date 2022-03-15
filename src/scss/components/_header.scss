@@ -1,0 +1,17 @@
+#site-header {
+  height: $header-height;
+}
+svg.header-triangle {
+  fill: theme('colors.blue.DEFAULT');
+}
+.single-modell {
+  svg.header-triangle {
+    @apply bg-white;
+  }
+}
+svg.light-gray-triangle {
+  fill: theme('colors.gray.100');
+}
+svg.white-triangle {
+  fill: white;
+}

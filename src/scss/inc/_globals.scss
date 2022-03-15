@@ -1,0 +1,4 @@
+/* Variables and mixins used by components as global settings */
+@mixin global-radius {
+	@apply rounded-lg;
+}

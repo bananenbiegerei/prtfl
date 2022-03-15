@@ -1,0 +1,27 @@
+.button,
+.wp-block-buttons > .wp-block-button .wp-block-button__link {
+	@apply inline-flex items-center px-2 py-1 lg:px-4 lg:py-2 border-2 text-base;
+	@include global-radius;
+	&.tiny {
+		@apply px-1 py-0 text-xs;
+		@screen lg {
+			@apply px-1 py-0 text-base;
+		}
+	}
+	&.small {
+		@apply px-3 py-2;
+	}
+	&.hollow {
+		@apply text-primary border-2 border-primary;
+	}
+	&.large {
+		@apply px-3 py-2 text-base;
+		@screen lg {
+			@apply px-4 py-3 text-xl;
+		}
+	}
+	&.active,
+	&.current {
+		background: fuchsia;
+	}
+}

@@ -1,0 +1,56 @@
+$footer-height: 400px;
+$mobile-footer-height: 460px;
+$header-height: 185px;
+$mobile-header-height: 70px;
+$fullheight-header: calc(100vh - #{$header-height});
+$mobile-fullheight-header: calc(100vh - #{$mobile-header-height});
+$fullheight-header-footer: calc(100vh - #{$header-height + $footer-height});
+$mobile-fullheight-header-footer: calc(100vh - #{$mobile-header-height + $mobile-footer-height});
+
+@mixin header-height {
+	min-height: $mobile-header-height;
+	@screen md {
+		min-height: $header-height;
+	}
+	&.shrunk {
+		min-height: 70px;
+	}
+}
+
+@mixin footer-height {
+	min-height: $mobile-footer-height;
+	@screen md {
+		min-height: $footer-height;
+	}
+}
+
+@mixin main-content-height {
+	min-height: $mobile-fullheight-header-footer;
+	@screen md {
+		min-height: $fullheight-header-footer;
+	}
+}
+
+.site-header {
+	@include header-height;
+	background: lime;
+}
+
+.site-footer {
+	@include footer-height;
+	background: red;
+}
+
+.main-content {
+	@include main-content-height;
+	background: orange;
+}
+
+.site-header.shrunk {
+	h1 {
+		@apply text-base text-black transition duration-500;
+	}
+	button {
+		@apply text-black;
+	}
+}

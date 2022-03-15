@@ -1,0 +1,6 @@
+.container {
+	@apply max-w-7xl mx-auto px-4 sm:px-6 w-full;
+	&.fluid {
+		@apply max-w-full;
+	}
+}
