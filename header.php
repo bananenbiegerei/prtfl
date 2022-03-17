@@ -9,15 +9,15 @@ $site_description = get_bloginfo( 'description' );
 //echo 'The Network Home Name is: ' . $site_title;
 //echo 'The Network Home Tagline is: ' . $site_description;
 ?>
-<body <?php body_class(); ?>>
+<body <?php body_class('bg-primary-light'); ?>>
     <header class="site-header grid grid-cols-1 content-center">
       <!-- This example requires Tailwind CSS v2.0+ -->
-      <nav class="bg-white shadow">
+      <nav class="bg-primary-light" x-data="{ open: false }">
         <div class="container fluid">
-          <div class="relative flex justify-between h-16">
+          <div class="relative flex justify-between h-16 sm:h-28">
             <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
               <!-- Mobile menu button -->
-              <button type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500" aria-controls="mobile-menu" aria-expanded="false">
+              <button type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500" aria-controls="mobile-menu" aria-expanded="false" x-on:click="open = ! open">
                 <span class="sr-only">Open main menu</span>
                 <!--
                   Icon when menu is closed.
@@ -41,28 +41,27 @@ $site_description = get_bloginfo( 'description' );
                 </svg>
               </button>
             </div>
-            <div class="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
-              <div class="hidden sm:ml-6 sm:flex sm:space-x-8">
+            <div class="flex-1 flex items-center justify-center sm:justify-start">
+              <div class="hidden sm:flex sm:space-x-4">
                 <!-- Current: "border-indigo-500 text-gray-900", Default: "border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700" -->
-                <a href="#" class="inline-flex items-center button active"> Dashboard </a>
-                <a href="#" class="inline-flex items-center button"> Team </a>
+                <a href="#" class="button active"> Dashboard </a>
+                <a href="#" class="button"> Team </a>
               </div>
             </div>
             <div class="flex-shrink-0 flex items-center">
-                <img class="block lg:hidden h-8 w-auto" src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg" alt="Workflow">
-                <img class="hidden lg:block h-8 w-auto" src="https://tailwindui.com/img/logos/workflow-logo-indigo-600-mark-gray-800-text.svg" alt="Workflow">
+                <img class="block lg:hidden h-9 w-auto" src="<?php echo get_stylesheet_directory_uri(); ?>/dist/img/logo-mobile.png" alt="Logo">
+                <img class="logo hidden lg:block h-9 w-auto" src="<?php echo get_stylesheet_directory_uri(); ?>/dist/img/logo.png" alt="Logo">
               </div>
           </div>
         </div>
       
         <!-- Mobile menu, show/hide based on menu state. -->
-        <div class="sm:hidden" id="mobile-menu">
-          <div class="pt-2 pb-4 space-y-1">
-            <!-- Current: "bg-indigo-50 border-indigo-500 text-indigo-700", Default: "border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700" -->
-            <a href="#" class="bg-indigo-50 border-indigo-500 text-indigo-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium">Dashboard</a>
-            <a href="#" class="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium">Team</a>
-            <a href="#" class="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium">Projects</a>
-            <a href="#" class="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium">Calendar</a>
+        <div class="sm:hidden" id="mobile-menu" x-show="open" x-transition>
+          <div class="p-4 grid grid-cols-1 gap-6">
+            <a href="#" class="button">Dashboard</a>
+            <a href="#" class="button active">Team</a>
+            <a href="#" class="button">Projects</a>
+            <a href="#" class="button">Calendar</a>
           </div>
         </div>
       </nav>

@@ -1,7 +1,7 @@
 $footer-height: 400px;
 $mobile-footer-height: 460px;
-$header-height: 185px;
-$mobile-header-height: 70px;
+$mobile-header-height: 64px;
+$header-height: 112px;
 $fullheight-header: calc(100vh - #{$header-height});
 $mobile-fullheight-header: calc(100vh - #{$mobile-header-height});
 $fullheight-header-footer: calc(100vh - #{$header-height + $footer-height});
@@ -33,7 +33,6 @@ $mobile-fullheight-header-footer: calc(100vh - #{$mobile-header-height + $mobile
 
 .site-header {
 	@include header-height;
-	background: lime;
 }
 
 .site-footer {

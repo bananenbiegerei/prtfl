@@ -19,7 +19,7 @@ mix
   })
   .sourceMaps()
   .setPublicPath('dist')
-  //.copyDirectory('src/fonts', 'dist/fonts')
+  .copyDirectory('src/fonts', 'dist/fonts')
   .copyDirectory('src/img', 'dist/img')
   .browserSync({
     open: true,
