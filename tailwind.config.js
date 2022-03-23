@@ -4,7 +4,7 @@ module.exports = {
   ],
   theme: {
     colors: {
-      'primary': '#2F2F89',
+      'primary': '#2424A8',
       'primary-light': '#CECBE0',
       'primary-medium': '#A49FC5',
       'primary-dark': '#21214E',
@@ -39,7 +39,7 @@ module.exports = {
     },
     fontWeight: {
       normal: 400,
-      bold: 900,
+      bold: 500,
     },
     extend: {
       // spacing: {

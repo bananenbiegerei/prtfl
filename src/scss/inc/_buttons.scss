@@ -5,13 +5,14 @@
 	font-normal 
 	inline-flex items-center 
 	px-3 
-	py-2  
-	border 
+	py-2 
+	border
+	text-primary  
 	text-tiny 
 	transition 
 	transform 
-	active:ring-1 active:ring-black
-	hover:ring-1 hover:ring-black
+	active:ring-2 active:ring-primary
+	hover:ring-2 hover:ring-primary
 	;
 	@include global-radius;
 	&.tiny {
@@ -34,6 +35,6 @@
 	}
 	&.active,
 	&.current {
-		@apply ring-1 ring-primary;
+		@apply ring-2 ring-primary;
 	}
 }
