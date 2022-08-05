@@ -2,3 +2,9 @@
 @mixin global-radius {
 	@apply rounded-lg;
 }
+@mixin global-shadow {
+	@apply shadow-2xl;
+}
+@mixin global-transition {
+	@apply transition duration-300 ease-in-out hover:duration-300;
+}

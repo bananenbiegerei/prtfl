@@ -1,21 +1,36 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import './inc/globals';
+/* Inc */
+@import './inc/color-scheme';
+// @import './inc/globals';
 @import './inc/grid';
 @import './inc/scafolding';
 @import './inc/fonts';
 @import './inc/typography';
 @import './inc/buttons';
-// @import './inc/nav';
-// @import './inc/lists';
-// @import './inc/accessibility';
-// @import './components/header';
-// @import './components/footer';
-// @import './components/card';
-// 
-// @import 'swiper/css/bundle';
-// @import './components/swiper';
-// 
+@import './inc/nav';
+// @import './inc/fullclick-cards';
+//@import './inc/forms';
 // @import './inc/cookie-consent';
 // @import './inc/layout';
+// @import './inc/lists';
+// @import './inc/accessibility';
+/* Components */
+@import './components/header';
+// @import './components/footer';
+//@import './components/cards';
+@import './components/swipers';
+// Gutenberg Overwrites
+@import './gutenberg-overwrites/gb-grid';
+@import './gutenberg-overwrites/gb-buttons';
+@import './gutenberg-overwrites/gb-images';
+/* Post Types */
+@import './custom-posts/single-sprecherinnen';
+/* Templates */
+@import './templates/page';
+/* Plugin Overwrites */
+@import './plugin-overwrites/bbwkcarch';
+@import './plugin-overwrites/polylang';
+/* Node Modules */
+@import 'swiper/swiper-bundle';

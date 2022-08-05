@@ -5,11 +5,13 @@ module.exports = {
   theme: {
     colors: {
       'primary': '#2424A8',
-      'primary-light': '#CECBE0',
-      'primary-medium': '#A49FC5',
+      'primary-extra-light': '#EBEBFF',
+      'primary-light': '#D4D4ED',
+      'primary-medium': '#ADADD2',
       'primary-dark': '#21214E',
       'secondary': '#006492',
       'secondary-light': '#C7E5F5',
+      'secondary-extra-light': '#E2F4FD',
       'secondary-medium': '#5BC6F4',
       'secondary-dark': '#014463',
       'black': '#231F20',
@@ -17,41 +19,145 @@ module.exports = {
       'transparent': 'rgba(0,0,0,0)',
       'gray-dark': '#273444',
       'gray': '#8492a6',
-      'gray-light': '#d3dce6',
-      'alert': 'red',
+      'gray-light': '#F4F4F4',
+      'red': '#C10D70',
+      'red-extra-light': '#FBE0ED',
+      'red-light': '#FFD3E9',
+      'red-medium': '#ED61A0',
+      'red-dark': '#4A0029',
       'success': 'green',
     },
     // Helper pixel to rem calc: https://nekocalc.com/de/px-zu-rem-umrechner
     fontSize: {
-      'xs': '0.75rem',
-      'sm': '0.75rem',
-      'tiny': '0.95rem', //small, h6
+      'xs': '0.5rem',
+      'sm': '0.85rem',//small,
+      'tiny': '1rem', // h6
       'base': '1.125rem', //p, h5
       'lg': '1.125rem', //h4
-      'xl': '1.125rem', //h3
-      '2xl': '1.375rem', //h2
-      '3xl': '2.125rem', //h1
+      'xl': '1.5rem', //h3
+      '2xl': '1.75rem', //h2
+      '3xl': '2.375rem', //h1
       '4xl': '2.25rem',
     },
     fontFamily: {
-      sans: ['Roboto', 'sans-serif'],
-      mono: ['Roboto Mono', 'serif'],
+      sans: ['Sora', 'sans-serif'],
+      //mono: ['Roboto Mono', 'serif'],
+      //serif: ['Roboto Serif', 'serif'],
     },
     fontWeight: {
-      normal: 400,
+      light: 200,
+      normal: 300,
       bold: 500,
     },
-    extend: {
-      // spacing: {
-      //   '8xl': '96rem',
-      //   '9xl': '128rem',
-      // },
-      // borderRadius: {
-      //   '4xl': '2rem',
-      // }
+    letterSpacing: {
+      tight: '-.25em',
+      normal: '0',
+      wide: '.0125em',
+      wider: '.25em'
     },
+    extend: {
+      spacing: {
+        'page-header': '50rem',
+      },
+      boxShadow: {
+        'inner': 'inset 0px 0px 5px rgba(0, 0, 0, 0.25)',
+      }
+    }
+  },
+  daisyui: {
+        themes: [
+          {
+            default: {
+              'primary': '#2424A8',
+              'primary-extra-light': '#EBEBFF',
+              'primary-content': '#D4D4ED',
+              'primary-medium': '#ADADD2',
+              'primary-dark': '#21214E',
+              'secondary': '#006492',
+              'secondary-light': '#C7E5F5',
+              'secondary-extra-light': '#E2F4FD',
+              'secondary-medium': '#5BC6F4',
+              'secondary-dark': '#014463',
+              'black': '#231F20',
+              'white': '#fff',
+              'transparent': 'rgba(0,0,0,0)',
+              'gray-dark': '#273444',
+              'gray': '#8492a6',
+              'gray-light': '#F4F4F4',
+              'red': '#C10D70',
+              'red-extra-light': '#FBE0ED',
+              'red-light': '#FFD3E9',
+              'red-medium': '#ED61A0',
+              'red-dark': '#4A0029',
+              'success': 'green',           
+              "accent": "#37CDBE",
+              "neutral": "#273444",
+              "base-100": "#fff",
+            },
+            secondary: {
+              'primary': '#006492',
+              'primary-extra-light': '#E2F4FD',
+              'primary-light': '#C7E5F5',
+              'primary-medium': '#5BC6F4',
+              'primary-dark': '#014463',
+              'secondary': '#006492',
+              'secondary-light': '#C7E5F5',
+              'secondary-extra-light': '#E2F4FD',
+              'secondary-medium': '#5BC6F4',
+              'secondary-dark': '#014463',
+              'black': '#231F20',
+              'white': '#fff',
+              'transparent': 'rgba(0,0,0,0)',
+              'gray-dark': '#273444',
+              'gray': '#8492a6',
+              'gray-light': '#F4F4F4',
+              'red': '#C10D70',
+              'red-extra-light': '#FBE0ED',
+              'red-light': '#FFD3E9',
+              'red-medium': '#ED61A0',
+              'red-dark': '#4A0029',
+              'success': 'green',           
+              "accent": "#37CDBE",
+              "neutral": "#273444",
+              "base-100": "#fff",
+            },
+            red: {
+              'primary': '#C10D70',
+              'primary-extra-light': '#FBE0ED',
+              'primary-content': '#FFD3E9',
+              'primary-medium': '#ED61A0',
+              'primary-focus': '#4A0029',
+              'primary-dark': '#C10D70',
+              'secondary': '#006492',
+              'secondary-light': '#C7E5F5',
+              'secondary-extra-light': '#E2F4FD',
+              'secondary-medium': '#5BC6F4',
+              'secondary-dark': '#014463',
+              'black': '#231F20',
+              'white': '#fff',
+              'transparent': 'rgba(0,0,0,0)',
+              'gray-dark': '#273444',
+              'gray': '#8492a6',
+              'gray-light': '#F4F4F4',
+              'red': '#C10D70',
+              'red-extra-light': '#FBE0ED',
+              'red-light': '#FFD3E9',
+              'red-medium': '#ED61A0',
+              'red-dark': '#4A0029',
+              'success': 'green',           
+              "accent": "#37CDBE",
+              "neutral": "#273444",
+              "base-100": "#fff",
+            },
+          },
+        ],
+      },
+  corePlugins: {
+    aspectRatio: false,
   },
   plugins: [
+    require('@tailwindcss/aspect-ratio'),
     require('@tailwindcss/forms'),
+    require("daisyui"),
   ],
 }

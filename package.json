@@ -31,6 +31,7 @@
     "build": "mix --production"
   },
   "dependencies": {
+    "daisyui": "^2.22.0",
     "form-request-submit-polyfill": "^2.0.0",
     "gsap": "^3.6.1",
     "jquery": "^3.5.1",

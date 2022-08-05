@@ -1,19 +1,16 @@
-$footer-height: 400px;
+$footer-height: 340px;
 $mobile-footer-height: 460px;
 $mobile-header-height: 64px;
-$header-height: 112px;
+$header-height: 80px;
 $fullheight-header: calc(100vh - #{$header-height});
 $mobile-fullheight-header: calc(100vh - #{$mobile-header-height});
-$fullheight-header-footer: calc(100vh - #{$header-height + $footer-height});
-$mobile-fullheight-header-footer: calc(100vh - #{$mobile-header-height + $mobile-footer-height});
+$fullheight-header-footer: calc(100vh - #{$footer-height});
+$mobile-fullheight-header-footer: calc(100vh - #{$mobile-footer-height});
 
 @mixin header-height {
-	min-height: $mobile-header-height;
+	height: $mobile-header-height;
 	@screen md {
-		min-height: $header-height;
-	}
-	&.shrunk {
-		min-height: 70px;
+		height: $header-height;
 	}
 }
 
@@ -31,7 +28,7 @@ $mobile-fullheight-header-footer: calc(100vh - #{$mobile-header-height + $mobile
 	}
 }
 
-.site-header {
+.site-header .nav-container {
 	@include header-height;
 }
 
@@ -40,6 +37,7 @@ $mobile-fullheight-header-footer: calc(100vh - #{$mobile-header-height + $mobile
 }
 
 .main-content {
+	@apply pt-20;
 	@include main-content-height;
 }
 

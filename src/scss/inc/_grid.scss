@@ -1,6 +1,12 @@
+@mixin container {
+	@apply max-w-screen-2xl mx-auto px-4 sm:px-6 w-full;
+}
+@mixin fluid-container {
+	@apply max-w-full;
+}
 .container {
-	@apply max-w-7xl mx-auto px-4 sm:px-6 w-full;
+	@include container;
 	&.fluid {
-		@apply max-w-full;
+		@include fluid-container;
 	}
 }

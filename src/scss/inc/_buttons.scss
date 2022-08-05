@@ -1,40 +1,17 @@
-.button,
-.wp-block-buttons > .wp-block-button .wp-block-button__link {
-	@apply 
-	font-mono 
-	font-normal 
-	inline-flex items-center 
-	px-3 
-	py-2 
-	border
-	text-primary  
-	text-tiny 
-	transition 
-	transform 
-	active:ring-2 active:ring-primary
-	hover:ring-2 hover:ring-primary
-	;
-	@include global-radius;
-	&.tiny {
-		@apply px-1 py-0 text-xs;
-		@screen lg {
-			@apply px-1 py-0 text-base;
-		}
-	}
-	&.small {
-		@apply px-3 py-2;
-	}
-	&.hollow {
-		@apply text-primary border-2 border-primary;
-	}
-	&.large {
-		@apply px-3 py-2 text-base;
-		@screen lg {
-			@apply px-4 py-3 text-xl;
-		}
-	}
+@mixin button {
+	@apply text-white;
 	&.active,
 	&.current {
-		@apply ring-2 ring-primary;
+		@apply bg-white;
+	}
+}
+.btn:not(.btn-outline) {
+	@include button;
+	&.btn-ghost,
+	&.btn-link {
+		@apply text-primary;
+	}
+	&.btn-link {
+		@apply underline;
 	}
 }
