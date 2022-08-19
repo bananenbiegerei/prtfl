@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html <?php language_attributes(); ?> class="h-full no-js">
+<html <?php language_attributes(); ?> class="h-full no-js" data-theme="numero">
 <?php get_template_part('head') ?>
 <?php
 $site_title = get_bloginfo( 'name' );
@@ -9,7 +9,7 @@ $site_description = get_bloginfo( 'description' );
 //echo 'The Network Home Name is: ' . $site_title;
 //echo 'The Network Home Tagline is: ' . $site_description;
 ?>
-<body <?php body_class('bg-primary-light'); ?>>
+<body <?php body_class('bg-primary-light'); ?> data-theme="numero-light">
     <header class="site-header grid grid-cols-1 content-center">
       <!-- This example requires Tailwind CSS v2.0+ -->
       <nav class="bg-primary-light" x-data="{ open: false }">
