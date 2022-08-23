@@ -52,9 +52,9 @@ module.exports = {
         "accent": "fuchsia",
         "accent-focus": "fuchsia",
         "accent-content": "fuchsia",
-        "neutral": "gray",
-        "neutral-focus": "gray",
-        "neutral-content": "gray",
+        "neutral": "black",
+        "neutral-focus": "black",
+        "neutral-content": "black",
         "base-100": "white",
         "base-200": "white",
         "base-300": "white",
@@ -87,6 +87,7 @@ module.exports = {
   plugins: [
     require('@tailwindcss/aspect-ratio'),
     require('@tailwindcss/forms'),
+    require('@tailwindcss/typography'),
     require("daisyui"),
   ],
 }
