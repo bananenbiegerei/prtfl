@@ -44,19 +44,6 @@ function stylesProduction() {
     ]))
     .pipe(dest('./dist/css'))
 }
-/*
-* DEPRECATED
-* bundle js with webpack
-*/
-function webpackScripts() {
-  return src('./src/js/app.js')
-    .pipe(webpack({
-      output: {
-        filename: 'app.js',
-      }
-    }))
-    .pipe(dest('./dist/js'))
-}
 
 function esbuild() {
   return src('./src/js/app.js')

@@ -2,7 +2,7 @@
 <?php
 while ( have_posts() ) : the_post(); ?>
 	<div class="container">
-		<h1>voefvipoenfk</h1>
+		<h1>Page</h1>
 	</div>
 <?php endwhile;
 ?>

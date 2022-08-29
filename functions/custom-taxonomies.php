@@ -1,7 +1,5 @@
 <?php
-// Register Custom Taxonomy
 function custom_taxonomy() {
-
     $labels = array(
         'name'                       => _x( 'Kategorien', 'Taxonomy General Name', 'text_domain' ),
         'singular_name'              => _x( 'Kategorie', 'Taxonomy Singular Name', 'text_domain' ),
