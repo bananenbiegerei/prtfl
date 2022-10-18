@@ -81,13 +81,6 @@ function dev() {
   browserSync.init({
     proxy: process.env.BROWSERSYNC_PROXY_URL,
     open: process.env.BROWSERSYNC_OPEN_BROWSER == 'true',
-    snippetOptions: {
-      rule: {
-        // Add to head as turbo replaces body.
-        match: /<\/head>/i,
-        fn: (snippet, match) => snippet + match
-      }
-    }
   })
 
   watch('./src/scss/**/*.scss', styles)
