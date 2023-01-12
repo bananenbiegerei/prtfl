@@ -25,7 +25,7 @@ function styles() {
       tailwindcss('./tailwind.config.js'),
     ]))
     .pipe(sourcemaps.write('.'))
-    .pipe(dest('./dist/css'))
+    .pipe(dest('./css'))
     .pipe(browserSync.stream())
 }
 
@@ -42,7 +42,7 @@ function stylesProduction() {
       autoprefixer(),
       cssnano(),
     ]))
-    .pipe(dest('./dist/css'))
+    .pipe(dest('./css'))
 }
 
 function esbuild() {
@@ -52,7 +52,7 @@ function esbuild() {
       bundle: true,
       sourcemap: true,
     }))
-    .pipe(dest('./dist/js'))
+    .pipe(dest('./js'))
 }
 
 function esbuildProduction() {
@@ -64,17 +64,17 @@ function esbuildProduction() {
       minifyWhitespace: true,
       minifyIdentifiers: true,
     }))
-    .pipe(dest('./dist/js'))
+    .pipe(dest('./js'))
 }
 
 function copyImages() {
   return src('./src/img/**/*')
-    .pipe(dest('./dist/img'))
+    .pipe(dest('./img'))
 }
 
 function copyFonts() {
   return src('./src/fonts/**/*')
-    .pipe(dest('./dist/fonts'))
+    .pipe(dest('./fonts'))
 }
 
 function dev() {
