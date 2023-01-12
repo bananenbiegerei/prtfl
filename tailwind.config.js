@@ -40,47 +40,6 @@ module.exports = {
       }
     }
   },
-  daisyui: {
-    themes: [{
-      numero: {
-        "primary": "blue",
-        "primary-focus": "blue",
-        "primary-content": "blue",
-        "secondary": "orange",
-        "secondary-focus": "orange",
-        "secondary-content": "orange",
-        "accent": "fuchsia",
-        "accent-focus": "fuchsia",
-        "accent-content": "fuchsia",
-        "neutral": "black",
-        "neutral-focus": "black",
-        "neutral-content": "black",
-        "base-100": "white",
-        "base-200": "white",
-        "base-300": "white",
-        "base-content": "black",
-        "info": "yellow",
-        "info-content": "yellow",
-        "success": "green",
-        "success-content": "green",
-        "warning": "orange",
-        "warning-content": "orange",
-        "error": "red",
-        "error-content": "red",
-        // More adjustements
-        "--rounded-box": "1rem", // border radius rounded-box utility class, used in card and other large boxes
-        "--rounded-btn": "0.33rem", // border radius rounded-btn utility class, used in buttons and similar element
-        "--rounded-badge": "1.9rem", // border radius rounded-badge utility class, used in badges and similar
-        "--animation-btn": "0.25s", // duration of animation when you click on button
-        "--animation-input": "0.2s", // duration of animation for inputs like checkbox, toggle, radio, etc
-        "--btn-text-case": "normal", // set default text transform for buttons
-        "--btn-focus-scale": "0.95", // scale transform of button when you focus on it
-        "--border-btn": "1px", // border width of buttons
-        "--tab-border": "1px", // border width of tabs
-        "--tab-radius": "0.5rem", // border radius of tabs
-      },
-    }, ],
-  },
   corePlugins: {
     aspectRatio: false,
   },
@@ -88,6 +47,48 @@ module.exports = {
     require('@tailwindcss/aspect-ratio'),
     require('@tailwindcss/forms'),
     require('@tailwindcss/typography'),
-    require("daisyui"),
+    require('tailwindcss-themer')({
+      defaultTheme: {
+        extend: {
+          colors: { // generated with: https://uicolors.app/ ATTENTION: need to get rid of '50' quote signs…
+            primary: {
+              '50': '#f9f6f3',
+              '100': '#f0eae4',
+              '200': '#e0d3c7',
+              '300': '#cdb7a4',
+              '400': '#b8967f',
+              '500': '#a97d66',
+              '600': '#9c6d5a',
+              '700': '#82594c',
+              '800': '#6a4a42',
+              '900': '#573d37',
+            },
+            secondary: {'DEFAULT' : '#fff'}
+          }
+        }
+      },
+      themes: [
+        {
+          name: 'blue-scheme',
+          extend: {
+            colors: {
+              primary: {
+                50: '#e5eeff',
+                100: '#cfe0ff',
+                200: '#a9c3ff',
+                300: '#7599ff',
+                400: '#3f5dff',
+                500: '#1423ff',
+                600: '#0008ff',
+                700: '#0009ff',
+                800: '#0008e3',
+                DEFAULT: '#000068',
+                light: '#FCDDEC'
+              },
+            }
+          }
+        }
+      ]
+    })
   ],
 }

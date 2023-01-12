@@ -1,15 +1,21 @@
 @mixin button {
-	@apply text-white;
+	@apply text-secondary;
 	&.active,
 	&.current {
-		@apply bg-white;
+		@apply bg-secondary;
+	}
+	&.btn-large {
+		@apply p-0 text-3xl;
+	}
+	&.btn-tiny {
+		@apply p-0 text-xs;
 	}
 }
 .btn:not(.btn-outline) {
 	@include button;
 	&.btn-ghost,
 	&.btn-link {
-		@apply text-primary;
+		@apply text-secondary;
 	}
 	&.btn-link {
 		@apply underline;
