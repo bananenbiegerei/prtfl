@@ -1,3 +1,9 @@
+/node_modules/
+/dist/
+/.nova/
 /.env
-/node_modules
-/dist
+/js/
+/css/
+.DS_Store
+bb_blocks/
+bb_blocks*

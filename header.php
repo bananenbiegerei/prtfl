@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html <?php language_attributes(); ?> class="h-full no-js" data-theme="numero">
-<?php get_template_part('head') ?>
+<?php get_template_part('head'); ?>
 <?php
-$site_title = get_bloginfo( 'name' );
-$site_url = network_site_url( '/' );
-$site_description = get_bloginfo( 'description' );
+$site_title = get_bloginfo('name');
+$site_url = network_site_url('/');
+$site_description = get_bloginfo('description');
+
 //echo 'The Network Home URL is: ' . $site_url;
 //echo 'The Network Home Name is: ' . $site_title;
 //echo 'The Network Home Tagline is: ' . $site_description;
@@ -21,9 +22,9 @@ $site_description = get_bloginfo( 'description' );
                 <span class="sr-only">Open main menu</span>
                 <!--
                   Icon when menu is closed.
-      
+
                   Heroicon name: outline/menu
-      
+
                   Menu open: "hidden", Menu closed: "block"
                 -->
                 <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
@@ -31,9 +32,9 @@ $site_description = get_bloginfo( 'description' );
                 </svg>
                 <!--
                   Icon when menu is open.
-      
+
                   Heroicon name: outline/x
-      
+
                   Menu open: "block", Menu closed: "hidden"
                 -->
                 <svg class="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
@@ -49,12 +50,12 @@ $site_description = get_bloginfo( 'description' );
               </div>
             </div>
             <div class="flex-shrink-0 flex items-center">
-                <img class="block lg:hidden h-9 w-auto" src="<?php echo get_stylesheet_directory_uri(); ?>/dist/img/logo-mobile.png" alt="Logo">
-                <img class="logo hidden lg:block h-9 w-auto" src="<?php echo get_stylesheet_directory_uri(); ?>/dist/img/logo.png" alt="Logo">
+                <img class="block lg:hidden h-9 w-auto" src="<?php echo get_stylesheet_directory_uri(); ?>/img/logo-mobile.svg" alt="Logo">
+                <img class="logo hidden lg:block h-9 w-auto" src="<?php echo get_stylesheet_directory_uri(); ?>/img/logo.svg" alt="Logo">
               </div>
           </div>
         </div>
-      
+
         <!-- Mobile menu, show/hide based on menu state. -->
         <div class="sm:hidden" id="mobile-menu" x-show="open" x-transition>
           <div class="p-4 grid grid-cols-1 gap-6">
@@ -66,5 +67,5 @@ $site_description = get_bloginfo( 'description' );
         </div>
       </nav>
     </header>
-    
+
     <main class="main-content">

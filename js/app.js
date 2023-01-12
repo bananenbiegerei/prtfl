@@ -8661,5 +8661,6 @@ ${expression ? 'Expression: "' + expression + '"\n\n' : ""}`, el);
   window.Alpine = module_default;
   module_default.start();
   core_default.use([Navigation, Pagination, Keyboard, Autoplay, EffectFade, Thumb]);
+  console.log("started");
 })();
 //# sourceMappingURL=app.js.map
