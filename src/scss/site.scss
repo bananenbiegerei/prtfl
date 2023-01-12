@@ -9,13 +9,19 @@
 @import './inc/search';
 @import './inc/colors';
 @import './inc/typography';
-
-/* Import all ACF blocks */
-@import 'acf-blocks/*.scss';
-
 // @import './inc/accessibility';
-/* Plugins Overwrites */
-@import './plugin-overwrites/complianz';
+
+/* ACF blocks */
+@import 'acf-blocks/*';
+
+/* Plugins overwrites */
+@import 'plugin-overwrites/*';
+
+/* Templates */
+@import './templates/*';
+
+/* Gutenberg Overwrites */
+@import './gutenberg-overwrites/*';
 
 /* Components */
 @import './components/custom-swiper';
@@ -25,8 +31,3 @@
 
 @import './blocks/image';
 @import './components/main-menu';
-/* Templates */
-@import './templates/page';
-/* Gutenberg Overwrites */
-@import './gutenberg-overwrites/gb-images';
-@import './gutenberg-overwrites/gb-embeds';

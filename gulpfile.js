@@ -30,7 +30,7 @@ function styles() {
 }
 
 function stylesProduction() {
-	return src('./src/scss/style.scss')
+	return src(['./src/scss/site.scss', './src/scss/editor.scss'])
 		.pipe(sassGlob())
 
 		.pipe(
