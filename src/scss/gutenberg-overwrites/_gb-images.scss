@@ -1,7 +1,11 @@
 .wp-block-image {
-	&.is-style-rounded {
-		img {
-			@apply rounded-xl;
-		}
+	a {
+		@apply block;
+	}
+	@apply flex justify-center;
+}
+.wp-block-gallery {
+	.blocks-gallery-grid {
+		@apply w-full;
 	}
 }
