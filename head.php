@@ -3,8 +3,16 @@
 	<meta name="viewport" content="width=device-width">
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
-	<script>
-	theme_directory = "<?php echo get_template_directory_uri(); ?>";
-	</script>
 	<?php wp_head(); ?>
+
+	<?php
+ $site_title = get_bloginfo('name');
+ $site_url = network_site_url('/');
+ $site_description = get_bloginfo('description');
+
+//echo 'The Network Home URL is: ' . $site_url;
+//echo 'The Network Home Name is: ' . $site_title;
+//echo 'The Network Home Tagline is: ' . $site_description;
+?>
+
 </head>

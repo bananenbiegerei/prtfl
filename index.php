@@ -1,3 +1,8 @@
 <?php get_header(); ?>
-<h1>Index</h1>
-<?php get_footer(); ?>
+
+<?php while (have_posts()): ?>
+	<?php the_post(); ?>
+	<?php the_content(); ?>
+<?php endwhile; ?>
+
+<?php get_footer();

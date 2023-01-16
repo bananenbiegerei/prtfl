@@ -1,9 +1,7 @@
 require('dotenv').config();
 const { src, dest, parallel, series, watch } = require('gulp');
-const del = require('del');
 const sass = require('gulp-sass')(require('sass'));
-var sassGlob = require('gulp-sass-glob');
-
+const sassGlob = require('gulp-sass-glob');
 const sourcemaps = require('gulp-sourcemaps');
 const postcss = require('gulp-postcss');
 const tailwindcss = require('tailwindcss');
@@ -14,10 +12,6 @@ const gulpEsbuild = require('gulp-esbuild');
 const { createGulpEsbuild } = require('gulp-esbuild');
 const gulpEsbuildIncremental = createGulpEsbuild({ incremental: true });
 const browserSync = require('browser-sync').create();
-
-function cleanUp() {
-	return del(['css/**/*', 'js/**/*']);
-}
 
 function stylesDev() {
 	return src(['./src/scss/site.scss', './src/scss/editor.scss'])
@@ -73,26 +67,17 @@ function esbuildProd() {
 		.pipe(dest('./js'));
 }
 
-// function copyImages() {
-// 	return src('./img/**/*').pipe(dest('./img'));
-// }
-//
-// function copyFonts() {
-// 	return src('./fonts/**/*').pipe(dest('./fonts'));
-// }
-
 function dev() {
 	browserSync.init({
 		proxy: process.env.BROWSERSYNC_PROXY_URL,
 		open: process.env.BROWSERSYNC_OPEN_BROWSER == 'true',
 	});
-
 	watch('./src/scss/**/*.scss', stylesDev);
 	watch('./src/js/**/*.js', esbuildDev).on('change', browserSync.reload);
 }
 
-exports.default = series(cleanUp, parallel(stylesDev, esbuildDev), dev);
-exports.build = series(cleanUp, stylesProd, esbuildProd);
+exports.default = series(parallel(stylesDev, esbuildDev), dev);
+exports.build = series(stylesProd, esbuildProd);
 exports.styles = stylesDev;
 exports.scripts = esbuildDev;
 exports.pstyles = stylesProd;

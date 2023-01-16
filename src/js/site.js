@@ -3,11 +3,11 @@ import * as TW from './tailwindhelpers';
 import Alpine from 'alpinejs';
 import Swiper, { Navigation, Pagination, Keyboard, Autoplay, EffectFade, Thumbs } from 'swiper';
 
+import * as Accordion from './bb-blocks/accordion';
+
 window.Alpine = Alpine;
 Alpine.start();
 
-// configure Swiper to use modules
-//Swiper.use([Navigation, Pagination, Keyboard, Autoplay, EffectFade, Thumbs]);
-
-// Test
+// Tests
+Accordion.test();
 console.log(TW.fullConfig);

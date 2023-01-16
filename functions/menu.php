@@ -1,11 +1,10 @@
 <?php
-// Register Navigation Menus
-function custom_navigation_menus() {
-    $locations = array(
-        'top' => __( 'Top', 'text_domain' ),
-        'footer' => __( 'Footer', 'text_domain' ),
-    );
-    register_nav_menus( $locations );
 
-}
-add_action( 'init', 'custom_navigation_menus' );
+// Register navigation menu locations
+add_action('init', function () {
+	$locations = [
+		'top' => __('Top', BB_TEXT_DOMAIN),
+		'footer' => __('Footer', BB_TEXT_DOMAIN),
+	];
+	register_nav_menus($locations);
+});

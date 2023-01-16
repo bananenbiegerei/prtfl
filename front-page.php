@@ -7,6 +7,7 @@
 		<div>
 			Col1
 		</div>
+		<?php the_content(); ?>
 		<div>
 			Col1
 		</div>
