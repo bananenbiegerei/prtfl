@@ -1,5 +1,6 @@
 require('dotenv').config();
 const { src, dest, parallel, series, watch } = require('gulp');
+const del = require('del');
 const sass = require('gulp-sass')(require('sass'));
 var sassGlob = require('gulp-sass-glob');
 
@@ -14,7 +15,11 @@ const { createGulpEsbuild } = require('gulp-esbuild');
 const gulpEsbuildIncremental = createGulpEsbuild({ incremental: true });
 const browserSync = require('browser-sync').create();
 
-function styles() {
+function cleanUp() {
+	return del(['css/**/*', 'js/**/*']);
+}
+
+function stylesDev() {
 	return src(['./src/scss/site.scss', './src/scss/editor.scss'])
 		.pipe(sassGlob())
 		.pipe(sourcemaps.init())
@@ -29,10 +34,9 @@ function styles() {
 		.pipe(browserSync.stream());
 }
 
-function stylesProduction() {
+function stylesProd() {
 	return src(['./src/scss/site.scss', './src/scss/editor.scss'])
 		.pipe(sassGlob())
-
 		.pipe(
 			sass({
 				includePaths: ['node_modules'],
@@ -42,7 +46,7 @@ function stylesProduction() {
 		.pipe(dest('./css'));
 }
 
-function esbuild() {
+function esbuildDev() {
 	return src('./src/js/site.js')
 		.pipe(
 			gulpEsbuildIncremental({
@@ -54,11 +58,12 @@ function esbuild() {
 		.pipe(dest('./js'));
 }
 
-function esbuildProduction() {
+function esbuildProd() {
 	return src('./src/js/site.js')
 		.pipe(
 			gulpEsbuild({
 				outfile: 'site.js',
+				sourcemap: false,
 				bundle: true,
 				minify: true,
 				minifyWhitespace: true,
@@ -68,13 +73,13 @@ function esbuildProduction() {
 		.pipe(dest('./js'));
 }
 
-function copyImages() {
-	return src('./src/img/**/*').pipe(dest('./img'));
-}
-
-function copyFonts() {
-	return src('./src/fonts/**/*').pipe(dest('./fonts'));
-}
+// function copyImages() {
+// 	return src('./img/**/*').pipe(dest('./img'));
+// }
+//
+// function copyFonts() {
+// 	return src('./fonts/**/*').pipe(dest('./fonts'));
+// }
 
 function dev() {
 	browserSync.init({
@@ -82,16 +87,13 @@ function dev() {
 		open: process.env.BROWSERSYNC_OPEN_BROWSER == 'true',
 	});
 
-	watch('./src/scss/**/*.scss', styles);
-	watch('./src/js/**/*.js', esbuild).on('change', browserSync.reload);
-	watch('./**/*.php', styles).on('change', browserSync.reload);
-	watch('./src/img/**/*', copyImages);
-	watch('./src/fonts/**/*', copyFonts);
+	watch('./src/scss/**/*.scss', stylesDev);
+	watch('./src/js/**/*.js', esbuildDev).on('change', browserSync.reload);
 }
 
-exports.default = series(parallel(styles, esbuild, copyImages, copyFonts), dev);
-exports.build = series(stylesProduction, esbuildProduction);
-exports.styles = styles;
-exports.scripts = esbuild;
-exports.pstyles = stylesProduction;
-exports.pscripts = esbuildProduction;
+exports.default = series(cleanUp, parallel(stylesDev, esbuildDev), dev);
+exports.build = series(cleanUp, stylesProd, esbuildProd);
+exports.styles = stylesDev;
+exports.scripts = esbuildDev;
+exports.pstyles = stylesProd;
+exports.pscripts = esbuildProd;

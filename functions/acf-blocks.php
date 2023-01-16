@@ -1,8 +1,8 @@
 <?php
 
-/* Automatically declare all blocks in `acf-blocks/` */
+/* Automatically declare all blocks in `bb-blocks/` */
 add_action('acf/init', function () {
-	foreach (glob(dirname(__FILE__) . '/acf-blocks/*.php') as $block) {
+	foreach (glob(dirname(__FILE__) . '/bb-blocks/*.php') as $block) {
 		include_once $block;
 	}
 });

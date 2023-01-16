@@ -10,4 +10,4 @@ require_once get_template_directory() . '/functions/enqueue-scripts.php';
 // require_once get_template_directory() . '/functions/features.php';
 
 // Include all ACF block declarations
-require_once get_template_directory() . '/functions/acf-blocks.php';
+require_once get_template_directory() . '/functions/bb-blocks.php';
