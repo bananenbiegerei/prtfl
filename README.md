@@ -61,6 +61,10 @@ The theme will set the constant `BB_TEXT_DOMAIN` to the value setup in `style.cs
 
 `<?php _e('my example text', BB_TEXT_DOMAIN); ?>`
 
+## Features
+
+When logged in the current page can be edited by pressing `CTLR-E`.
+
 ## Development and Build
 
 For development start `npm run dev` or `npm run watch`.

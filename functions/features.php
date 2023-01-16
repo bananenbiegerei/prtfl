@@ -7,6 +7,7 @@ add_filter(
 	function ($tag, $handle, $src) {
 		if (strstr($handle, ':defer')) {
 			$tag = str_replace('<script ', '<script defer ', $tag);
+			$tag = str_replace(':defer', '', $tag);
 		}
 		return $tag;
 	},
