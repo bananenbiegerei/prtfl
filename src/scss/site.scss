@@ -9,6 +9,7 @@
 @import './ui/nav';
 @import './ui/forms';
 @import './ui/typography';
+@import './ui/badges';
 @import './ui/accessibility';
 
 /* ACF blocks */
@@ -24,6 +25,6 @@
 //@import './gutenberg-overwrites/*';
 
 /* Components */
-//@import './components/custom-swiper';
+@import './components/cards';
 //@import './blocks/image';
 //@import './components/main-menu';

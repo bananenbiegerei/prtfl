@@ -1,0 +1,6 @@
+.badge-primary {
+  @apply bg-primary text-white py-1 px-2 rounded-full text-sm;
+}
+.badge-secondary {
+  @apply bg-secondary text-black py-1 px-2 rounded-full text-sm border border-primary;
+}

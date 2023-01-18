@@ -33,7 +33,7 @@ add_theme_support('post-thumbnails', ['post', 'page']);
 add_filter(
 	'excerpt_length',
 	function ($length) {
-		return 30;
+		return 20;
 	},
 	999,
 );

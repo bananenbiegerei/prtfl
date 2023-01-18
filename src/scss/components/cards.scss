@@ -1,13 +1,6 @@
 .card {
-  @include global-radius;
-  @include global-shadow;
-  @apply bg-white p-4 text-primary text-base;
-  &.linked {
-    @include global-transition;
-    @apply hover:scale-105 hover:cursor-pointer;
-  }
-  &.speaker {
-    @apply text-center text-black bg-transparent shadow-none p-10;
+  @apply border rounded-md p-4;
+  h2 {
+    @apply text-lg lg:text-xl;
   }
 }
-

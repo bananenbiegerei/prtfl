@@ -154,4 +154,4 @@
       </div>
     </nav>
 
-    <main class="main-content my-16 min-h-screen">
+    <main class="main-content my-16">
