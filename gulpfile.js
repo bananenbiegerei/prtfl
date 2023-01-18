@@ -74,6 +74,8 @@ function dev() {
 	});
 	watch('./src/scss/**/*.scss', stylesDev);
 	watch('./src/js/**/*.js', esbuildDev).on('change', browserSync.reload);
+	watch('./**/*.php', stylesDev).on('change', browserSync.reload);
+	watch(['./img/**/*.*', './fonts/**/*.*']).on('change', browserSync.reload);
 }
 
 exports.default = series(parallel(stylesDev, esbuildDev), dev);

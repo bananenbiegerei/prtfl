@@ -6,11 +6,11 @@
 	.hide-for-editor {
 		@apply hidden;
 	}
-	@import './inc/globals';
-	@import './inc/grid';
-	@import './inc/typography';
-	@import './components/cards';
-	@import './gutenberg-overwrites/gb-images';
+	// @import './inc/globals';
+	// @import './inc/grid';
+	// @import './inc/typography';
+	// @import './components/cards';
+	// @import './gutenberg-overwrites/gb-images';
 	@apply font-sans overflow-hidden p-0 font-normal;
 
 	// Make groups easy to see
@@ -21,8 +21,7 @@
 	/* overwrite custom eidtor blocks */
 	.wp-block,
 	.wp-block-post-title {
-		@include container;
-		@apply px-0;
+		@apply px-0 container;
 		&.has-background {
 			@apply py-10 px-6;
 			// @include fluid-container;

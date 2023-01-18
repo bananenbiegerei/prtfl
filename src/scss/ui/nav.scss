@@ -1,0 +1,22 @@
+.menu {
+	&.horizontal {
+		@apply flex;
+	}
+	li {
+		a {
+			@apply btn btn-ghost;
+		}
+		&.current-menu-item {
+			a {
+				@apply bg-white;
+			}
+		}
+	}
+	&.dropdown {
+		li {
+			a {
+				@apply w-full;
+			}
+		}
+	}
+}

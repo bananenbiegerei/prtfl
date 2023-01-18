@@ -69,6 +69,7 @@ When logged in the current page can be edited by pressing `CTLR-E`.
 
 For development start `npm run dev` or `npm run watch`.
 
+
 For building (for production site) start `npm run build`.
 
 ## Files and Folder Structure:

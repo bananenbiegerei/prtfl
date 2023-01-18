@@ -2,32 +2,28 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Inc */
-@import './inc/grid';
-@import './inc/fonts';
-@import './inc/buttons';
-@import './inc/search';
-@import './inc/colors';
-@import './inc/typography';
-// @import './inc/accessibility';
+/* UI Basic components */
+@import './ui/grid';
+@import './ui/icons';
+@import './ui/buttons';
+@import './ui/nav';
+//@import './ui/colors';
+//@import './ui/typography';
+// @import './ui/accessibility';
 
 /* ACF blocks */
 @import 'bb-blocks/*';
 
 /* Plugins overwrites */
-@import 'plugin-overwrites/*';
+//@import 'plugin-overwrites/*';
 
 /* Templates */
-@import './templates/*';
+//@import './templates/*';
 
 /* Gutenberg Overwrites */
-@import './gutenberg-overwrites/*';
+//@import './gutenberg-overwrites/*';
 
 /* Components */
-@import './components/custom-swiper';
-/* Node Modules */
-// @import 'swiper/swiper-bundle';
-// @import './blocks/swiper-spread';
-
-@import './blocks/image';
-@import './components/main-menu';
+//@import './components/custom-swiper';
+//@import './blocks/image';
+//@import './components/main-menu';
