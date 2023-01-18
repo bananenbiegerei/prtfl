@@ -28,3 +28,6 @@ ol {
 ul:not(.menu) {
 	@apply list-disc pl-5;
 }
+a.link {
+	@apply underline hover:text-primary-300 transition;
+}

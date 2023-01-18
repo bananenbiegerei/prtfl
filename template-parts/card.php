@@ -1,21 +1,17 @@
 <div class="card">
+	<?php
+	if ( has_post_thumbnail() ) { ?>
+		<div class="aspect-w-16 aspect-h-9 mb-4">
+			<?php the_post_thumbnail('medium', array('class' => 'object-fit object-cover')); ?>
+		</div>
+	<?php }
+	else {
+	}
+	?>
 	<h2><?php the_title(); ?></h2>
-	<div class="flex gap-2 my-4">
-		<?php
-		$cats = get_the_category($id);
-		foreach ( $cats as $cat ): ?>
-			<a class="badge-primary" href="<?php echo get_category_link($cat->cat_ID); ?>">
-				<?php echo $cat->name; ?>
-			</a>
-		<?php endforeach; ?>
-		<?php
-		$tags = get_the_tags($id);
-		foreach ( $tags as $tag ): ?>
-			<a class="badge-secondary" href="<?php echo get_category_link($tag->tag_ID); ?>">
-				<?php echo $tag->name; ?>
-			</a>
-		<?php endforeach; ?>
+	<?php get_template_part('template-parts/categories-tags') ?>
+	<div class="mb-2">
+		<?php the_excerpt(); ?>
 	</div>
-	<?php the_excerpt(); ?>
-	
+	<a class="link" href="<?php the_permalink(); ?>">Mehr</a>
 </div>
