@@ -24,7 +24,7 @@
 	}
 	// Only Icon
 	.btn-icon-only {
-		@apply text-white rounded-full;
+		@apply rounded-full;
 		&.btn-xs {
 			@apply p-1;
 		}

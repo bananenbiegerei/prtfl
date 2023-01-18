@@ -1,11 +1,17 @@
-select {
-	//@include button-spacing;
-	@apply block w-full border-gray bg-white;
-	option {
-		@apply text-black font-normal;
-	}
+input[type="text"],
+input[type="email"],
+input[type="date"] {
+	@apply block w-full rounded-md border-gray-300 shadow-sm focus:border-focus-300 focus:ring focus:ring-focus-200 focus:ring-opacity-50;
 }
-input {
-	//@include button-spacing;
-	@apply border rounded-xl border-gray;
+
+select {
+	@apply block w-full rounded-md border-gray-300 shadow-sm focus:border-focus-300 focus:ring focus:ring-focus-200 focus:ring-opacity-50;
+}
+
+textarea {
+	@apply block w-full rounded-md border-gray-300 shadow-sm focus:border-focus-300 focus:ring focus:ring-focus-200 focus:ring-opacity-50;
+}
+
+input[type="checkbox"] {
+	@apply rounded border-gray-300 text-primary shadow-sm focus:border-focus-300 focus:ring focus:ring-offset-0 focus:ring-focus-200 focus:ring-opacity-50;
 }

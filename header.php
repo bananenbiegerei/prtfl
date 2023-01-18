@@ -27,7 +27,7 @@
                   <li>
                       <div class="relative inline-block text-left">
                         <div>
-                          <button type="button" class="btn btn-ghost" id="menu-button" aria-expanded="true" aria-haspopup="true">
+                          <button type="button" class="dropdown-toggle" id="menu-button" aria-expanded="true" aria-haspopup="true">
                             Options
                             <!-- Heroicon name: mini/chevron-down -->
                             <svg class="-mr-1 ml-2 h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">

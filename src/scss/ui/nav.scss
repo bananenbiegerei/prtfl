@@ -1,10 +1,10 @@
 .menu {
 	&.horizontal {
-		@apply flex;
+		@apply flex gap-8 items-baseline;
 	}
 	li {
 		a {
-			@apply btn btn-ghost;
+			@apply inline-flex items-center text-base py-1 px-2 hover:bg-primary-50 rounded transition;
 		}
 		&.current-menu-item {
 			a {
@@ -13,10 +13,14 @@
 		}
 	}
 	&.dropdown {
+		@apply flex flex-col space-y-2;
 		li {
 			a {
-				@apply w-full;
+				@apply w-full text-base py-1 px-2 hover:bg-primary-50 rounded transition;
 			}
 		}
+	}
+	.dropdown-toggle {
+		@apply inline-flex items-center text-base py-1 px-2 hover:bg-primary-50 rounded transition;
 	}
 }

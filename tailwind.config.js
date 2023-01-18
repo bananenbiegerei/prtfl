@@ -2,17 +2,16 @@ module.exports = {
 	content: ['./**/*.php'],
 	theme: {
 		// Helper pixel to rem calc: https://nekocalc.com/de/px-zu-rem-umrechner
-		// fontSize: {
-		// 	xs: '0.5rem',
-		// 	sm: '0.85rem', //small,
-		// 	tiny: '1rem', // h6
-		// 	base: '1.125rem', //p, h5
-		// 	lg: '1.125rem', //h4
-		// 	xl: '1.5rem', //h3
-		// 	'2xl': '1.75rem', //h2
-		// 	'3xl': '2.375rem', //h1
-		// 	'4xl': '2.25rem',
-		// },
+		fontSize: {
+			xs: '0.625rem', // 10px
+			sm: '0.875rem', // 14px
+			base: '1rem', // 16px
+			lg: '1.25rem', // 20px
+			xl: '1.5rem', // 24px
+			'2xl': '2rem', // 32px
+			'3xl': '2.5rem', // 40px
+			'4xl': '3.75rem', // 60px
+		},
 		fontFamily: {
 			sans: ['Arial', 'sans-serif'],
 			//mono: ['Roboto Mono', 'serif'],
@@ -31,7 +30,6 @@ module.exports = {
 	plugins: [
 		require('@tailwindcss/aspect-ratio'),
 		require('@tailwindcss/forms'),
-		require('@tailwindcss/typography'),
 		require('tailwindcss-themer')({
 		  defaultTheme: {
 			// put the default values of any config you want themed
@@ -64,7 +62,16 @@ module.exports = {
 					'900': '#000000',	
 				},
 				focus: {
-					DEFAULT: '#1614ff',
+					'50': '#e7f6ff',
+					'100': '#d3efff',
+					'200': '#b0dfff',
+					'300': '#81c8ff',
+					'400': '#4fa1ff',
+					'500': '#2878ff',
+					'600': '#044bff',
+					'700': '#0049ff',
+					DEFAULT: '#0038c4',
+					'900': '#0b3aa4',
 				}
 			  }
 			}
