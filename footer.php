@@ -1,105 +1,108 @@
 </main>
 <footer class="bg-white" aria-labelledby="footer-heading">
 	<h2 id="footer-heading" class="sr-only">Footer</h2>
-	<div class="container">
-		<div class="xl:grid xl:grid-cols-3 xl:gap-8">
-			<div class="grid grid-cols-2 gap-8 xl:col-span-2">
-				<div class="md:grid md:grid-cols-2 md:gap-8">
-					<div>
-						<h3>Solutions</h3>
-						<ul role="list" class="menu -ml-2">
-							<li>
-								<a href="#" class="text-sm leading-6 text-gray-600 hover:text-gray-900">Marketing</a>
-							</li>
-
-							<li>
-								<a href="#" class="text-sm leading-6 text-gray-600 hover:text-gray-900">Analytics</a>
-							</li>
-
-							<li>
-								<a href="#" class="text-sm leading-6 text-gray-600 hover:text-gray-900">Commerce</a>
-							</li>
-
-							<li>
-								<a href="#" class="text-sm leading-6 text-gray-600 hover:text-gray-900">Insights</a>
-							</li>
-						</ul>
+	<div class="border-y border-primary-200 py-8">
+		<div class="container">
+			<div class="xl:grid xl:grid-cols-3 xl:gap-8">
+				<div class="grid grid-cols-2 gap-8 xl:col-span-2">
+					<div class="md:grid md:grid-cols-2 md:gap-8">
+						<div>
+							<h3>Solutions</h3>
+							<ul role="list" class="menu -ml-2">
+								<li>
+									<a href="#" class="text-sm leading-6 text-gray-600 hover:text-gray-900">Marketing</a>
+								</li>
+		
+								<li>
+									<a href="#" class="text-sm leading-6 text-gray-600 hover:text-gray-900">Analytics</a>
+								</li>
+		
+								<li>
+									<a href="#" class="text-sm leading-6 text-gray-600 hover:text-gray-900">Commerce</a>
+								</li>
+		
+								<li>
+									<a href="#" class="text-sm leading-6 text-gray-600 hover:text-gray-900">Insights</a>
+								</li>
+							</ul>
+						</div>
+						<div class="mt-10 md:mt-0">
+							<h3>Support</h3>
+							<ul role="list" class="menu -ml-2">
+								<li>
+									<a href="#" class="text-sm leading-6 text-gray-600 hover:text-gray-900">Pricing</a>
+								</li>
+		
+								<li>
+									<a href="#" class="text-sm leading-6 text-gray-600 hover:text-gray-900">Documentation</a>
+								</li>
+		
+								<li>
+									<a href="#" class="text-sm leading-6 text-gray-600 hover:text-gray-900">Guides</a>
+								</li>
+		
+								<li>
+									<a href="#" class="text-sm leading-6 text-gray-600 hover:text-gray-900">API Status</a>
+								</li>
+							</ul>
+						</div>
 					</div>
-					<div class="mt-10 md:mt-0">
-						<h3>Support</h3>
-						<ul role="list" class="menu -ml-2">
-							<li>
-								<a href="#" class="text-sm leading-6 text-gray-600 hover:text-gray-900">Pricing</a>
-							</li>
-
-							<li>
-								<a href="#" class="text-sm leading-6 text-gray-600 hover:text-gray-900">Documentation</a>
-							</li>
-
-							<li>
-								<a href="#" class="text-sm leading-6 text-gray-600 hover:text-gray-900">Guides</a>
-							</li>
-
-							<li>
-								<a href="#" class="text-sm leading-6 text-gray-600 hover:text-gray-900">API Status</a>
-							</li>
-						</ul>
+					<div class="md:grid md:grid-cols-2 md:gap-8">
+						<div>
+							<h3>Company</h3>
+							<ul role="list" class="menu -ml-2">
+								<li>
+									<a href="#" class="text-sm leading-6 text-gray-600 hover:text-gray-900">About</a>
+								</li>
+		
+								<li>
+									<a href="#" class="text-sm leading-6 text-gray-600 hover:text-gray-900">Blog</a>
+								</li>
+		
+								<li>
+									<a href="#" class="text-sm leading-6 text-gray-600 hover:text-gray-900">Jobs</a>
+								</li>
+		
+								<li>
+									<a href="#" class="text-sm leading-6 text-gray-600 hover:text-gray-900">Press</a>
+								</li>
+		
+								<li>
+									<a href="#" class="text-sm leading-6 text-gray-600 hover:text-gray-900">Partners</a>
+								</li>
+							</ul>
+						</div>
+						<div class="mt-10 md:mt-0">
+							<h3>Legal</h3>
+							<ul role="list" class="menu -ml-2">
+								<li>
+									<a href="#" class="text-sm leading-6 text-gray-600 hover:text-gray-900">Claim</a>
+								</li>
+		
+								<li>
+									<a href="#" class="text-sm leading-6 text-gray-600 hover:text-gray-900">Privacy</a>
+								</li>
+		
+								<li>
+									<a href="#" class="text-sm leading-6 text-gray-600 hover:text-gray-900">Terms</a>
+								</li>
+							</ul>
+						</div>
 					</div>
 				</div>
-				<div class="md:grid md:grid-cols-2 md:gap-8">
-					<div>
-						<h3>Company</h3>
-						<ul role="list" class="menu -ml-2">
-							<li>
-								<a href="#" class="text-sm leading-6 text-gray-600 hover:text-gray-900">About</a>
-							</li>
-
-							<li>
-								<a href="#" class="text-sm leading-6 text-gray-600 hover:text-gray-900">Blog</a>
-							</li>
-
-							<li>
-								<a href="#" class="text-sm leading-6 text-gray-600 hover:text-gray-900">Jobs</a>
-							</li>
-
-							<li>
-								<a href="#" class="text-sm leading-6 text-gray-600 hover:text-gray-900">Press</a>
-							</li>
-
-							<li>
-								<a href="#" class="text-sm leading-6 text-gray-600 hover:text-gray-900">Partners</a>
-							</li>
-						</ul>
-					</div>
-					<div class="mt-10 md:mt-0">
-						<h3>Legal</h3>
-						<ul role="list" class="menu -ml-2">
-							<li>
-								<a href="#" class="text-sm leading-6 text-gray-600 hover:text-gray-900">Claim</a>
-							</li>
-
-							<li>
-								<a href="#" class="text-sm leading-6 text-gray-600 hover:text-gray-900">Privacy</a>
-							</li>
-
-							<li>
-								<a href="#" class="text-sm leading-6 text-gray-600 hover:text-gray-900">Terms</a>
-							</li>
-						</ul>
-					</div>
+				<div class="mt-10 xl:mt-0">
+					<h3>Subscribe to our newsletter</h3>
+					<p class="mt-2 text-sm leading-6 text-gray-600">The latest news, articles, and resources, sent to your inbox weekly.</p>
+					<form class="mt-6 sm:flex sm:max-w-md items-center gap-4">
+						<label for="email-address" class="sr-only">Email address</label>
+						<input type="email" name="email-address" id="email-address" autocomplete="email" required placeholder="Enter your email">
+						<button type="submit" class="btn">Subscribe</button>
+					</form>
 				</div>
-			</div>
-			<div class="mt-10 xl:mt-0">
-				<h3>Subscribe to our newsletter</h3>
-				<p class="mt-2 text-sm leading-6 text-gray-600">The latest news, articles, and resources, sent to your inbox weekly.</p>
-				<form class="mt-6 sm:flex sm:max-w-md items-center gap-4">
-					<label for="email-address" class="sr-only">Email address</label>
-					<input type="email" name="email-address" id="email-address" autocomplete="email" required placeholder="Enter your email">
-					<button type="submit" class="btn">Subscribe</button>
-				</form>
 			</div>
 		</div>
-		<hr>
+	</div>
+	<div class="container">
 		<div class="md:flex md:items-center md:justify-between py-4">
 			<div class="flex space-x-2 md:order-2">
 				<a href="#" class="btn btn-ghost btn-icon-only">
