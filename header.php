@@ -4,8 +4,8 @@
 <?php get_template_part('head'); ?>
 
 <body <?php body_class(); ?>>
-    <nav class="bg-white">
-      <div class="container border-b">
+    <nav class="bg-white border-b">
+      <div class="container">
         <div class="flex h-16 justify-between">
           <div class="flex">
             <div class="flex flex-shrink-0 items-center">
@@ -154,4 +154,4 @@
       </div>
     </nav>
 
-    <main class="main-content my-16">
+    <main class="main-content my-16 min-h-screen">
