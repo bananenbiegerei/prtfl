@@ -3,20 +3,13 @@
 @tailwind utilities;
 
 /* UI Basic components */
-@import './ui/grid';
-@import './ui/icons';
-@import './ui/buttons';
-@import './ui/nav';
-@import './ui/forms';
-@import './ui/typography';
-@import './ui/badges';
-@import './ui/accessibility';
+@import './ui/*';
 
 /* ACF blocks */
 @import 'bb-blocks/*';
 
 /* Plugins overwrites */
-//@import 'plugin-overwrites/*';
+@import 'plugin-overwrites/*';
 
 /* Templates */
 //@import './templates/*';
