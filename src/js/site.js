@@ -5,6 +5,3 @@ import Swiper, { Navigation, Pagination, Keyboard, Autoplay, EffectFade, Thumbs 
 
 window.Alpine = Alpine;
 Alpine.start();
-
-// Tests
-//console.log(TW.fullConfig);
