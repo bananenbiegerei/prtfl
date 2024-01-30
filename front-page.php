@@ -1,10 +1,9 @@
 <?php get_header('front-page'); ?>
-<?php
-/* while (have_posts()):
+<?php while (have_posts()):
 	the_post(); ?>
 
 <?php if (have_rows('columns')): ?>
-___PSEUDO_INLINE_PLACEHOLDER___<?php while (have_rows('columns')):
+<?php while (have_rows('columns')):
 	the_row(); ?>
 <div class="flex gap-12 scrollers h-full transition ease-in-out duration-300">
     <?php if (have_rows('left_column')): ?>
@@ -36,8 +35,7 @@ ___PSEUDO_INLINE_PLACEHOLDER___<?php while (have_rows('columns')):
             <?php wp_nav_menu([
             	'theme_location' => 'footer', // Replace with your menu location
             	'menu_class' => 'menu horizontal', // Add any additional classes you need
-            	'container' => false,
-            	// Don't wrap the menu in a container
+            	'container' => false, // Don't wrap the menu in a container
             ]); ?>
         </footer>
     </div>
@@ -72,10 +70,9 @@ ___PSEUDO_INLINE_PLACEHOLDER___<?php while (have_rows('columns')):
 </div>
 <?php
 endwhile; ?>
-___PSEUDO_INLINE_PLACEHOLDER___<?php else: ?>
-___PSEUDO_INLINE_PLACEHOLDER___<?php endif; ?>
-___PSEUDO_INLINE_PLACEHOLDER___<?php
-endwhile; */
-?>
+<?php else: ?>
+<?php endif; ?>
+<?php
+endwhile; ?>
 
 <?php get_footer(); ?>

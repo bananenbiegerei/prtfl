@@ -1,6 +1,6 @@
-<header class="fixed bg-primary-100 top-0 left-0 w-screen z-50 transition ease-in-out duration-300"
+<header class="fixed bg-primary-100 top-0 left-0 w-screen z-50 transition ease-in-out duration-300 h-20"
     :class="{ '-translate-y-full': isScrolled, 'translate-y-0': !isScrolled }">
-    <div class="lg:flex justify-between gap-6 lg:gap-12 p-3 pb-0">
+    <div class="lg:flex items-center justify-between gap-6 lg:gap-12 px-4 h-full">
         <div class="flex items-center gap-4">
             <nav>
                 <ul class="menu horizontal lg:justify-end">

@@ -8,9 +8,9 @@ module.exports = {
 			base: '1rem',
 			lg: '1.25rem',
 			xl: '2rem',
-			'2xl': '3rem',
-			'3xl': '3rem',
-			'4xl': '3rem',
+			'2xl': '2.25rem',
+			'3xl': '2.25rem',
+			'4xl': '2.25rem',
 		},
 
 		fontFamily: {
@@ -42,6 +42,7 @@ module.exports = {
 			boxShadow: {
 				'custom-focus-ring': '0 0 10px 2px rgba(237, 137, 54, 1), 0 0 0 2px rgba(237, 137, 54, 1)',
 				'text-stroke': '0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black',
+				'bb-custom': '0px 0px 15px 0px rgba(0, 0, 0, 0.14)',
 			},
 		},
 	},
