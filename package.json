@@ -12,6 +12,7 @@
 		"jsxSingleQuote": true
 	},
 	"devDependencies": {
+		"@achamaro/tailwindcss-iconify-icon": "^0.3.0",
 		"@prettier/plugin-php": "^0.19.4",
 		"@tailwindcss/aspect-ratio": "^0.4.2",
 		"@tailwindcss/forms": "^0.5.2",
@@ -46,6 +47,7 @@
 	},
 	"dependencies": {
 		"jquery": "^3.5.1",
+		"scrollmirror": "^0.0.2",
 		"swiper": "^7.4.1"
 	}
 }

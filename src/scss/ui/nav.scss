@@ -1,26 +1,29 @@
 .menu {
 	&.horizontal {
-		@apply flex gap-8 items-baseline;
+		@apply flex items-stretch lg:items-start gap-4 lg:gap-8;
 	}
 	li {
 		a {
-			@apply inline-flex items-center text-base py-1 px-2 hover:bg-primary-50 rounded transition;
+			@apply btn;
 		}
-		&.current-menu-item {
-			a {
-				@apply bg-white;
-			}
-		}
+		// &.current-menu-item {
+		// 	a {
+		// 		@apply bg-white;
+		// 	}
+		// }
 	}
 	&.dropdown {
 		@apply flex flex-col space-y-2;
 		li {
 			a {
-				@apply w-full text-base py-1 px-2 hover:bg-primary-50 rounded transition;
+				@apply w-full text-base py-1 px-2 hover:bg-primary-100 rounded transition;
 			}
 		}
 	}
 	.dropdown-toggle {
-		@apply inline-flex items-center text-base py-1 px-2 hover:bg-primary-50 rounded transition;
+		@apply inline-flex items-center text-base py-1 px-2 hover:bg-primary-100 rounded transition;
 	}
+}
+.hide-scrollbar::-webkit-scrollbar {
+	display: none;
 }

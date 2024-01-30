@@ -6,7 +6,7 @@
     .cmplz-header {
         @apply block #{!important}; 
         .cmplz-title {
-            @apply block text-white text-xs font-normal  #{!important};  
+            @apply block text-primary-100 text-xs font-normal  #{!important};  
         }
     }
     .cmplz-message {

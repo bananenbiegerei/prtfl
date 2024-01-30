@@ -1,16 +1,28 @@
-<div class="flex gap-2 my-4">
-	<?php
-	$cats = get_the_category($id);
-	foreach ( $cats as $cat ): ?>
-		<a class="badge-primary" href="<?php echo get_category_link($cat->cat_ID); ?>">
-			<?php echo $cat->name; ?>
-		</a>
-	<?php endforeach; ?>
-	<?php
-	$tags = get_the_tags($id);
-	foreach ( $tags as $tag ): ?>
-		<a class="badge-secondary" href="<?php echo get_category_link($tag->tag_ID); ?>">
-			<?php echo $tag->name; ?>
-		</a>
-	<?php endforeach; ?>
+<div class="p-4 flex flex-wrap gap-4 text-xl font-mono border-t border-b">
+    <h2>
+        <?php _e('Leistung, Services… etc.', BB_TEXT_DOMAIN); ?>
+    </h2>
+    <?php
+    $categories = get_categories();
+    foreach ($categories as $category) {
+    	echo '<div class="border border-dashed p-2 px-4 border-black rounded-full">' . $category->name . '</div>';
+    }
+    ?>
+</div>
+<div class="p-4 flex flex-wrap gap-4 text-xl font-mono border-t border-b">
+    <h2>
+        <?php _e('Leistung, Services… etc.', BB_TEXT_DOMAIN); ?>
+    </h2>
+    <?php
+    $categories = get_categories();
+    foreach ($categories as $category) {
+    	echo '<div class="border border-dashed p-2 px-4 border-black rounded-full">' . $category->name . '</div>';
+    }
+
+    $tags = get_tags();
+    foreach ($tags as $tag) {
+    	echo '<div class="border border-dashed p-2 px-4 border-black rounded-full">' . $tag->name . '</div>';
+    }
+    ?>
+
 </div>

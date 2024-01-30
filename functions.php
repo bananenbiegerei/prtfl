@@ -8,9 +8,6 @@ require_once get_template_directory() . '/functions/localization.php';
 // Special features of theme
 require_once get_template_directory() . '/functions/features.php';
 
-// Load custom ACF blocks
-require_once get_template_directory() . '/functions/acf-blocks.php';
-
 // Load styles & scripts
 require_once get_template_directory() . '/functions/enqueue-scripts.php';
 
@@ -21,6 +18,5 @@ require_once get_template_directory() . '/functions/menu.php';
 // require_once(get_template_directory().'/functions/custom-posts.php');
 // require_once(get_template_directory().'/functions/custom-taxonomies.php');
 
-// Define some image sizes
-// @Ingo: is this still needed?
-// require_once get_template_directory() . '/functions/image-sizes.php';
+// Define image sizes
+require_once get_template_directory() . '/functions/image-sizes.php';

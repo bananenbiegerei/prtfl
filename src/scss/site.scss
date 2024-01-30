@@ -18,6 +18,27 @@
 //@import './gutenberg-overwrites/*';
 
 /* Components */
-@import './components/cards';
-//@import './blocks/image';
+@import './components/custom-swiper';
 //@import './components/main-menu';
+.animation-test {
+    font-variation-settings: 'T1  ' 1, 'T2  ' 0, 'T3  ' 0, 'T4  ' 0, 'M1  ' -1, 'M2  ' -1;
+    animation: eclipse 3s linear infinite;
+}
+
+@keyframes eclipse {
+    0% {
+        font-variation-settings: 'T1  ' 1, 'T2  ' 0, 'T3  ' 0, 'T4  ' 0, 'M1  ' -1, 'M2  ' -1;
+    }
+
+    25% {
+        font-variation-settings: 'T1  ' 0, 'T2  ' 0, 'T3  ' 0, 'T4  ' 0, 'M1  ' -0.5, 'M2  ' -1;
+    }
+
+    50% {
+        font-variation-settings: 'T1  ' 0, 'T2  ' 0, 'T3  ' 0, 'T4  ' 0, 'M1  ' 0.5, 'M2  ' -1;
+    }
+
+    100% {
+        font-variation-settings: 'T1  ' 1, 'T2  ' 0, 'T3  ' 0, 'T4  ' 0, 'M1  ' 1, 'M2  ' -1;
+    }
+}

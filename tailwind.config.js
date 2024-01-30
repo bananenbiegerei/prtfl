@@ -3,25 +3,46 @@ module.exports = {
 	theme: {
 		// Helper pixel to rem calc: https://nekocalc.com/de/px-zu-rem-umrechner
 		fontSize: {
-			xs: '0.625rem', // 10px
-			sm: '0.875rem', // 14px
-			base: '1rem', // 16px
-			lg: '1.25rem', // 20px
-			xl: '1.5rem', // 24px
-			'2xl': '2rem', // 32px
-			'3xl': '2.5rem', // 40px
-			'4xl': '3.75rem', // 60px
+			xs: '0.625rem',
+			sm: '0.875rem',
+			base: '1rem',
+			lg: '1.25rem',
+			xl: '2rem',
+			'2xl': '3rem',
+			'3xl': '3rem',
+			'4xl': '3rem',
 		},
+
 		fontFamily: {
-			sans: ['Arial', 'sans-serif'],
-			//mono: ['Roboto Mono', 'serif'],
-			//serif: ['Roboto Serif', 'serif'],
+			sans: ['untitled', 'sans-serif'],
+			mono: ['IBM Plex Mono', 'monospace'],
+			logotype: ['dalfitra', 'monospace'],
+			icon: ['Zycon', 'sans-serif'],
 		},
 		fontWeight: {
 			light: 200,
 			normal: 300,
 			medium: 400,
 			bold: 500,
+		},
+		extend: {
+			animation: {
+				wiggle: 'wiggle 0.3s ease-in-out infinite',
+			},
+			keyframes: {
+				wiggle: {
+					'0%, 100%': {
+						transform: 'rotate(-3deg)',
+					},
+					'50%': {
+						transform: 'rotate(3deg)',
+					},
+				},
+			},
+			boxShadow: {
+				'custom-focus-ring': '0 0 10px 2px rgba(237, 137, 54, 1), 0 0 0 2px rgba(237, 137, 54, 1)',
+				'text-stroke': '0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black',
+			},
 		},
 	},
 	corePlugins: {
@@ -35,18 +56,20 @@ module.exports = {
 				extend: {
 					colors: {
 						primary: {
-							50: '#e5eeff',
-							100: '#cfe0ff',
-							200: '#a9c3ff',
-							300: '#7599ff',
-							400: '#3f5dff',
-							500: '#1423ff',
-							600: '#0008ff',
-							700: '#0009ff',
-							800: '#0008e3',
-							900: '#000094',
-							DEFAULT: '#000068',
+							50: '#f9f7f3',
+							100: '#f0ece4',
+							200: '#e0d7c7',
+							DEFAULT: '#e0d7c7',
+							300: '#cdbda4',
+							400: '#b89f7f',
+							500: '#a98866',
+							600: '#9c785a',
+							700: '#82624c',
+							800: '#6a5042',
+							900: '#574237',
+							950: '#2e221c',
 						},
+
 						secondary: {
 							50: '#f7f7f7',
 							DEFAULT: '#f7f7f7',
@@ -61,17 +84,17 @@ module.exports = {
 							900: '#000000',
 						},
 						focus: {
-							50: '#e7f6ff',
-							100: '#d3efff',
-							200: '#b0dfff',
-							300: '#81c8ff',
-							400: '#4fa1ff',
-							500: '#2878ff',
-							DEFAULT: '#2878ff',
-							600: '#044bff',
-							700: '#0049ff',
-							800: '#0038c4',
-							900: '#0b3aa4',
+							50: '#f9f7f1',
+							100: '#ede9d8',
+							200: '#d3c9a1',
+							300: '#c5b684',
+							400: '#b8a167',
+							DEFAULT: 'rgba(237, 137, 54, 1)',
+							600: '#977248',
+							700: '#7f5a3e',
+							800: '#694a37',
+							900: '#573e30',
+							950: '#302018',
 						},
 						black: {
 							DEFAULT: 'black',

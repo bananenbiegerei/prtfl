@@ -1,22 +1,24 @@
 <?php get_header(); ?>
-<div class="container">
-	<h1><?php the_title(); ?></h1>
-	<div class="lg:flex gap-8">
-		<div class="lg:w-3/4">
-			<?php the_content(); ?>
-		</div>
-		<div class="w-1/4">
-			<?php
-			if ( has_post_thumbnail() ) { ?>
-				<div class="aspect-w-16 aspect-h-9 mb-4 bg-red-500">
-					<?php the_post_thumbnail('large', array('class' => 'object-fit object-cover')); ?>
-				</div>
-			<?php }
-			else {
-			}
-			?>
-			<?php get_template_part('template-parts/categories-tags') ?>
-		</div>
-	</div>
+<div class="container-fluid">
+    <h1><?php the_title(); ?></h1>
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <?php
+            $images = get_field('desktop_gallery');
+            if ($images):
+            	foreach ($images as $image): ?>
+            <div class="swiper-slide">
+                <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+            </div>
+            <?php endforeach;
+            endif;
+            ?>
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+        <!-- Add Navigation -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+    </div>
 </div>
-<?php get_footer();
+<?php get_footer(); ?>
