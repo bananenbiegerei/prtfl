@@ -21,7 +21,7 @@ module.exports = {
 		},
 		fontWeight: {
 			light: 200,
-			normal: 300,
+			normal: 400,
 			medium: 400,
 			bold: 500,
 		},
@@ -56,18 +56,18 @@ module.exports = {
 				extend: {
 					colors: {
 						primary: {
-							50: '#f9f7f3',
-							100: '#f0ece4',
-							200: '#e0d7c7',
-							DEFAULT: '#e0d7c7',
-							300: '#cdbda4',
-							400: '#b89f7f',
-							500: '#a98866',
-							600: '#9c785a',
-							700: '#82624c',
-							800: '#6a5042',
-							900: '#574237',
-							950: '#2e221c',
+							50: '#f9f6f3',
+							100: '#f0eae4',
+							200: '#e0d3c7',
+							300: '#cdb7a4',
+							400: '#b8967f',
+							500: '#a97d66',
+							600: '#9c6d5a',
+							700: '#82594c',
+							800: '#6a4a42',
+							DEFAULT: '#573d37',
+							900: '#573d37',
+							950: '#2e1f1c',
 						},
 
 						secondary: {

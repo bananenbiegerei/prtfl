@@ -1,9 +1,9 @@
 // Unstyled
 .btn {
-	@apply rounded-lg md:rounded-xl lg:rounded-2xl inline-flex flex-shrink-0 cursor-pointer select-none flex-wrap items-center justify-center border-transparent text-left transition duration-200 ease-out text-base md:text-lg 2xl:text-xl leading-none;
+	@apply rounded-md inline-flex flex-shrink-0 cursor-pointer select-none flex-wrap items-center justify-start border-transparent text-left transition duration-200 ease-out text-base leading-none;
 	//@apply min-h-12 h-12 px-4;
-	@apply px-3 py-2 md:px-6 md:py-4 2xl:px-6 2xl:py-4 max-w-md;
-	//@apply bg-gradient-to-b from-primary-100 to-primary-500 border-primary-600;
+	@apply px-2.5 py-1.5;
+
 	/* disabled */
 	&-disabled,
 	&[disabled],
@@ -75,18 +75,18 @@
 // Styled
 // hover + active color changes around 4-5 steps
 .btn {
-	@apply gap-2 no-underline font-sans border border-transparent;
+	@apply gap-2 no-underline font-sans border;
 	animation: button-pop var(--animation-btn, 0.25s) ease-out;
 
 	&:active:hover,
 	&:active:focus {
 		animation: button-pop 0s ease-out;
-		transform: scale(var(--btn-600-scale, 0.97));
+		transform: scale(var(--btn-600-scale, 0.98));
 	}
 
 	/* default btn */
 	& {
-		@apply border-black bg-black text-primary-100 outline-primary no-underline hover:border-primary-800 hover:bg-primary-800;
+		@apply border-primary bg-primary text-white outline-primary-700 no-underline hover:border-primary-500 hover:bg-primary-500;
 
 		&.btn-active {
 			@apply border-primary-500 bg-primary-500;
@@ -99,7 +99,7 @@
 
 	/* Menu */
 	&-menu {
-		@apply rounded-md inline-flex select-none flex-wrap items-center justify-start border-y-primary-200 text-left transition duration-200 ease-out leading-none text-base p-3 bg-primary-200 text-black  font-medium hover:bg-gray hover:border-gray;
+		@apply rounded-md inline-flex select-none flex-wrap items-center justify-start border-transparent text-left transition duration-200 ease-out leading-none text-base p-3 bg-transparent text-black  font-medium hover:bg-gray hover:border-gray;
 
 		&.current {
 			@apply text-primary-500;
@@ -108,7 +108,7 @@
 
 	/* brand colors */
 	&-primary {
-		@apply border-primary bg-primary text-black outline-primary hover:border-primary-500 hover:bg-primary-500;
+		@apply border-primary bg-primary text-white outline-primary hover:border-primary-500 hover:bg-primary-500;
 
 		&.btn-active {
 			@apply border-primary-500 bg-primary-500;
@@ -116,7 +116,7 @@
 	}
 
 	&-secondary {
-		@apply border-gray-600 bg-gray-600 text-black outline-gray hover:border-gray-300 hover:bg-gray-300;
+		@apply border-gray bg-gray text-black outline-gray hover:border-gray-200 hover:bg-gray-200;
 
 		&.btn-active {
 			@apply border-black bg-black;
@@ -155,7 +155,7 @@
 	/* btn with state colors */
 
 	&-success {
-		@apply border-green bg-green text-black outline-green hover:border-green-500 hover:bg-green-500;
+		@apply border-green bg-green text-white outline-green hover:border-green-500 hover:bg-green-500;
 
 		&.btn-active {
 			@apply border-green bg-green;
@@ -163,7 +163,7 @@
 	}
 
 	&-warning {
-		@apply border-orange bg-orange text-black outline-orange hover:border-orange-400 hover:bg-orange-400;
+		@apply border-orange bg-orange text-white outline-orange hover:border-orange-400 hover:bg-orange-400;
 
 		&.btn-active {
 			@apply border-orange bg-orange;
@@ -172,7 +172,7 @@
 
 	&-error,
 	&-red {
-		@apply border-red bg-red text-black outline-red hover:border-red-400 hover:bg-red-400;
+		@apply border-red bg-red text-white outline-red hover:border-red-400 hover:bg-red-400;
 
 		&.btn-active {
 			@apply border-red bg-red;
@@ -181,14 +181,14 @@
 
 	/* btn variants */
 	&-ghost {
-		@apply border border-transparent bg-transparent text-current shadow-none outline-current hover:bg-primary-200 hover:border-opacity-0 hover:bg-opacity-20;
+		@apply border border-transparent bg-transparent text-black shadow-none outline-current hover:bg-primary-200 hover:border-opacity-0 hover:bg-opacity-20;
 
 		&.btn-active {
 			@apply bg-primary-600 border-opacity-0 bg-opacity-20;
 		}
 
 		&.btn-secondary {
-			@apply text-gray-800 hover:border-gray-500 hover:bg-gray-500 hover:text-black;
+			@apply text-gray-800 hover:border-gray-500 hover:bg-gray-500 hover:text-white;
 
 			&.btn-active {
 				@apply border-secondary-600 bg-secondary-600 text-secondary-700;
@@ -205,27 +205,27 @@
 		}
 
 		&.btn-success {
-			@apply text-green hover:border-green hover:bg-green hover:text-black;
+			@apply text-green hover:border-green hover:bg-green hover:text-white;
 
 			&.btn-active {
-				@apply border-green bg-green text-black;
+				@apply border-green bg-green text-white;
 			}
 		}
 
 		&.btn-warning {
-			@apply text-orange hover:border-orange hover:bg-orange hover:text-black;
+			@apply text-orange hover:border-orange hover:bg-orange hover:text-white;
 
 			&.btn-active {
-				@apply border-orange bg-orange text-black;
+				@apply border-orange bg-orange text-white;
 			}
 		}
 
 		&.btn-error,
 		&.btn-red {
-			@apply text-red hover:border-red hover:bg-red hover:text-black;
+			@apply text-red hover:border-red hover:bg-red hover:text-white;
 
 			&.btn-active {
-				@apply border-red bg-red text-black;
+				@apply border-red bg-red text-white;
 			}
 		}
 	}
@@ -246,14 +246,14 @@
 
 	/* outline */
 	&-outline {
-		@apply text-primary border-current bg-transparent shadow-none hover:border-primary-700 hover:bg-primary-700 hover:text-black;
+		@apply text-primary border-current bg-transparent shadow-none hover:border-primary-700 hover:bg-primary-700 hover:text-white;
 
 		&.btn-active {
-			@apply border-primary-700 bg-primary-700 text-black;
+			@apply border-primary-700 bg-primary-700 text-white;
 		}
 
 		&.btn-secondary {
-			@apply text-gray-800 hover:border-gray-500 hover:bg-gray-500 hover:text-black;
+			@apply text-gray-800 hover:border-gray-500 hover:bg-gray-500 hover:text-white;
 
 			&.btn-active {
 				@apply border-secondary-600 bg-secondary-600 text-secondary-700;
@@ -270,27 +270,27 @@
 		}
 
 		&.btn-success {
-			@apply text-green hover:border-green hover:bg-green hover:text-black;
+			@apply text-green hover:border-green hover:bg-green hover:text-white;
 
 			&.btn-active {
-				@apply border-green bg-green text-black;
+				@apply border-green bg-green text-white;
 			}
 		}
 
 		&.btn-warning {
-			@apply text-orange hover:border-orange hover:bg-orange hover:text-black;
+			@apply text-orange hover:border-orange hover:bg-orange hover:text-white;
 
 			&.btn-active {
-				@apply border-orange bg-orange text-black;
+				@apply border-orange bg-orange text-white;
 			}
 		}
 
 		&.btn-error,
 		&.btn-red {
-			@apply text-red hover:border-red hover:bg-red hover:text-black;
+			@apply text-red hover:border-red hover:bg-red hover:text-white;
 
 			&.btn-active {
-				@apply border-red bg-red text-black;
+				@apply border-red bg-red text-white;
 			}
 		}
 	}
@@ -325,7 +325,7 @@
 	@apply gap-2;
 	//     &>input[type="radio"]:checked.btn,
 	//     &>.btn-active {
-	//         @apply border-primary bg-primary text-black;
+	//         @apply border-primary bg-primary text-white;
 
 	//         &:focus-visible {
 	//             @apply outline-primary outline outline-2;

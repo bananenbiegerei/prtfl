@@ -1,27 +1,16 @@
 .menu {
 	&.horizontal {
-		@apply flex items-stretch lg:items-start gap-4 lg:gap-8;
+		@apply flex items-stretch lg:items-start gap-1 lg:gap-1;
 	}
 	li {
-		a {
-			@apply btn;
-		}
+		// a {
+		// 	@apply btn;
+		// }
 		// &.current-menu-item {
 		// 	a {
 		// 		@apply bg-white;
 		// 	}
 		// }
-	}
-	&.dropdown {
-		@apply flex flex-col space-y-2;
-		li {
-			a {
-				@apply w-full text-base py-1 px-2 hover:bg-primary-100 rounded transition;
-			}
-		}
-	}
-	.dropdown-toggle {
-		@apply inline-flex items-center text-base py-1 px-2 hover:bg-primary-100 rounded transition;
 	}
 }
 .hide-scrollbar::-webkit-scrollbar {
