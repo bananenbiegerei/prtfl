@@ -1,3 +1,32 @@
+/* Define a transition duration during page visits */
+html.is-changing .transition-fade {
+    transition: opacity 0.25s;
+    opacity: 1;
+}
+
+/* Define the styles for the unloaded pages */
+html.is-animating .transition-fade {
+    opacity: 0;
+}
+
+.modal {
+    position: fixed;
+    inset: 0;
+    z-index: 99999;
+}
+
+html.is-changing .transition-main {
+    transition:
+        opacity 250ms,
+        transform 250ms;
+}
+
+html.is-animating .transition-main {
+    opacity: 0;
+    /* `transform` will misplace the .modal's positioning during an animated page visit */
+    transform: translateY(20px);
+}
+
 .animation-arrow {
     font-variation-settings: 'T1  ' 1, 'T2  ' 0, 'T3  ' 0, 'T4  ' 0, 'M1  ' -1, 'M2  ' -1;
     animation: eclipse 3s linear infinite;

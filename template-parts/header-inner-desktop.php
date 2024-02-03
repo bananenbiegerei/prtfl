@@ -1,13 +1,15 @@
-<header class="fixed bg-primary-100 top-0 left-0 w-screen z-50 transition ease-in-out duration-300 h-20"
+<header class="hidden lg:block fixed bg-primary-100 top-0 left-0 w-screen z-50 transition ease-in-out duration-300 h-20"
     :class="{ '-translate-y-full': isScrolled, 'translate-y-0': !isScrolled }">
     <div class="lg:flex items-center justify-between gap-6 lg:gap-12 px-4 h-full">
         <div class="flex items-center gap-4">
             <nav>
-                <ul class="menu horizontal lg:justify-end">
-                    <li><a href="" class="btn btn-ghost btn-sm">Work</a></li>
-                    <li><a href="" class="btn btn-ghost btn-sm">About</a></li>
-                    <li><a href="" class="btn btn-ghost btn-sm">Contact</a></li>
-                </ul>
+                <?php wp_nav_menu([
+                	'theme_location' => 'top',
+                	'container' => false,
+                	'items_wrap' => '<ul class="menu horizontal lg:justify-end">%3$s</ul>',
+                	'link_before' => '<span class="btn btn-ghost btn-sm">',
+                	'link_after' => '</span>',
+                ]); ?>
             </nav>
             <div class="text-base flex items-center lg:justify-end">
                 <a class="btn btn-ghost btn-sm" href="mailto:hallo@bananenbiegerei.de">
@@ -49,9 +51,11 @@
             </div>
         </div>
         <div>
-            <img class="h-8 w-auto"
-                src="<?= esc_url(get_stylesheet_directory_uri() . '/img/bananenbiegerei-logo.svg') ?>"
-                alt="Logo der Bananenbiegerei">
+            <a class="block" href="<?= esc_url(home_url('/')) ?>">
+                <img class="h-8 w-auto"
+                    src="<?= esc_url(get_stylesheet_directory_uri() . '/img/bananenbiegerei-logo.svg') ?>"
+                    alt="Logo der Bananenbiegerei">
+            </a>
             <p class="mb-0 sr-only">
                 <i><?php echo get_bloginfo('description'); ?></i>
             </p>

@@ -1,4 +1,4 @@
-<?php get_header('front-page'); ?>
+<?php get_header(); ?>
 <?php while (have_posts()):
 	the_post(); ?>
 
@@ -35,7 +35,8 @@
             <?php wp_nav_menu([
             	'theme_location' => 'footer', // Replace with your menu location
             	'menu_class' => 'menu horizontal', // Add any additional classes you need
-            	'container' => false, // Don't wrap the menu in a container
+            	'container' => false,
+            	// Don't wrap the menu in a container
             ]); ?>
         </footer>
     </div>

@@ -1,5 +1,4 @@
 <?php if (get_row_layout() == 'projects'): ?>
-<!-- <h1 class="font-icon animation-test">☀✯➟⬤🌝🏵🐈🐕🐢💡🔒🕛🖐🚴🦉🦎</h1> -->
 <div class="mb-12">
     <h2>
         <?php _e('Featured Projects'); ?>
