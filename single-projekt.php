@@ -1,29 +1,59 @@
-<?php get_header(); ?>
-<div class="grid grid-cols-12 mt-36">
-    <h1 class="col-span-12"><?php the_title(); ?></h1>
-    <div class="bg-red-600 py-4">
-        <div class="swiper-container desktop-gallery">
-            <div class="swiper-wrapper">
-                <?php
+<?php get_header('single'); ?>
+<h1 class="col-span-12"><?php the_title(); ?></h1>
+        <?php the_content(); ?>
+    <div class="flex gap-12">
+
+        <div>
+            <div class="swiper desktop-gallery h-screen">
+                <div class="swiper-pagination"></div>
+                <div class="swiper-wrapper">
+                    <?php
                 $images = get_field('desktop_gallery');
                 if ($images):
                 	foreach ($images as $image): ?>
-                <div class="swiper-slide">
-                    <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
-                </div>
-                <?php endforeach;
+                    <div class="swiper-slide !h-[600px]">
+                        <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+                    </div>
+                    <?php endforeach;
                 endif;
                 ?>
+                </div>
             </div>
-            <!-- Add Pagination -->
-            <div class="swiper-pagination"></div>
-            <!-- Add Navigation -->
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
+        </div>
+        <div>
+            <div class="swiper tablet-gallery h-screen">
+                <div class="swiper-pagination"></div>
+                <div class="swiper-wrapper">
+                    <?php
+                $images_tablet = get_field('tablet_gallery');
+                if ($images_tablet):
+                	foreach ($images_tablet as $image): ?>
+                    <div class="swiper-slide !h-96">
+                        <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+                    </div>
+                    <?php endforeach;
+                endif;
+                ?>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="swiper mobile-gallery h-screen">
+                <div class="swiper-pagination"></div>
+                <div class="swiper-wrapper">
+                    <?php
+                $images_mobile = get_field('mobile_gallery');
+                if ($images_mobile):
+                    foreach ($images_mobile as $image): ?>
+                    <div class="swiper-slide !h-72">
+                        <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+                    </div>
+                    <?php endforeach;
+                endif;
+                ?>
+                </div>
+            </div>
         </div>
     </div>
 </div>
-<script>
-
-</script>
 <?php get_footer(); ?>
