@@ -44,6 +44,9 @@ module.exports = {
 				'text-stroke': '0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black',
 				'bb-custom': '0px 0px 15px 0px rgba(0, 0, 0, 0.14)',
 			},
+			height: {
+				'single-full-header': 'calc(100vh - 5rem)', //  = h-16 + p-2*2
+			},
 		},
 	},
 	corePlugins: {

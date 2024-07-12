@@ -41,7 +41,7 @@ h6,
 p,
 ul:not([class]),
 ol:not([class]) {
-	@apply leading-normal text-lg lg:text-xl  mb-6 max-w-4xl;
+	@apply leading-normal text-lg lg:text-xl mb-6;
 }
 
 .topline {
