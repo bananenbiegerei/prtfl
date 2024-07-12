@@ -23,6 +23,24 @@
         </div>
     </div>
     <div class="grid grid-cols-12 gap-6 md:h-single-full-header overflow-hidden p-4">
+    <div class="col-span-4 md:col-span-2">
+            <div class="swiper mobile-gallery h-screen relative pl-2">
+                <div class="swiper-pagination"></div>
+                <div class="swiper-wrapper">
+                    <?php
+                $images_mobile = get_field('mobile_gallery');
+                if ($images_mobile):
+                    foreach ($images_mobile as $image): ?>
+                    <div class="swiper-slide !h-auto">
+                        <img class="rounded-xl shadow-xl" src="<?php echo esc_url($image['url']); ?>"
+                            alt="<?php echo esc_attr($image['alt']); ?>" />
+                    </div>
+                    <?php endforeach;
+                endif;
+                ?>
+                </div>
+            </div>
+        </div>
         <div class="col-span-12 md:col-span-6">
             <div class="swiper desktop-gallery h-screen relative pl-2">
                 <div class="swiper-pagination"></div>
@@ -49,24 +67,6 @@
                 $images_tablet = get_field('tablet_gallery');
                 if ($images_tablet):
                 	foreach ($images_tablet as $image): ?>
-                    <div class="swiper-slide !h-auto">
-                        <img class="rounded-xl shadow-xl" src="<?php echo esc_url($image['url']); ?>"
-                            alt="<?php echo esc_attr($image['alt']); ?>" />
-                    </div>
-                    <?php endforeach;
-                endif;
-                ?>
-                </div>
-            </div>
-        </div>
-        <div class="col-span-4 md:col-span-2">
-            <div class="swiper mobile-gallery h-screen relative pl-2">
-                <div class="swiper-pagination"></div>
-                <div class="swiper-wrapper">
-                    <?php
-                $images_mobile = get_field('mobile_gallery');
-                if ($images_mobile):
-                    foreach ($images_mobile as $image): ?>
                     <div class="swiper-slide !h-auto">
                         <img class="rounded-xl shadow-xl" src="<?php echo esc_url($image['url']); ?>"
                             alt="<?php echo esc_attr($image['alt']); ?>" />

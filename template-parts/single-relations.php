@@ -13,8 +13,8 @@
 // Step 1: Retrieve the Client ID from the current post
 $client_post = get_field('client');
 $client_id = $client_post->ID; // Assuming 'client' returns a single post object
-// Assuming $client_id is the ID of the client post
 $client_title = get_the_title($client_id);
+$client_thumb = get_the_post_thumbnail($client_id, 'medium', array('class' => 'client-thumbnail'));
 
 // Step 2: Query for Projects with the same related client
 $args = array(
@@ -31,18 +31,32 @@ $args = array(
 );
 
 $related_projects = new WP_Query($args);
-
+$item_count = 0;
+$rotation = 0;
 if ($related_projects->have_posts()) : ?>
-    <div class="related-projects">
-        <h2><?php _e('Andere Projekte für: ', BB_TEXT_DOMAIN) ?> <?= $client_title ?></h2>
-        <ul>
-            <?php while ($related_projects->have_posts()) : $related_projects->the_post(); ?>
-                <li>
-                    <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-                </li>
-            <?php endwhile; ?>
-        </ul>
-    </div>
-    <?php wp_reset_postdata(); // Reset the global post object
+<div class="related-projects" x-data="{ showFolded: true }">
+    <h2><?php _e('Andere Projekte für: ', BB_TEXT_DOMAIN) ?> <?= $client_title ?></h2>
+    <button class="unfold" @click="showFolded = !showFolded">Toggle</button>
+    <ul id="pile-container" class="mt-8 mb-16" :class="showFolded ? 'relative' : 'grid grid-cols-2 gap-2'">
+        <?php while ($related_projects->have_posts()) : $related_projects->the_post(); ?>
+        <li class="pile-card"
+            :class="showFolded ? 'absolute bottom-0 left-0 origin-bottom-left' : 'relative rotate-0 left-auto bottom-auto'"
+            :style="showFolded ? 'transform: rotate(' + (<?php
+                if ($item_count % 2 == 0) {
+                    echo $rotation;
+                } else {
+                    echo $rotation;
+                }
+            ?>) + 'deg); z-index: <?= $item_count*-1; ?>;' : 'transform: rotate(0deg); z-index: 0;'">
+            <?php get_template_part('template-parts/card-mini'); ?>
+        </li>
+        <?php
+        $rotation += 5;
+        $item_count++;
+        ?>
+        <?php endwhile; ?>
+    </ul>
+</div>
+<?php wp_reset_postdata(); // Reset the global post object
 endif;
 ?>

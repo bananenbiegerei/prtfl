@@ -67,3 +67,29 @@ var swiper_mobile = new Swiper('.mobile-gallery', {
     // },
     speed: 2000,
 });
+
+function setContainerHeight() {
+    const container = document.getElementById('pile-container');
+    // Check if container exists
+    if (container) {
+        const pileCard = container.getElementsByClassName('pile-card');
+        let maxHeight = 0;
+
+        for (let i = 0; i < pileCard.length; i++) {
+            const imgHeight = pileCard[i].offsetHeight;
+            if (imgHeight > maxHeight) {
+                maxHeight = imgHeight;
+            }
+        }
+
+        container.style.minHeight = maxHeight + 'px';
+    } else {
+        console.error('Container not found');
+    }
+}
+
+// Ensure the DOM is fully loaded before running the function
+document.addEventListener('DOMContentLoaded', function() {
+    setContainerHeight();
+    window.onresize = setContainerHeight;
+});

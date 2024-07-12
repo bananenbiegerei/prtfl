@@ -1,5 +1,11 @@
 module.exports = {
 	content: ['./**/*.php'],
+	safelist: [
+		{
+			pattern: /rotate-/,
+			variants: ['20', '40', '80'],
+		},
+	],
 	theme: {
 		// Helper pixel to rem calc: https://nekocalc.com/de/px-zu-rem-umrechner
 		fontSize: {
