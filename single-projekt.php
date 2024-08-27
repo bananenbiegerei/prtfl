@@ -1,10 +1,16 @@
 <?php get_header('single'); ?>
 <article>
-    <div class="shadow-xl p-4 rounded-b-xl flex gap-8 mx-4">
+    <div class="flex gap-8 p-4">
         <div class="basis-2/3">
-            <header>
-                date: <?php the_date(); ?>
-                <h1><?php the_title(); ?></h1>
+            <header class="flex gap-4 items-end mb-8 border-b border-dotted pb-4">
+                <h1 class="mb-0 leading-none"><?php the_title(); ?></h1>
+                <?php if ( get_field('link_to_website') ) : ?>
+                <a href="<?php echo get_field('link_to_website'); ?>" target="_blank"
+                    class="btn btn-xs h-6"><?php _e('Website', BB_TEXT_DOMAIN); ?> <svg xmlns="http://www.w3.org/2000/svg"
+                        width="16" height="16" viewBox="0 0 32 32">
+                        <path fill="currentColor" d="M10 6v2h12.59L6 24.59L7.41 26L24 9.41V22h2V6z" />
+                    </svg></a>
+                <?php endif; ?>
             </header>
             <div class="mb-4">
                 <?php the_content(); ?>
@@ -16,14 +22,17 @@
                     <?php _e('Back'); ?></span>
             </a>
         </div>
-        <div class="basis-1/3 space-y-4">
-            <?php get_template_part( 'template-parts/single-taxonomies'); ?>
-            <?php get_template_part( 'template-parts/single-metas'); ?>
-            <?php get_template_part( 'template-parts/single-relations'); ?>
+        <div class="basis-1/3">
+            <div class="shadow-bb-custom p-4 rounded-xl space-y-4">
+                <?php get_template_part( 'template-parts/single-taxonomies'); ?>
+                <?php get_template_part( 'template-parts/single-metas'); ?>
+                <?php get_template_part( 'template-parts/single-relations'); ?>
+            </div>
+
         </div>
     </div>
     <div class="grid grid-cols-12 gap-6 md:h-single-full-header overflow-hidden p-4">
-    <div class="col-span-4 md:col-span-2">
+        <div class="col-span-4 md:col-span-2">
             <div class="swiper mobile-gallery h-screen relative pl-2">
                 <div class="swiper-pagination"></div>
                 <div class="swiper-wrapper">

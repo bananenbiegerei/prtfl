@@ -1,4 +1,4 @@
-<?php /* $related_projects = get_field( 'related_projects' ); ?>
+<?php $related_projects = get_field( 'related_projects' ); ?>
 <?php if ( $related_projects ) : ?>
 <?php foreach ( $related_projects as $post ) : ?>
 <?php setup_postdata ( $post ); ?>
@@ -7,7 +7,7 @@
 </div>
 <?php endforeach; ?>
 <?php wp_reset_postdata(); ?>
-<?php endif; */ ?>
+<?php endif; ?>
 
 <?php
 // Step 1: Retrieve the Client ID from the current post
@@ -29,18 +29,26 @@ $args = array(
         )
     )
 );
+
 $related_projects = new WP_Query($args);
 $item_count = 0;
 $rotation = 0;
 if ($related_projects->have_posts()) : ?>
-<section  x-data="{ open: false }">
-<div class="border rounded-xl border-dotted p-4 pb-20 group">
-    <h2 class="text-sm"><?php _e('Andere Projekte für: ', BB_TEXT_DOMAIN) ?> <?= $client_title ?></h2>
-    <ul id="pile-container" class="relative z-30 group-hover:cursor-pointer transform scale-100 group-hover:opacity-50 group-hover:scale-90 transition-opacity duration-300 ease-in-out transition-transform duration-300 ease-in-out" x-on:click="open = true">
+<div class="related-projects" x-data="{ showFolded: true }">
+    <h2><?php _e('Andere Projekte für: ', BB_TEXT_DOMAIN) ?> <?= $client_title ?></h2>
+    <button class="unfold" @click="showFolded = !showFolded">Toggle</button>
+    <ul id="pile-container" class="mt-8 mb-16" :class="showFolded ? 'relative' : 'grid grid-cols-2 gap-2'">
         <?php while ($related_projects->have_posts()) : $related_projects->the_post(); ?>
-        <li class="pile-card absolute bottom-0 left-0 origin-bottom-left"
-            style="transform: rotate(<?php echo $rotation; ?>deg); z-index: <?= $item_count * -1; ?>;">
-            <?php get_template_part('template-parts/card-mini-without-link'); ?>
+        <li class="pile-card"
+            :class="showFolded ? 'absolute bottom-0 left-0 origin-bottom-left' : 'relative rotate-0 left-auto bottom-auto'"
+            :style="showFolded ? 'transform: rotate(' + (<?php
+                if ($item_count % 2 == 0) {
+                    echo $rotation;
+                } else {
+                    echo $rotation;
+                }
+            ?>) + 'deg); z-index: <?= $item_count*-1; ?>;' : 'transform: rotate(0deg); z-index: 0;'">
+            <?php get_template_part('template-parts/card-mini'); ?>
         </li>
         <?php
         $rotation += 5;
@@ -49,9 +57,6 @@ if ($related_projects->have_posts()) : ?>
         <?php endwhile; ?>
     </ul>
 </div>
-
-<?php include(locate_template('template-parts/single-related-modal.php')); ?>
 <?php wp_reset_postdata(); // Reset the global post object
 endif;
 ?>
-</section>

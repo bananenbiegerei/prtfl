@@ -1,6 +1,6 @@
 // Unstyled
 .btn {
-	@apply rounded-md inline-flex flex-shrink-0 cursor-pointer select-none flex-wrap items-center justify-start border-transparent text-left transition duration-200 ease-out text-base leading-none;
+	@apply inline-flex flex-shrink-0 cursor-pointer select-none flex-wrap items-center justify-start border-transparent text-left transition duration-200 ease-out leading-none;
 	//@apply min-h-12 h-12 px-4;
 	@apply px-2.5 py-1.5;
 
@@ -12,7 +12,7 @@
 	}
 
 	svg {
-		@apply h-6 w-6;
+		@apply h-4 w-4;
 	}
 
 	&.btn-xs {
@@ -75,7 +75,7 @@
 // Styled
 // hover + active color changes around 4-5 steps
 .btn {
-	@apply gap-2 no-underline font-sans border;
+	@apply gap-2 no-underline font-sans border rounded-full text-sm;
 	animation: button-pop var(--animation-btn, 0.25s) ease-out;
 
 	&:active:hover,

@@ -3,7 +3,7 @@
 
 <?php get_template_part('head'); ?>
 
-<body <?php body_class('flex flex-col h-screen bg-primary-100 overflow-hidden'); ?>
+<body <?php body_class('flex flex-col h-screen text-primary bg-primary-100 overflow-hidden'); ?>
     x-data="{ isScrolled: window.matchMedia('(max-width: 640px)').matches ? true : false }">
     <?php get_template_part('template-parts/header-inner-desktop'); ?>
     <?php get_template_part('template-parts/header-inner-mobile'); ?>
