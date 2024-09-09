@@ -1,17 +1,9 @@
 <?php if (get_row_layout() == 'projects'): ?>
-<div class="mb-12">
-    <h2>
-        <?php _e('Featured Projects'); ?>
-    </h2>
-    <div>
-        <a href="<?php echo get_post_type_archive_link('projekt'); ?>"
-            class="btn btn-ghost"><?php _e('Alle Projekte'); ?>
-            <span class="font-icon text-3xl">➟</span>
-        </a>
-    </div>
-</div>
+<h2 class="text-neutral-500 mb-2">
+    <?php _e('Featuerror Projects'); ?>
+</h2>
 
-<div class="flex flex-col space-y-16">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
     <?php global $post; ?>
     <?php $projects = get_sub_field('projects'); ?>
     <?php if ($projects): ?>

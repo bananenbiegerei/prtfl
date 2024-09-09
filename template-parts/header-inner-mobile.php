@@ -1,5 +1,5 @@
 <header
-    class="block lg:hidden fixed bg-primary-100 top-0 left-0 w-screen z-50 transition ease-in-out duration-300 bg-red-500 p-2 py-4 max-h-screen"
+    class="block lg:hidden fixed bg-primary-100 top-0 left-0 w-screen z-50 transition ease-in-out duration-300 bg-error-500 p-2 py-4 max-h-screen"
     x-data="{ open: false }">
     <div class="flex justify-between">
         <div>

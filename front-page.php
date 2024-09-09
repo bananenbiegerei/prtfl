@@ -5,9 +5,9 @@
 <?php if (have_rows('columns')): ?>
 <?php while (have_rows('columns')):
 	the_row(); ?>
-<div class="flex gap-12 scrollers h-full transition ease-in-out duration-300">
+<div class="flex scrollers h-full transition ease-in-out duration-300">
     <?php if (have_rows('left_column')): ?>
-    <div class="scroller overflow-auto h-screen hide-scrollbar px-3 w-1/3">
+    <div class="scroller overflow-auto h-screen hide-scrollbar px-3 w-2/3 ">
         <?php if (is_single()) { ?>
         <h1><?php the_title(); ?></h1>
         <?php } else { ?>
@@ -16,7 +16,7 @@
         <?php while (have_rows('left_column')):
         	the_row(); ?>
         <?php if (have_rows('column')): ?>
-        <div class="space-y-12">
+        <div>
             <?php while (have_rows('column')):
             	the_row(); ?>
             <?php get_template_part('template-parts/layouts/paragraph'); ?>
@@ -42,7 +42,7 @@
     </div>
     <?php endif; ?>
     <?php if (have_rows('right_column')): ?>
-    <div class="scroller overflow-auto h-screen w-2/3 px-3" x-init="() => {
+    <div class="scroller overflow-auto h-screen w-1/3 px-3" x-init="() => {
     const scrollableDiv = document.getElementById('scrollableDiv');
     scrollableDiv.addEventListener('scroll', () => {
       isScrolled = scrollableDiv.scrollTop > 0;
@@ -52,7 +52,7 @@
         <?php while (have_rows('right_column')):
         	the_row(); ?>
         <?php if (have_rows('column')): ?>
-        <div class="space-y-12">
+        <div>
             <?php while (have_rows('column')):
             	the_row(); ?>
             <?php get_template_part('template-parts/layouts/paragraph'); ?>
@@ -60,6 +60,7 @@
             <?php get_template_part('template-parts/layouts/image'); ?>
             <?php get_template_part('template-parts/layouts/projects'); ?>
             <?php get_template_part('template-parts/layouts/template-part-name'); ?>
+            <?php get_template_part('template-parts/layouts/headline'); ?>
             <?php
             endwhile; ?>
         </div>

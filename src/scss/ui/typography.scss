@@ -1,11 +1,14 @@
 // some old artiles are styled with strong tag
+body * {
+	@apply lowercase;
+}
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-	@apply leading-tight mb-2 font-medium;
+	@apply leading-tight mb-0 font-medium;
 }
 
 h1,
@@ -15,17 +18,17 @@ h1,
 
 h2,
 .h2 {
-	@apply text-2xl lg:text-3xl;
+	@apply text-base lg:text-lg;
 }
 
 h3,
 .h3 {
-	@apply text-xl lg:text-2xl;
+	@apply text-base lg:text-lg;
 }
 
 h4,
 .h4 {
-	@apply text-lg lg:text-xl;
+	@apply text-base lg:text-lg;
 }
 
 h5,
@@ -35,13 +38,14 @@ h5,
 
 h6,
 .h6 {
-	@apply text-sm lg:text-base;
+	@apply text-base lg:text-lg;
 }
 
 p,
 ul:not([class]),
-ol:not([class]) {
-	@apply leading-normal text-lg lg:text-xl mb-6;
+ol:not([class]),
+label {
+	@apply leading-tight text-base lg:text-lg mb-4;
 }
 
 .topline {

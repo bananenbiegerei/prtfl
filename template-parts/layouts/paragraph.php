@@ -1,6 +1,8 @@
 <?php
-if (get_row_layout() == 'paragraph'): ?>
-<p class="text-base md:text-xl 2xl:text-3xl">
+if (get_row_layout() == 'paragraph'):
+$color = get_sub_field( 'color' );
+?>
+<p class="text-<?= $color;?>-500">
     <?php the_sub_field('paragraph'); ?>
 </p>
 <?php endif; ?>

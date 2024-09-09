@@ -33,8 +33,8 @@
 				<path fill-rule="evenodd" d="M12.79 5.23a.75.75 0 01-.02 1.06L8.832 10l3.938 3.71a.75.75 0 11-1.04 1.08l-4.5-4.25a.75.75 0 010-1.08l4.5-4.25a.75.75 0 011.06.02z" clip-rule="evenodd" />
 			  </svg>
 			</a>
-			<!-- Current: "z-10 bg-focus-50 border-focus-500 text-focus-600", Default: "bg-white border-primary-300 text-primary-500 hover:bg-primary-100" -->
-			<a href="#" aria-current="page" class="relative z-10 inline-flex items-center border border-focus-500 bg-focus-50 px-4 py-2 text-sm font-medium text-focus-600 focus:z-20">1</a>
+			<!-- Current: "z-10 bg-accent-50 border-accent-500 text-accent-600", Default: "bg-white border-primary-300 text-primary-500 hover:bg-primary-100" -->
+			<a href="#" aria-current="page" class="relative z-10 inline-flex items-center border border-accent-500 bg-accent-50 px-4 py-2 text-sm font-medium text-accent-600 focus:z-20">1</a>
 			<a href="#" class="relative inline-flex items-center border border-primary-300 bg-white px-4 py-2 text-sm font-medium text-primary-500 hover:bg-primary-100 focus:z-20">2</a>
 			<a href="#" class="relative hidden items-center border border-primary-300 bg-white px-4 py-2 text-sm font-medium text-primary-500 hover:bg-primary-100 focus:z-20 md:inline-flex">3</a>
 			<span class="relative inline-flex items-center border border-primary-300 bg-white px-4 py-2 text-sm font-medium text-primary-700">...</span>

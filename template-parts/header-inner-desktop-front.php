@@ -1,12 +1,10 @@
-<header class="hidden lg:block fixed top-0 left-0 w-screen z-50 transition ease-in-out duration-300 h-auto py-2 px-4 bg-primary"
+<header class="hidden lg:block fixed top-0 left-0 w-screen z-50 transition ease-in-out duration-300 h-auto py-2 px-4"
     :class="{ '-translate-y-full': isScrolled, 'translate-y-0': !isScrolled }">
     <div class="flex">
     <div class="flex-1">
-    <?php if (!is_front_page()) : ?>
     <h1 class="text-lg">
         abcd<span class="font-logotype">.works</span>
     </h1>
-    <?php endif; ?>
     </div>
     <div class="flex items-end flex-col">
         <div class="flex gap-2">

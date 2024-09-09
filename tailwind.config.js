@@ -2,8 +2,7 @@ module.exports = {
 	content: ['./**/*.php'],
 	safelist: [
 		{
-			pattern: /rotate-/,
-			variants: ['20', '40', '80'],
+			pattern: /text-neutral-(50|100|200|300|400|500|600|700|800|900)/,
 		},
 	],
 	theme: {
@@ -12,11 +11,12 @@ module.exports = {
 			xs: '0.625rem',
 			sm: '0.875rem',
 			base: '1rem',
-			lg: '1.25rem',
+			lg: '1.5rem',
 			xl: '2rem',
 			'2xl': '2.25rem',
 			'3xl': '2.25rem',
 			'4xl': '2.25rem',
+			'7xl': '6.25rem',
 		},
 
 		fontFamily: {
@@ -46,7 +46,7 @@ module.exports = {
 				},
 			},
 			boxShadow: {
-				'custom-focus-ring': '0 0 10px 2px rgba(237, 137, 54, 1), 0 0 0 2px rgba(237, 137, 54, 1)',
+				'custom-accent-ring': '0 0 10px 2px rgba(237, 137, 54, 1), 0 0 0 2px rgba(237, 137, 54, 1)',
 				'text-stroke': '0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black',
 				'bb-custom': '0px 0px 15px 0px rgba(0, 0, 0, 0.14)',
 			},
@@ -66,18 +66,18 @@ module.exports = {
 				extend: {
 					colors: {
 						primary: {
-							50: '#f9f6f3',
-							100: '#f0eae4',
-							200: '#e0d3c7',
-							300: '#cdb7a4',
-							400: '#b8967f',
-							500: '#a97d66',
-							600: '#9c6d5a',
-							700: '#82594c',
-							800: '#6a4a42',
-							DEFAULT: '#573d37',
-							900: '#573d37',
-							950: '#2e1f1c',
+							50: '#fdffe7',
+							100: '#f9ffc1',
+							200: '#f8ff86',
+							300: '#fbff41',
+							400: '#fff80d',
+							500: '#ffea00',
+							DEFAULT: '#ffea00',
+							600: '#d1ae00',
+							700: '#a67d02',
+							800: '#89610a',
+							900: '#744f0f',
+							950: '#442a04',
 						},
 
 						secondary: {
@@ -109,7 +109,7 @@ module.exports = {
 						black: {
 							DEFAULT: 'black',
 						},
-						red: {
+						error: {
 							50: '#fff0f2',
 							100: '#ffe2e6',
 							200: '#ffc9d4',
@@ -122,7 +122,7 @@ module.exports = {
 							800: '#B0003E',
 							900: '#910a3d',
 						},
-						gray: {
+						neutral: {
 							50: '#f7f7f7',
 							100: '#DCDCDC',
 							200: '#c8c8c8',
@@ -135,7 +135,7 @@ module.exports = {
 							800: '#383838',
 							900: '#313131',
 						},
-						green: {
+						success: {
 							50: '#edfcf4',
 							100: '#d2f9e2',
 							200: '#a9f1cb',
@@ -147,9 +147,10 @@ module.exports = {
 							800: '#095c3f',
 							900: '#084c35',
 						},
-						neon: {
+						accent: {
 							50: '#fcffe5',
 							100: '#f5ffc8',
+							200: '#ebff9a',
 							DEFAULT: '#ebff9a',
 							300: '#d8fb5b',
 							400: '#c4f229',
@@ -159,7 +160,7 @@ module.exports = {
 							800: '#4d670d',
 							900: '#415710',
 						},
-						orange: {
+						warning: {
 							50: '#fffaec',
 							100: '#fff3d3',
 							200: '#ffe4a5',
@@ -175,85 +176,6 @@ module.exports = {
 					},
 				},
 			},
-			themes: [
-				{
-					name: 'team-members-scheme',
-					extend: {
-						colors: {
-							palerose: {
-								DEFAULT: '#FBC5B4',
-							},
-							palepurple: {
-								DEFAULT: '#E0D3FF',
-							},
-							palepeach: {
-								DEFAULT: '#FADAB6',
-							},
-							palecyan: {
-								DEFAULT: '#D4E9DE',
-							},
-							palepink: {
-								DEFAULT: '#F7DAEF',
-							},
-							paleblue: {
-								DEFAULT: '#C0D8F4',
-							},
-							palegreen: {
-								DEFAULT: '#E3F9D6',
-							},
-							default: {
-								DEFAULT: '#d5d2d7',
-							},
-						},
-					},
-				},
-				{
-					name: 'orga-scheme',
-					extend: {
-						colors: {
-							red: {
-								DEFAULT: '#D04425',
-							},
-							cyan: {
-								DEFAULT: '#00B9FF',
-							},
-							blue: {
-								DEFAULT: '#3A25FF',
-								200: '#EEEAFF',
-							},
-							black: {
-								DEFAULT: '#000',
-							},
-						},
-					},
-				},
-				{
-					name: 'white-scheme',
-					extend: {
-						colors: {
-							primary: {
-								DEFAULT: '#fff',
-							},
-							black: {
-								DEFAULT: '#fff',
-							},
-						},
-					},
-				},
-				{
-					name: 'default-scheme',
-					extend: {
-						colors: {
-							primary: {
-								DEFAULT: '#000068',
-							},
-							black: {
-								DEFAULT: 'black',
-							},
-						},
-					},
-				},
-			],
 		}),
 	],
 };

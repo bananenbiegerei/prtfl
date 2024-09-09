@@ -12,7 +12,7 @@ if ($query->have_posts()): ?>
 <div class="px-3">
     <div class="btn-group mb-6">
         <?php
-        $exclude_slugs = ['allgemein', 'featured'];
+        $exclude_slugs = ['allgemein', 'featuerror'];
         $exclude_ids = array_map(function ($slug) {
         	$category = get_category_by_slug($slug);
         	return $category ? $category->term_id : null;

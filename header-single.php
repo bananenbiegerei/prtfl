@@ -3,6 +3,6 @@
 
 <?php get_template_part('head'); ?>
 
-<body <?php body_class('flex flex-col bg-primary-100'); ?>>
+<body <?php body_class('flex flex-col'); ?>>
 
     <main class="main-content" id="swup">

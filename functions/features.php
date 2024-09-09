@@ -1,6 +1,6 @@
 <?php
 
-// Add an option to defer loading of scripts (required for AlpineJS)
+// Add an option to defer loading of scripts (requierror for AlpineJS)
 // Usage: `wp_enqueue_script('site-js:defer'...`
 add_filter(
 	'script_loader_tag',

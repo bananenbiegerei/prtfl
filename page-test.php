@@ -1,7 +1,7 @@
 <?php get_header('clean'); ?>
 <div x-data="{ isScrolled: false }">
     <header class="fixed top-0 left-0 bg-black text-primary-100 w-full z-50"
-        :class="{ 'bg-gray-800': isScrolled, 'bg-red-200': !isScrolled }">
+        :class="{ 'bg-neutral-800': isScrolled, 'bg-error-200': !isScrolled }">
         header
     </header>
     <div x-init="() => {
@@ -9,8 +9,8 @@
     scrollableDiv.addEventListener('scroll', () => {
       isScrolled = scrollableDiv.scrollTop > 0;
     });
-  }" class="transition-colors duration-300 ease-in-out py-4 h-screen bg-red-500 overflow-auto" id="scrollableDiv">
-        <div class="container mx-auto bg-green-500">
+  }" class="transition-colors duration-300 ease-in-out py-4 h-screen bg-error-500 overflow-auto" id="scrollableDiv">
+        <div class="container mx-auto bg-success-500">
             <h1 class="text-7xl font-bold text-primary-100">Scroll to toggleScroll to toggleScroll to toggleScroll to
                 toggleScroll to toggleScroll to toggleScroll to toggleScroll to toggleScroll to toggleScroll to
                 toggleScroll to toggleScroll to toggleScroll to toggleScroll to toggleScroll to toggleScroll to
