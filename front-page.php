@@ -1,4 +1,4 @@
-<?php get_header(); ?>
+<?php get_header('front'); ?>
 <?php while (have_posts()):
 	the_post(); ?>
 

@@ -1,36 +1,50 @@
-<header class="hidden lg:block fixed top-0 left-0 w-screen z-50 transition ease-in-out duration-300 h-auto py-2 px-4 bg-primary"
-    :class="{ '-translate-y-full': isScrolled, 'translate-y-0': !isScrolled }">
+<header
+    class="hidden lg:block fixed top-0 left-0 w-screen z-50 transition ease-in-out duration-300 h-auto py-2 px-4 bg-primary rounded-b-abcd shadow-bb-custom"
+    x-data="{ isScrolled: false }" x-init="window.addEventListener('scroll', () => {
+            isScrolled = window.scrollY > 10;
+        })" :class="{ 'bg-red-500': isScrolled }">
     <div class="flex">
-    <div class="flex-1">
-    <?php if (!is_front_page()) : ?>
-    <h1 class="text-lg">
-        abcd<span class="font-logotype">.works</span>
-    </h1>
-    <?php endif; ?>
-    </div>
-    <div class="flex items-end flex-col">
-        <div class="flex gap-2">
-        <div class="text-base flex">
-                <a class="btn btn-ghost btn-sm" href="mailto:hallo@bananenbiegerei.de">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-                        <path fill="currentColor"
-                            d="M16 2A11.013 11.013 0 0 0 5 13a10.889 10.889 0 0 0 2.216 6.6s.3.395.349.452L16 30l8.439-9.953c.044-.053.345-.447.345-.447l.001-.003A10.885 10.885 0 0 0 27 13A11.013 11.013 0 0 0 16 2m0 15a4 4 0 1 1 4-4a4.005 4.005 0 0 1-4 4" />
-                        <circle cx="16" cy="13" r="4" fill="none" />
-                    </svg>
-                </a>
-                <a class="btn btn-ghost btn-sm" href="mailto:hallo@bananenbiegerei.de">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-                        <path fill="currentColor"
-                            d="M28 6H4a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h24a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2Zm-2.2 2L16 14.78L6.2 8ZM4 24V8.91l11.43 7.91a1 1 0 0 0 1.14 0L28 8.91V24Z" />
-                    </svg>
-                </a>
-                <a class="btn btn-ghost btn-sm" href="">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-                        <path fill="currentColor"
-                            d="m20.33 21.48l2.24-2.24a2.19 2.19 0 0 1 2.34-.48l2.73 1.09a2.18 2.18 0 0 1 1.36 2v5A2.17 2.17 0 0 1 26.72 29C7.59 27.81 3.73 11.61 3 5.41A2.17 2.17 0 0 1 5.17 3H10a2.16 2.16 0 0 1 2 1.36l1.09 2.73a2.16 2.16 0 0 1-.47 2.34l-2.24 2.24s1.29 8.73 9.95 9.81Z" />
-                    </svg>
-                </a>
-                <!-- <div class="flex bg-black text-primary-100 rounded-xl px-1">
+        <div class="flex-1">
+            <?php if (!is_front_page()) : ?>
+            <div class="text-lg">
+                <span class="sr-only">accessible beautiful custom digital.works</span>
+                <span aria-hidden="true">abcd<span class="font-logotype">.works</span></span>
+            </div>
+            <h1 class="mt-10" :class="{ 'hidden': isScrolled }">
+                <?php the_title(); ?>
+            </h1>
+            <?php endif; ?>
+        </div>
+        <div class="flex items-end flex-col">
+            <div class="flex gap-2">
+                <div class="flex">
+                    <a class="btn btn-ghost btn-sm" href="mailto:hallo@bananenbiegerei.de">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M14 3H2C1.73478 3 1.48043 3.10536 1.29289 3.29289C1.10536 3.48043 1 3.73478 1 4V12C1 12.2652 1.10536 12.5196 1.29289 12.7071C1.48043 12.8946 1.73478 13 2 13H14C14.2652 13 14.5196 12.8946 14.7071 12.7071C14.8946 12.5196 15 12.2652 15 12V4C15 3.73478 14.8946 3.48043 14.7071 3.29289C14.5196 3.10536 14.2652 3 14 3ZM12.9 4L8 7.39L3.1 4H12.9ZM2 12V4.455L7.715 8.41C7.7987 8.46806 7.89813 8.49918 8 8.49918C8.10187 8.49918 8.2013 8.46806 8.285 8.41L14 4.455V12H2Z"
+                                fill="black" />
+                        </svg>
+
+                    </a>
+                    <a class="btn btn-ghost btn-sm" href="mailto:hallo@bananenbiegerei.de">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M8 9C7.50555 9 7.0222 8.85338 6.61108 8.57868C6.19995 8.30397 5.87952 7.91353 5.6903 7.45671C5.50108 6.99989 5.45157 6.49723 5.54804 6.01228C5.6445 5.52732 5.8826 5.08187 6.23223 4.73223C6.58187 4.3826 7.02732 4.1445 7.51228 4.04804C7.99723 3.95157 8.4999 4.00108 8.95671 4.1903C9.41353 4.37952 9.80397 4.69995 10.0787 5.11108C10.3534 5.5222 10.5 6.00555 10.5 6.5C10.4992 7.1628 10.2356 7.79822 9.76689 8.26689C9.29822 8.73556 8.6628 8.99921 8 9ZM8 5C7.70333 5 7.41332 5.08797 7.16665 5.2528C6.91997 5.41762 6.72771 5.65189 6.61418 5.92598C6.50065 6.20007 6.47095 6.50167 6.52882 6.79264C6.5867 7.08361 6.72956 7.35088 6.93934 7.56066C7.14912 7.77044 7.41639 7.9133 7.70737 7.97118C7.99834 8.02906 8.29994 7.99935 8.57403 7.88582C8.84812 7.77229 9.08238 7.58003 9.24721 7.33336C9.41203 7.08668 9.5 6.79667 9.5 6.5C9.4996 6.1023 9.34144 5.721 9.06022 5.43978C8.779 5.15856 8.3977 5.0004 8 5Z"
+                                fill="black" />
+                            <path
+                                d="M8 15L3.782 10.0255C3.72339 9.95081 3.66539 9.87564 3.608 9.8C2.88786 8.8507 2.49866 7.69155 2.5 6.5C2.5 5.04131 3.07947 3.64236 4.11092 2.61091C5.14237 1.57946 6.54131 1 8 1C9.45869 1 10.8576 1.57946 11.8891 2.61091C12.9205 3.64236 13.5 5.04131 13.5 6.5C13.5012 7.69098 13.1122 8.84954 12.3925 9.7985L12.392 9.8C12.392 9.8 12.242 9.997 12.2195 10.0235L8 15ZM4.4065 9.1975C4.4065 9.1975 4.523 9.3515 4.5495 9.3845L8 13.454L11.455 9.379C11.477 9.3515 11.594 9.1965 11.5945 9.196C12.1831 8.42057 12.5012 7.47352 12.5 6.5C12.5 5.30653 12.0259 4.16193 11.182 3.31802C10.3381 2.47411 9.19348 2 8 2C6.80653 2 5.66194 2.47411 4.81802 3.31802C3.97411 4.16193 3.5 5.30653 3.5 6.5C3.49877 7.47415 3.81723 8.42179 4.4065 9.1975Z"
+                                fill="black" />
+                        </svg>
+                    </a>
+                    <a class="btn btn-ghost btn-sm" href="">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M12.9999 14.5H12.9149C3.08988 13.935 1.69488 5.645 1.49988 3.115C1.48417 2.91829 1.50742 2.72041 1.56832 2.53271C1.62921 2.345 1.72654 2.17115 1.85474 2.02113C1.98293 1.8711 2.13947 1.74784 2.31538 1.65842C2.4913 1.569 2.68313 1.51516 2.87988 1.5H5.63488C5.83516 1.49981 6.03088 1.55976 6.1967 1.67208C6.36251 1.78441 6.49078 1.94394 6.56488 2.13L7.32488 4C7.39806 4.18177 7.41621 4.38104 7.3771 4.57305C7.33799 4.76505 7.24333 4.94134 7.10488 5.08L6.03988 6.155C6.20624 7.10037 6.65897 7.97183 7.33683 8.65148C8.01468 9.33112 8.88495 9.78615 9.82988 9.955L10.9149 8.88C11.0556 8.74308 11.2336 8.65063 11.4265 8.61417C11.6195 8.57771 11.8189 8.59887 11.9999 8.675L13.8849 9.43C14.0681 9.50644 14.2245 9.63571 14.334 9.80134C14.4435 9.96696 14.5013 10.1614 14.4999 10.36V13C14.4999 13.3978 14.3418 13.7794 14.0605 14.0607C13.7792 14.342 13.3977 14.5 12.9999 14.5ZM2.99988 2.5C2.86727 2.5 2.74009 2.55268 2.64633 2.64645C2.55256 2.74022 2.49988 2.86739 2.49988 3V3.04C2.72988 6 4.20488 13 12.9699 13.5C13.0356 13.5041 13.1014 13.4951 13.1636 13.4737C13.2259 13.4522 13.2832 13.4187 13.3325 13.375C13.3817 13.3314 13.4218 13.2784 13.4506 13.2192C13.4793 13.16 13.4961 13.0957 13.4999 13.03V10.36L11.6149 9.605L10.1799 11.03L9.93988 11C5.58988 10.455 4.99988 6.105 4.99988 6.06L4.96988 5.82L6.38988 4.385L5.63988 2.5H2.99988Z"
+                                fill="black" />
+                        </svg>
+
+                    </a>
+                    <!-- <div class="flex bg-black text-primary-100 rounded-xl px-1">
                         <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
                             <path fill="currentColor"
                                 d="M25 12h-5v2h5a1 1 0 0 1 1 1v2h-4a3.003 3.003 0 0 0-3 3v1a3.003 3.003 0 0 0 3 3h6v-9a3.003 3.003 0 0 0-3-3zm-3 10a1 1 0 0 1-1-1v-1a1 1 0 0 1 1-1h4v3zm-6 2h2L12 7h-2L4 24h2l1.694-5h6.613zm-7.629-7l2.497-7.371h.266L13.63 17z" />
@@ -47,26 +61,43 @@
                             </svg>
                         </button>
                     </div> -->
-            </div>
-            <div class="flex items-baseline gap-1">
-                <span>
-                member of
-                </span>
-            <a class="underline" href="https://codingcircle.net/" rel="me">
-                 coding circle
-            </a>
-            </div>
-        </div>
-            <nav>
-                <?php wp_nav_menu([
-                	'theme_location' => 'top',
-                	'container' => false,
-                	'items_wrap' => '<ul class="menu horizontal">%3$s</ul>',
-                	'link_before' => '<span class="text-lg">',
-                	'link_after' => '</span>',
-                ]); ?>
-            </nav>
+                </div>
+                <div class="flex items-center gap-1 text-sm">
+                    <span>
+                        member of
+                    </span>
+                    <a class="underline" href="https://codingcircle.net/" rel="me">
+                        coding circle
+                    </a>
+                </div>
+                <div>
+                    <button @click="isScrolled = !isScrolled" class="btn btn-ghost btn-sm">
+                        menu
+                        <span class="text-base">
+                            <svg class="hidden" :class="{ '!block': isScrolled }" width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M2 3H14V4H2V3ZM2 12H14V13H2V12ZM2 6H14V7H2V6ZM2 9H14V10H2V9Z" fill="black" />
+                            </svg>
+                            <svg class="block" :class="{ 'hidden': isScrolled }" width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M8.707 8L12 4.707L11.293 4L8 7.293L4.707 4L4 4.707L7.293 8L4 11.293L4.707 12L8 8.707L11.293 12L12 11.293L8.707 8Z"
+                                    fill="black" />
+                            </svg>
+                        </span>
+                    </button>
 
-    </div>
+                </div>
+            </div>
+            <nav class="mt-4 block mr-3" :class="{ 'hidden': isScrolled }">
+                <?php wp_nav_menu([
+                        'theme_location' => 'top',
+                        'container' => false,
+                        'items_wrap' => '<ul class="menu right">%3$s</ul>',
+                        'link_before' => '<span class="text-lg">',
+                        'link_after' => '</span>',
+                    ]); ?>
+            </nav>
+        </div>
     </div>
 </header>

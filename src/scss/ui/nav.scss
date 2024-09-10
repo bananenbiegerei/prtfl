@@ -1,5 +1,5 @@
 .menu {
-	@apply flex flex-col;
+	@apply flex flex-col leading-tight;
 	&.horizontal {
 		@apply flex flex-row items-stretch lg:items-start gap-2 lg:gap-3;
 	}

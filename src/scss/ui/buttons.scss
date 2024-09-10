@@ -16,7 +16,7 @@
 	}
 
 	&.btn-xs {
-		@apply px-1.5 py-0.5 text-sm;
+		@apply px-1.5 py-0.5 text-xs;
 
 		svg {
 			@apply icon-xs;
@@ -24,7 +24,7 @@
 	}
 
 	&.btn-sm {
-		@apply px-1.5 py-0.5 text-base lg:px-2 lg:py-0.5 lg:text-base;
+		@apply px-1.5 py-0.5 text-sm lg:px-2 lg:py-0.5 lg:text-sm;
 
 		svg {
 			@apply icon-sm;

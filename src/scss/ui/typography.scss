@@ -1,6 +1,6 @@
 // some old artiles are styled with strong tag
 body * {
-	@apply lowercase;
+	@apply lowercase font-normal;
 }
 h1,
 h2,
@@ -8,7 +8,7 @@ h3,
 h4,
 h5,
 h6 {
-	@apply leading-tight mb-0 font-medium;
+	@apply leading-tight mb-0 font-normal;
 }
 
 h1,

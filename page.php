@@ -3,7 +3,6 @@
 	the_post(); ?>
 <div class="container mt-36">
     <div class="max-w-4xl">
-        <h1><?php the_title(); ?></h1>
         <?php the_content(); ?>
     </div>
 </div>

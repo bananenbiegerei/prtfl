@@ -8,14 +8,14 @@ module.exports = {
 	theme: {
 		// Helper pixel to rem calc: https://nekocalc.com/de/px-zu-rem-umrechner
 		fontSize: {
-			xs: '0.625rem',
-			sm: '0.875rem',
+			xs: '0.75rem',
+			sm: '0.75rem',
 			base: '1rem',
 			lg: '1.5rem',
 			xl: '2rem',
-			'2xl': '2.25rem',
-			'3xl': '2.25rem',
-			'4xl': '2.25rem',
+			'2xl': '6.25rem',
+			'3xl': '6.25rem',
+			'4xl': '6.25rem',
 			'7xl': '6.25rem',
 		},
 
@@ -53,6 +53,9 @@ module.exports = {
 			height: {
 				'single-full-header': 'calc(100vh - 5rem)', //  = h-16 + p-2*2
 			},
+			borderRadius: {
+				'abcd': '32px',
+			},
 		},
 	},
 	corePlugins: {
@@ -66,20 +69,19 @@ module.exports = {
 				extend: {
 					colors: {
 						primary: {
-							50: '#fdffe7',
-							100: '#f9ffc1',
-							200: '#f8ff86',
-							300: '#fbff41',
-							400: '#fff80d',
-							500: '#ffea00',
-							DEFAULT: '#ffea00',
-							600: '#d1ae00',
-							700: '#a67d02',
-							800: '#89610a',
-							900: '#744f0f',
-							950: '#442a04',
+							50: '#f5ffe4',
+							100: '#e8ffc4',
+							200: '#d1ff90',
+							300: '#b0ff50',
+							400: '#94ff23',
+							DEFAULT: '#94ff23',
+							500: '#70e600',
+							600: '#55b800',
+							700: '#408b00',
+							800: '#356d07',
+							900: '#2e5c0b',
+							950: '#143400',
 						},
-
 						secondary: {
 							50: '#f7f7f7',
 							DEFAULT: '#f7f7f7',
