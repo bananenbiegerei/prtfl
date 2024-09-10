@@ -25,6 +25,7 @@
         <?php get_template_part( 'template-parts/cta'); ?>
     </div>
 </footer>
+</div><!-- x-data init container -->
 <?php wp_footer(); ?>
 </body>
 

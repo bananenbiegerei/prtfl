@@ -1,4 +1,4 @@
-<div class="flex gap-1">
+<div class="flex">
 <a class="btn btn-ghost btn-sm" href="mailto:hallo@bananenbiegerei.de">
     <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path
@@ -24,7 +24,7 @@
     </svg>
 
 </a>
-<div class="flex items-center gap-1 text-sm">
+<div class="flex items-center gap-1 text-sm ml-2">
     <span>
         member of
     </span>

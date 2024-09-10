@@ -12,7 +12,7 @@ module.exports = {
 			sm: '0.75rem',
 			base: '1rem',
 			lg: '1.5rem',
-			xl: '2rem',
+			xl: '2.75rem',
 			'2xl': '6.25rem',
 			'3xl': '6.25rem',
 			'4xl': '6.25rem',
@@ -51,7 +51,9 @@ module.exports = {
 				'bb-custom': '0px 0px 15px 0px rgba(0, 0, 0, 0.14)',
 			},
 			height: {
-				'single-full-header': 'calc(100vh - 5rem)', //  = h-16 + p-2*2
+				'single-full-header': 'calc(100vh - 5rem)',
+				'desktop-header': '222px',
+				'mobile-header': '71px',
 			},
 			borderRadius: {
 				'abcd': '32px',
