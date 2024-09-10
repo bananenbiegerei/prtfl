@@ -43,12 +43,12 @@
                 </button>
             </div>
             <div class="flex flex-wrap justify-end">
-                <div class="block transition-all duration-300" :class="{ 'hidden': isScrolled }">
+                <div class="opacity-100 transition-all duration-300" :class="{ '!opacity-0': isScrolled }">
                     <?php get_template_part( 'template-parts/cta'); ?>
                 </div>
             </div>
 
-            <div class="flex items-end transition-all duration-300" :class="{ 'hidden': isScrolled }">
+            <div class="flex items-end">
                 <?php if (!is_front_page()) : ?>
                 <h1>
                     <?php the_title(); ?>
