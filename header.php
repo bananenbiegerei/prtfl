@@ -3,7 +3,7 @@
 
 <?php get_template_part('head'); ?>
 
-<body <?php body_class('flex flex-col'); ?>>
+<body <?php body_class('flex min-h-screen flex-col justify-between'); ?>>
     <?php get_template_part('template-parts/header-inner-desktop'); ?>
     <?php //get_template_part('template-parts/header-inner-mobile'); ?>
 
