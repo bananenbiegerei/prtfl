@@ -1,5 +1,8 @@
 </main>
-<footer class="bg-primary p-4 flex flex-col justify-between rounded-t-abcd min-h-[160px]">
+<footer class="flex w-full">
+<div class="transform scale-y-[-1]">
+        <?php get_template_part('template-parts/wing'); ?>
+    </div>    <div class="flex-1 bg-primary p-4 flex flex-col justify-between rounded-t-abcd min-h-[160px]">
     <div class="flex gap-2">
         <div class="flex-1">
             <p>
@@ -23,6 +26,10 @@
         <?php get_template_part( 'template-parts/logo'); ?>
         </div>
         <?php get_template_part( 'template-parts/cta'); ?>
+    </div>
+    </div>
+    <div class="transform scale-x-[-1] scale-y-[-1]">
+        <?php get_template_part('template-parts/wing'); ?>
     </div>
 </footer>
 </div><!-- x-data init container -->

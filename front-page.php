@@ -5,7 +5,7 @@
 <?php if (have_rows('columns')): ?>
 <?php while (have_rows('columns')):
 	the_row(); ?>
-<div class="flex scrollers h-screen transition ease-in-out duration-300">
+<div class="flex scrollers h-screen transition ease-in-out duration-300 px-6">
     <?php if (have_rows('left_column')): ?>
     <div class="scroller overflow-auto h-screen hide-scrollbar px-3 w-2/3 ">
         <?php if (is_single()) { ?>

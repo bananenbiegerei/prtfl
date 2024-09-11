@@ -1,10 +1,8 @@
 <?php get_header(); ?>
 <?php while (have_posts()):
 	the_post(); ?>
-<div class="container">
-    <div class="max-w-4xl">
-        <?php the_content(); ?>
-    </div>
+<div class="p-12">
+    <?php the_content(); ?>
 </div>
 <?php
 endwhile; ?>
