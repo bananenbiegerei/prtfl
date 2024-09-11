@@ -1,4 +1,4 @@
-<?php get_header(); ?>
+<?php get_header('front'); ?>
 <?php while (have_posts()):
 	the_post(); ?>
 
@@ -42,12 +42,7 @@
     </div>
     <?php endif; ?>
     <?php if (have_rows('right_column')): ?>
-    <div class="scroller overflow-auto h-screen w-1/3 px-3" x-init="() => {
-    const scrollableDiv = document.getElementById('scrollableDiv');
-    scrollableDiv.addEventListener('scroll', () => {
-      isScrolled = scrollableDiv.scrollTop > 0;
-    });
-  }" id="scrollableDiv">
+    <div class="scroller overflow-auto h-screen w-1/3 px-3" id="scrollableDiv">
 
         <?php while (have_rows('right_column')):
         	the_row(); ?>
