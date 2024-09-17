@@ -60,6 +60,9 @@ module.exports = {
 			borderRadius: {
 				abcd: '32px',
 			},
+			lineHeight: {
+				'abcd': '1.15',
+			}
 		},
 	},
 	corePlugins: {

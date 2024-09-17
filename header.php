@@ -9,5 +9,5 @@
         isScrolled = window.scrollY > 10;
     })">
         <?php get_template_part('template-parts/header-inner'); ?>
-        <div class="h-desktop-header"></div>
+        <div class="h-mobile-header sm:h-desktop-header"></div>
         <main class="main-content flex-1 transition-fade" id="swup">
