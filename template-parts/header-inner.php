@@ -27,12 +27,12 @@
         </div>
         <div class="sm:flex items-end block opacity-100 transition-all duration-30"
             :class="{ '!opactiy-0 ': isScrolled }">
-            <nav class="mt-2 sm:mt-4 block flex-1 sm:order-2">
+            <nav class="mt-2 mb-2 sm:mt-4 block flex-1 sm:order-2">
                 <?php wp_nav_menu([
                         'theme_location' => 'top',
                         'container' => false,
                         'items_wrap' => '<ul class="flex gap-2 sm:gap-0 sm:flex-col leading-tight items-end">%3$s</ul>',
-                        'link_before' => '<span class="text-lg">',
+                        'link_before' => '<span class="sm:text-lg">',
                         'link_after' => '</span>',
                     ]); ?>
             </nav>

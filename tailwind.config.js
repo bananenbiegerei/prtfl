@@ -11,7 +11,7 @@ module.exports = {
 			xs: '0.75rem',  // 12px
 			sm: '0.75rem',  // 12px
 			base: '1rem',   // 16px
-			lg: '1.25rem',   // 20px
+			lg: '1.375rem',   // 22px
 			xl: '2.75rem',  // 44px
 			'2xl': '6.25rem', // 100px
 			'3xl': '6.25rem', // 100px
@@ -54,7 +54,7 @@ module.exports = {
 				'single-full-header': 'calc(100vh - 5rem)',
 				'desktop-header': '222px',
 				'desktop-header-collapsed': '70px',
-				'mobile-header': '175px',
+				'mobile-header': '152px',
 				'mobile-header-collapsed': '52px',
 			},
 			borderRadius: {
