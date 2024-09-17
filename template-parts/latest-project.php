@@ -8,15 +8,14 @@ $args = array(
 $latest_project_query = new WP_Query($args);
 if ($latest_project_query->have_posts()) :
     while ($latest_project_query->have_posts()) : $latest_project_query->the_post();
+    $konstellation = get_post_meta(get_the_ID(), 'konstellation', true);
 ?>
-    <div class="mb-12">
-        <h2 class="text-neutral-500 mb-2"><?php _e('latest project', BB_TEXT_DOMAIN); ?></h2>
-        <?php
-        if (has_post_thumbnail()) {
-            echo get_the_post_thumbnail(get_the_ID(), 'full', array('class' => 'rounded-[32px] shadow-lg w-full h-auto border border-neutral-200'));
-        }
-        ?>
+<div class="px-12 flex justify-end">
+    <div class="basis-2/3">
+        <h2 class="mb-2"><?php _e('latest project', BB_TEXT_DOMAIN); ?></h2>
+        <?php include locate_template('template-parts/card.php');?>
     </div>
+</div>
 <?php
     endwhile;
     wp_reset_postdata();

@@ -1,8 +1,6 @@
-<div class="h-0 relative">
-</div>
 <header
-    class="relative sticky top-0 w-full z-50 transition-all duration-300 overflow-hidden flex bg-transparent"
-    :class="{ '': isScrolled }">
+    class="fixed top-0 w-full z-50 transition-all duration-300 overflow-hidden flex bg-transparent h-desktop-header"
+    :class="{ 'h-mobile-header': isScrolled }">
     <?php get_template_part( 'template-parts/wing'); ?>
     <div class="flex-1 flex-col flex p-4 pr-6 bg-primary rounded-b-abcd">
         <div class="flex justify-between items-center">
@@ -29,7 +27,7 @@
             </div>
         </div>
 
-        <div class="flex items-end block" :class="{ '!hidden': isScrolled }">
+        <div class="flex items-end block opacity-100 transition-all duration-30" :class="{ '!opactiy-0 ': isScrolled }">
             <?php if (!is_front_page()) : ?>
             <h1>
                 <?php the_title(); ?>

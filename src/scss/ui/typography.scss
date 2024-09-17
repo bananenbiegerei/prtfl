@@ -1,6 +1,6 @@
 // some old artiles are styled with strong tag
 body * {
-	@apply lowercase font-normal;
+	@apply font-normal;
 }
 h1,
 h2,
@@ -84,4 +84,7 @@ abbr {
 
 cite {
 	@apply not-italic;
+}
+sup {
+	@apply text-[0.33em] -top-[1.5em] bg-black text-white px-2 rounded-full border border-black hover:cursor-pointer;
 }

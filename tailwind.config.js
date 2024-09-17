@@ -56,7 +56,7 @@ module.exports = {
 				'mobile-header': '71px',
 			},
 			borderRadius: {
-				'abcd': '32px',
+				abcd: '32px',
 			},
 		},
 	},
@@ -127,7 +127,7 @@ module.exports = {
 							900: '#910a3d',
 						},
 						neutral: {
-							50: '#f7f7f7',
+							50: '#F2F2F7',
 							100: '#DCDCDC',
 							200: '#c8c8c8',
 							300: '#a4a4a4',
@@ -180,6 +180,29 @@ module.exports = {
 					},
 				},
 			},
+			themes: [
+				{
+					name: 'yellow-theme',
+					extend: {
+						colors: {
+							primary: {
+								50: '#EBEAE6',
+								100: '#f5ffc1',
+								200: '#efff86',
+								300: '#efff41',
+								400: '#f6ff0d',
+								500: '#fffb00',
+								DEFAULT: '#fffb00',
+								600: '#d1bc00',
+								700: '#a68802',
+								800: '#896a0a',
+								900: '#74560f',
+								950: '#442f04',
+							},
+						},
+					},
+				},
+			],
 		}),
 	],
 };
