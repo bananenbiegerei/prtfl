@@ -12,7 +12,7 @@ module.exports = {
 			sm: '0.75rem',  // 12px
 			base: '1rem',   // 16px
 			lg: '1.375rem',   // 22px
-			xl: '2.75rem',  // 44px
+			xl: '2.25rem',  // 36px
 			'2xl': '6.25rem', // 100px
 			'3xl': '6.25rem', // 100px
 			'4xl': '6.25rem', // 100px
@@ -55,7 +55,7 @@ module.exports = {
 				'desktop-header': '222px',
 				'desktop-header-collapsed': '70px',
 				'mobile-header': '152px',
-				'mobile-header-collapsed': '52px',
+				'mobile-header-collapsed': '45px',
 			},
 			borderRadius: {
 				abcd: '32px',
