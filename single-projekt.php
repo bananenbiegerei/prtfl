@@ -31,8 +31,8 @@
 
         </div>
     </div>
-    <div class="grid grid-cols-12 gap-6 md:h-single-full-header overflow-hidden p-4">
-        <div class="col-span-4 md:col-span-2">
+    <div class="grid grid-cols-12 gap-6 sm:h-single-full-header overflow-hidden p-4">
+        <div class="col-span-4 sm:col-span-2">
             <div class="swiper mobile-gallery h-screen relative pl-2">
                 <div class="swiper-pagination"></div>
                 <div class="swiper-wrapper">
@@ -50,7 +50,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-span-12 md:col-span-6">
+        <div class="col-span-12 sm:col-span-6">
             <div class="swiper desktop-gallery h-screen relative pl-2">
                 <div class="swiper-pagination"></div>
                 <div class="swiper-wrapper">
@@ -68,7 +68,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-span-8 md:col-span-4">
+        <div class="col-span-8 sm:col-span-4">
             <div class="swiper tablet-gallery h-screen relative pl-2">
                 <div class="swiper-pagination"></div>
                 <div class="swiper-wrapper">

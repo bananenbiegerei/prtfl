@@ -8,15 +8,15 @@ module.exports = {
 	theme: {
 		// Helper pixel to rem calc: https://nekocalc.com/de/px-zu-rem-umrechner
 		fontSize: {
-			xs: '0.75rem',
-			sm: '0.75rem',
-			base: '1rem',
-			lg: '1.5rem',
-			xl: '2.75rem',
-			'2xl': '6.25rem',
-			'3xl': '6.25rem',
-			'4xl': '6.25rem',
-			'7xl': '6.25rem',
+			xs: '0.75rem',  // 12px
+			sm: '0.75rem',  // 12px
+			base: '1rem',   // 16px
+			lg: '1.25rem',   // 20px
+			xl: '2.75rem',  // 44px
+			'2xl': '6.25rem', // 100px
+			'3xl': '6.25rem', // 100px
+			'4xl': '6.25rem', // 100px
+			'7xl': '6.25rem', // 100px
 		},
 
 		fontFamily: {
@@ -53,7 +53,9 @@ module.exports = {
 			height: {
 				'single-full-header': 'calc(100vh - 5rem)',
 				'desktop-header': '222px',
-				'mobile-header': '71px',
+				'desktop-header-collapsed': '70px',
+				'mobile-header': '175px',
+				'mobile-header-collapsed': '52px',
 			},
 			borderRadius: {
 				abcd: '32px',

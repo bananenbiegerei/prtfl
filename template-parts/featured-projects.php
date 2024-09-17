@@ -21,6 +21,13 @@ if ($latest_project_query->have_posts()) : ?>
     <?php include locate_template('template-parts/card.php');?>
     <?php
     endwhile; ?>
+    <a href="<?php echo esc_url(get_permalink(1879)); ?>"
+        class="bg-black text-white flex items-center justify-center rounded-abcd transform-gpu hover:scale-[1.025] transition duration-500 flex gap-4 hover:gap-8">
+        <?php _e('View All Projects', BB_TEXT_DOMAIN); ?> <svg xmlns="http://www.w3.org/2000/svg" width="1.5em"
+            height="1.5em" viewBox="0 0 32 32">
+            <path fill="currentColor" d="m18 6l-1.43 1.393L24.15 15H4v2h20.15l-7.58 7.573L18 26l10-10z" />
+        </svg>
+    </a>
 </div>
 <?php wp_reset_postdata();
 else :

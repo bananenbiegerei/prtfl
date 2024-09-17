@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 <div class="container">
-	<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+	<div class="grid grid-cols-1 sm:grid-cols-2 sm:grid-cols-4 gap-8 mb-8">
 		<!-- @EL Please add Pagination -->
 		<?php while (have_posts()):
   	the_post();
@@ -36,9 +36,9 @@
 			<!-- Current: "z-10 bg-accent-50 border-accent-500 text-accent-600", Default: "bg-white border-primary-300 text-primary-500 hover:bg-primary-100" -->
 			<a href="#" aria-current="page" class="relative z-10 inline-flex items-center border border-accent-500 bg-accent-50 px-4 py-2 text-sm font-medium text-accent-600 focus:z-20">1</a>
 			<a href="#" class="relative inline-flex items-center border border-primary-300 bg-white px-4 py-2 text-sm font-medium text-primary-500 hover:bg-primary-100 focus:z-20">2</a>
-			<a href="#" class="relative hidden items-center border border-primary-300 bg-white px-4 py-2 text-sm font-medium text-primary-500 hover:bg-primary-100 focus:z-20 md:inline-flex">3</a>
+			<a href="#" class="relative hidden items-center border border-primary-300 bg-white px-4 py-2 text-sm font-medium text-primary-500 hover:bg-primary-100 focus:z-20 sm:inline-flex">3</a>
 			<span class="relative inline-flex items-center border border-primary-300 bg-white px-4 py-2 text-sm font-medium text-primary-700">...</span>
-			<a href="#" class="relative hidden items-center border border-primary-300 bg-white px-4 py-2 text-sm font-medium text-primary-500 hover:bg-primary-100 focus:z-20 md:inline-flex">8</a>
+			<a href="#" class="relative hidden items-center border border-primary-300 bg-white px-4 py-2 text-sm font-medium text-primary-500 hover:bg-primary-100 focus:z-20 sm:inline-flex">8</a>
 			<a href="#" class="relative inline-flex items-center border border-primary-300 bg-white px-4 py-2 text-sm font-medium text-primary-500 hover:bg-primary-100 focus:z-20">9</a>
 			<a href="#" class="relative inline-flex items-center border border-primary-300 bg-white px-4 py-2 text-sm font-medium text-primary-500 hover:bg-primary-100 focus:z-20">10</a>
 			<a href="#" class="relative inline-flex items-center rounded-r-md border border-primary-300 bg-white px-2 py-2 text-sm font-medium text-primary-500 hover:bg-primary-100 focus:z-20">

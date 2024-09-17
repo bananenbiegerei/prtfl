@@ -12,7 +12,7 @@
     </div>
     <div class="basis-1/2">
         <h2 class="text-neutral-400">what we do not do</h2>
-        <ul class="space-y-4 list-disc list-inside leading-tight text-lg lg:text-xl">
+        <ul class="space-y-4 list-disc list-inside leading-tight text-lg sm:text-xl">
             <li>take ourselfs too seriously</li>
             <li>Work for Assholescause we are working with you.</li>
             <li>Work for freeValue deserves payment. Your investment drives results.</li>

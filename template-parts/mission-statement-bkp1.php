@@ -1,6 +1,6 @@
 <div class="bg-white rounded-abcd p-24" x-data="{ open1: false, open2: false, open3: false, res1: false }">
     <div class="flex gap-4">
-        <div class="basis-2/3 space-y-4">
+        <div class="basis-2/3">
             <div>
                 <p class="text-xl">
                     <?php _e('We are a <sup x-on:click="res1 = !res1">1</sup>human network of people realizing websites and all kinds of digital products. Solid, reliable, scalable, flexible. After ten years in the business, we know what we are doing, and on top of that, we know what we are not doing. That’s how we keep enjoying our work while earning our income. Don’t hesitate to contact us; we love working with people.', BB_TEXT_DOMAIN); ?>

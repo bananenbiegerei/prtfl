@@ -1,14 +1,14 @@
 <div class=" flex flex-col">
         <div class="flex-1 flex flex-col justify-end">
-            <div class=" text-neutral-500 text-base">
+            <div class="text-neutral-500 text-lg">
                 <?php the_date() ?>
             </div>
             <a class="pl-8" href="<?php the_permalink();?>">
-                <h2 class="text-base"><?php the_title(); ?></h2>
+                <h2 class="text-lg"><?php the_title(); ?></h2>
             </a>
-            <p class="pl-8 text-neutral-500 text-base"><?= $konstellation; ?></p>
+            <p class="pl-8 text-neutral-500 text-lg"><?= $konstellation; ?></p>
         </div>
-        <a class="relative hover:scale-105 transition" href="<?php the_permalink();?>">
+        <a class="relative transform-gpu hover:scale-[1.025] transition duration-500" href="<?php the_permalink();?>">
             <div class="aspect-w-4 aspect-h-3">
                     <?php
                     if (has_post_thumbnail()) {
@@ -16,7 +16,7 @@
                     }
                     ?>
             </div>
-            <div class="absolute top-0 left-0 h-full bg-gradient-to-t from-black/10 to-transparent rounded-abcd w-full z-20 transition hover:from-black/50 hover:transition">
+            <div class="absolute top-0 left-0 h-full bg-gradient-to-t from-black to-transparent rounded-abcd w-full z-20 transition-opacity duration-500 opacity-25 hover:opacity-80">
             </div>
         </a>
     </div>

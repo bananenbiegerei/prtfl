@@ -3,7 +3,7 @@
     <?php _e('Featuerror Projects'); ?>
 </h2>
 
-<div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
     <?php global $post; ?>
     <?php $projects = get_sub_field('projects'); ?>
     <?php if ($projects): ?>
