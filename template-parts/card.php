@@ -1,12 +1,12 @@
 <div class=" flex flex-col">
         <div class="flex-1 flex flex-col justify-end">
-            <div class="text-neutral-500 text-lg">
+            <div class="text-neutral-500 text-base sm:text-lg">
                 <?php the_date() ?>
             </div>
             <a class="pl-8" href="<?php the_permalink();?>">
-                <h2 class="text-lg"><?php the_title(); ?></h2>
+                <h2 class="text-base sm:text-lg"><?php the_title(); ?></h2>
             </a>
-            <p class="pl-8 text-neutral-500 text-lg"><?= $konstellation; ?></p>
+            <p class="pl-8 text-neutral-500 text-base sm:text-lg"><?= $konstellation; ?></p>
         </div>
         <a class="relative transform-gpu hover:scale-[1.025] transition duration-500" href="<?php the_permalink();?>">
             <div class="aspect-w-4 aspect-h-3">

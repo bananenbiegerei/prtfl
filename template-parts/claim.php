@@ -1,4 +1,4 @@
-<div class="flex flex-col space-y-64 sm:flex-row gap-4 px-12">
+<div class="flex flex-col space-y-4 sm:flex-row gap-4 px-12">
     <div class="basis-1/3">
         <h2 class="text-xl sm:text-7xl leading-none max-w-xl flex flex-col space-y-2">
             <span class=""><?php _e('accessible', BB_TEXT_DOMAIN); ?></span>

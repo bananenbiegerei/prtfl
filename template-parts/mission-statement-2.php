@@ -1,6 +1,6 @@
 <div class="flex gap-4" x-show="open1" x-transition>
     <div class="basis-2/3">
-    <p class="text-xl">
+    <p class="text-lg sm:text-xl">
         <?php _e('Please be aware that we produce — figuratively speaking — tailor-made suits. No wobbly H&M stuff. As our name suggests, we consider Accessibility, Beauty, Customization, and the Digital nature of our products. Since the start of our professional work, we have collected data on how long it takes to build a website. It is still surprising to us that it is so labor-intensive. But at least we are realistic.', BB_TEXT_DOMAIN); ?>
     </p>
     <button class="btn btn-ghost btn-secondary" x-on:click="open2 = !open2">
