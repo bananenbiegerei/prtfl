@@ -1,7 +1,8 @@
-<header class="fixed top-0 w-full z-50 transition-all duration-300 overflow-hidden flex bg-transparent h-mobile-header sm:h-desktop-header"
+<header
+    class="fixed top-0 w-full z-50 transition-all duration-300 overflow-hidden flex bg-transparent h-mobile-header sm:h-desktop-header"
     :class="{ '!h-mobile-header-collapsed sm:!h-desktop-header-collapsed': isScrolled }">
     <?php get_template_part( 'template-parts/wing'); ?>
-    <div class="flex-1 flex-col flex space-y-2 py-2 px-4 sm:p-4 pr-6 bg-primary rounded-b-abcd">
+    <div class="flex-1 flex-col flex py-2 px-4 sm:p-3 pr-6 bg-primary rounded-b-abcd">
         <div class="flex justify-between items-center">
             <?php get_template_part( 'template-parts/logo'); ?>
             <button @click="isScrolled = !isScrolled" class="btn btn-ghost btn-sm -mr-2">
@@ -20,29 +21,11 @@
                 </span>
             </button>
         </div>
-        <div class="sm:flex flex-wrap justify-end block" :class="{ '!hidden': isScrolled }">
-            <div class="opacity-100 transition-all duration-300" :class="{ '!opacity-0': isScrolled }">
-                <?php get_template_part( 'template-parts/cta'); ?>
-            </div>
+        <div class="sm:flex flex-wrap justify-end items-center transition-all duration-300 opacity-100" :class="{ 'opacity-0': isScrolled }">
+            <?php get_template_part( 'template-parts/cta'); ?>
         </div>
-        <div class="sm:flex items-end block opacity-100 transition-all duration-30"
-            :class="{ '!opactiy-0 ': isScrolled }">
-            <nav class="mt-2 mb-2 sm:mt-4 block flex-1 sm:order-2">
-                <?php wp_nav_menu([
-                        'theme_location' => 'top',
-                        'container' => false,
-                        'items_wrap' => '<ul class="flex gap-2 sm:gap-0 sm:flex-col leading-tight items-end">%3$s</ul>',
-                        'link_before' => '<span class="sm:text-lg">',
-                        'link_after' => '</span>',
-                    ]); ?>
-            </nav>
-            <?php if (!is_front_page()) : ?>
-            <h1 class="sm:order-1">
-                <?php the_title(); ?>
-            </h1>
-            <?php else : ?>
-            <h1 class="sm:order-1"><?php _e('Hello.', BB_TEXT_DOMAIN); ?></h1>
-            <?php endif; ?>
+        <div class="sm:flex items-end opacity-100 transition-all duration-300" :class="{ 'opacity-0': isScrolled }">
+            <?php get_template_part( 'template-parts/nav'); ?>
         </div>
     </div>
     <div class="transform scale-x-[-1]">

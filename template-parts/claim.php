@@ -1,17 +1,17 @@
-<div class="flex flex-col space-y-4 sm:flex-row gap-4 px-12">
+<div class="flex flex-col space-y-4 gap-12 md:gap-24 sm:flex-row  px-12 py-12">
     <div class="basis-1/3">
-        <h2 class="text-xl sm:text-7xl leading-none max-w-xl flex flex-col space-y-2">
+        <h1 class="text-xl sm:text-3xl lg:text-4xl xl:text-7xl leading-abcd max-w-xl flex flex-col">
             <span class=""><?php _e('accessible', BB_TEXT_DOMAIN); ?></span>
             <span class="self-end"><?php _e('beautiful', BB_TEXT_DOMAIN); ?></span>
             <span class="self-center"><?php _e('custom', BB_TEXT_DOMAIN); ?></span>
             <span class="self-end"><?php _e('digital', BB_TEXT_DOMAIN); ?></span>
             <span class="font-logotype">.works</span>
-        </h2>
+        </h1>
     </div>
 
     <div class="flex items-end justify-start basis-2/3">
-        <h3 class="text-xl sm:text-7xl text-right">
+        <h2 class="text-xl sm:text-3xl lg:text-4xl xl:text-7xl leading-abcd text-right">
             <?php _e('We help you realise your webproject', BB_TEXT_DOMAIN); ?>
-        </h3>
+        </h2>
     </div>
 </div>

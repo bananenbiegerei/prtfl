@@ -7,8 +7,8 @@ if (has_post_thumbnail()) {
 ?>
 <a class="relative block shadow-bb-custom rounded-xl overflow-hidden group" href="<?php the_permalink(); ?>">
     <?= $thumb; ?>
-    <div class="absolute bottom-0 w-full h-full left-0 bg-gradient-to-t from-black/100 to-transparent p-4 flex items-end rounded-xl group-hover:to-primary">
-        <h3 class="mb-0 text-lg text-white">
+    <div class="absolute bottom-0 w-full h-full left-0 bg-gradient-to-t from-black/100 to-transparent p-2 flex items-end rounded-xl group-hover:to-black/30 transition">
+        <h3 class="mb-0 text-base text-white">
             <?php the_title(); ?>
         </h3>
     </div>

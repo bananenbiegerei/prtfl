@@ -1,7 +1,7 @@
 .swiper {
 	.swiper-button-prev,
 	.swiper-button-next {
-		@apply relative top-auto mt-0 text-primary w-10 h-10 rounded-full;
+		@apply relative top-auto mt-0 text-black w-auto h-10 rounded-full after:content-none;
 	}
 
 	.swiper-button-prev {
@@ -29,5 +29,7 @@
 			@apply bg-black h-full;
 		}
 	}
-
+	.swiper-pagination.swiper-pagination-fraction.swiper-pagination-horizontal {
+		@apply relative flex items-center top-0 left-0;
+	}
 }

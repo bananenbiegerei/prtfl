@@ -25,7 +25,7 @@
             </svg>
         </a>
     </div>
-    <div class="sm:flex items-center gap-1 text-sm ml-2 leading-none">
+    <div class="flex items-center gap-1 text-sm ml-2 leading-none">
         <span>
             member of
         </span>

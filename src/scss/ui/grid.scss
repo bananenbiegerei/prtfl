@@ -1,6 +1,6 @@
 .container {
-	@apply max-w-screen-2xl mx-auto;
+	@apply max-w-6xl mx-auto;
 }
-.container-fuid {
-	@apply max-w-full mx-auto px-3;
+.container-fluid {
+	@apply w-full px-10;
 }

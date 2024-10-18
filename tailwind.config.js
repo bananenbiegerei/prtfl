@@ -4,19 +4,23 @@ module.exports = {
 		{
 			pattern: /text-neutral-(50|100|200|300|400|500|600|700|800|900)/,
 		},
+		{
+            pattern: /rotate-(15|30|45|60|75|90|105|120|135|150|165|180|195|210|225|240|255|270|285|300|315|330|345)/,
+        },
 	],
 	theme: {
 		// Helper pixel to rem calc: https://nekocalc.com/de/px-zu-rem-umrechner
 		fontSize: {
-			xs: '0.75rem',  // 12px
-			sm: '0.75rem',  // 12px
-			base: '1rem',   // 16px
-			lg: '1.375rem',   // 22px
-			xl: '2.25rem',  // 36px
-			'2xl': '6.25rem', // 100px
-			'3xl': '6.25rem', // 100px
-			'4xl': '6.25rem', // 100px
-			'7xl': '6.25rem', // 100px
+			xs: '0.75rem', // 12px
+			sm: '0.75rem', // 12px
+			base: '1rem', // 16px
+			lg: '1.375rem', // 22px
+			xl: '2.25rem', // 36px
+			'2xl': '2.25rem', // 36px
+			'3xl': '3.25rem', // 52px
+			'4xl': '4.25rem', // 68px
+			'5xl': '5.25rem', // 84px
+			'6xl': '6.25rem', // 100px
 		},
 
 		fontFamily: {
@@ -52,8 +56,8 @@ module.exports = {
 			},
 			height: {
 				'single-full-header': 'calc(100vh - 5rem)',
-				'desktop-header': '222px',
-				'desktop-header-collapsed': '70px',
+				'desktop-header': '230px',
+				'desktop-header-collapsed': '60px',
 				'mobile-header': '152px',
 				'mobile-header-collapsed': '45px',
 			},
@@ -61,8 +65,33 @@ module.exports = {
 				abcd: '32px',
 			},
 			lineHeight: {
-				'abcd': '1.15',
-			}
+				abcd: '1.15',
+			},
+			rotate: {
+				15: '15deg',
+				30: '30deg',
+				45: '45deg',
+				60: '60deg',
+				75: '75deg',
+				90: '90deg',
+				105: '105deg',
+				120: '120deg',
+				135: '135deg',
+				150: '150deg',
+				165: '165deg',
+				180: '180deg',
+				195: '195deg',
+				210: '210deg',
+				225: '225deg',
+				240: '240deg',
+				255: '255deg',
+				270: '270deg',
+				285: '285deg',
+				300: '300deg',
+				315: '315deg',
+				330: '330deg',
+				345: '345deg',
+			},
 		},
 	},
 	corePlugins: {
