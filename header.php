@@ -3,7 +3,7 @@
 
 <?php get_template_part('head'); ?>
 
-<body <?php body_class('yellow-theme bg-primary-50'); ?>>
+<body <?php body_class('lime-theme'); ?>>
     <div class="flex min-h-screen flex-col justify-between" x-data="{ isScrolled: false }" x-init="
     window.addEventListener('scroll', () => {
         isScrolled = window.scrollY > 10;

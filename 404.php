@@ -5,7 +5,7 @@ get_header(); ?>
 	  <a href="/" class="inline-flex">
 		<span class="sr-only">Your Company</span>
 		<svg class="h-16 w-auto" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-		<circle cx="20" cy="20" r="20" fill="black"/>
+		<circle cx="20" cy="20" r="20" fill="currentColor"/>
 		</svg>
 	  </a>
 	</div>

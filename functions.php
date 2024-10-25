@@ -15,8 +15,8 @@ require_once get_template_directory() . '/functions/enqueue-scripts.php';
 require_once get_template_directory() . '/functions/menu.php';
 
 // Custom posts and taxonomies, edit as needed
-// require_once(get_template_directory().'/functions/custom-posts.php');
-// require_once(get_template_directory().'/functions/custom-taxonomies.php');
+require_once(get_template_directory().'/functions/custom-posts.php');
+require_once(get_template_directory().'/functions/custom-taxonomies.php');
 
 // Define image sizes
 require_once get_template_directory() . '/functions/image-sizes.php';
