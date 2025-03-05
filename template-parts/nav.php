@@ -1,12 +1,3 @@
-<nav class="mt-2 mb-2 sm:mt-4 block flex-1 sm:order-2">
-    <?php wp_nav_menu([
-                        'theme_location' => 'top',
-                        'container' => false,
-                        'items_wrap' => '<ul class="flex gap-2 sm:gap-0 sm:flex-col leading-tight items-end">%3$s</ul>',
-                        'link_before' => '<span class="sm:text-lg hover:bg-primary-50 px-2 rounded-full transition">',
-                        'link_after' => '</span>',
-                    ]); ?>
-</nav>
 <?php if (!is_front_page()) : ?>
 <div class="sm:order-1 flex items-baseline gap-4">
     <h1>
@@ -26,3 +17,12 @@
 <?php else : ?>
 <h1 class="sm:order-1"><?php _e('Hello.', BB_TEXT_DOMAIN); ?></h1>
 <?php endif; ?>
+<nav class="mt-2 mb-2 sm:mt-4 block flex-1 sm:order-2">
+    <?php wp_nav_menu([
+                        'theme_location' => 'top',
+                        'container' => false,
+                        'items_wrap' => '<ul class="flex gap-2 sm:gap-0 sm:flex-col leading-tight items-end">%3$s</ul>',
+                        'link_before' => '<span class="sm:text-lg hover:bg-primary-50 px-2 rounded-full transition">',
+                        'link_after' => '</span>',
+                    ]); ?>
+</nav>

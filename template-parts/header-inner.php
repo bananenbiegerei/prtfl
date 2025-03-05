@@ -21,10 +21,10 @@
                 </span>
             </button>
         </div>
-        <div class="sm:flex flex-wrap justify-end items-center transition-all duration-300 opacity-100" :class="{ 'opacity-0': isScrolled }">
+        <div class="sm:flex flex-wrap justify-end items-center transition-all duration-300 opacity-100 transition-all duration-300" :class="{ '!opacity-0': isScrolled }">
             <?php get_template_part( 'template-parts/cta'); ?>
         </div>
-        <div class="sm:flex items-end opacity-100 transition-all duration-300" :class="{ 'opacity-0': isScrolled }">
+        <div class="sm:flex items-end opacity-100 transition-all duration-300" :class="{ '!opacity-0': isScrolled }">
             <?php get_template_part( 'template-parts/nav'); ?>
         </div>
     </div>

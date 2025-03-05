@@ -1,6 +1,6 @@
-<div class="flex flex-col space-y-4 gap-12 md:gap-24 sm:flex-row  px-12 py-12 text-accent">
+<div class="relative top-0 left-0 mt-desktop-header-height rounded-b-abcd flex flex-col space-y-4 gap-12 md:gap-24 sm:flex-row  px-12 py-12 text-accent claim pt-mobile-header md:pt-[230px]">
     <div class="basis-1/3">
-        <h1 class="text-[clamp(1rem,5vw,10rem)] leading-abcd max-w-xl flex flex-col">
+        <h1 class="text-[clamp(2rem,5vw,10rem)] leading-abcd max-w-xl flex flex-col">
             <span class=""><?php _e('accessible', BB_TEXT_DOMAIN); ?></span>
             <span class="self-end"><?php _e('beautiful', BB_TEXT_DOMAIN); ?></span>
             <span class="self-center"><?php _e('custom', BB_TEXT_DOMAIN); ?></span>
@@ -10,7 +10,7 @@
     </div>
 
     <div class="flex items-end justify-start basis-2/3">
-        <h2 class="text-[clamp(1rem,5vw,10rem)] leading-abcd text-right">
+        <h2 class="text-[clamp(2rem,5vw,10rem)] leading-abcd text-right">
             <?php _e('We help you realise your webproject', BB_TEXT_DOMAIN); ?>
         </h2>
     </div>
