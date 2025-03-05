@@ -12,7 +12,7 @@ if ($latest_project_query->have_posts()) :
 ?>
 <div class="px-6 sm:px-12 sm:flex justify-center">
     <div class="container">
-        <h2 class="mb-2 bg-primary text-accent py-2 px-4 rounded-xl animate-bounce inline-block"><?php _e('latest project', BB_TEXT_DOMAIN); ?></h2>
+        <h2 class="mb-2 bg-primary text-accent py-2 px-4 rounded-xl inline-block"><?php _e('latest project', BB_TEXT_DOMAIN); ?></h2>
         <?php include locate_template('template-parts/card.php');?>
     </div>
 </div>

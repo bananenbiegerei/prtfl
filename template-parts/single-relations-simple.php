@@ -34,12 +34,15 @@ $item_count = 0;
 $rotation = 0;
 if ($related_projects->have_posts()) : ?>
 <section>
-    <div class="border rounded-xl border-dotted p-4 pb-20 group">
-        <h2 class="text-sm"><?php _e('Andere Projekte für: ', BB_TEXT_DOMAIN) ?> <?= $client_title ?></h2>
-        <ul class="list-inside">
+    <div class="group">
+        <h2 class="text-sm mb-4"><?php _e('Andere Projekte für: ', BB_TEXT_DOMAIN) ?> <?= $client_title ?></h2>
+        <ul class="list-inside grid grid-cols-3 gap-4">
             <?php while ($related_projects->have_posts()) : $related_projects->the_post(); ?>
-            <li class="">
-                <h3 class="mb-0 text-base md:text-lg">
+            <li class="flex gap-2 mb-2 bg-gray-100 p-2 rounded-lg">
+                <?php if (has_post_thumbnail()) {
+                echo get_the_post_thumbnail(get_the_ID(), 'two-columns', array('class' => 'rounded-lg max-w-[70px]'));
+                } ?>
+                <h3 class="mb-0 text-base">
                     <?php the_title(); ?>
                 </h3>
             </li>

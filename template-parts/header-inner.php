@@ -1,8 +1,8 @@
 <header
     class="fixed top-0 w-full z-50 transition-all duration-300 overflow-hidden flex bg-transparent h-mobile-header sm:h-desktop-header text-accent"
     :class="{ '!h-mobile-header-collapsed sm:!h-desktop-header-collapsed': isScrolled }">
-    <?php get_template_part( 'template-parts/wing'); ?>
-    <div class="flex-1 flex flex-wrap py-2 px-4 sm:p-3 pr-6 bg-primary rounded-b-abcd">
+    <?php // get_template_part( 'template-parts/wing'); ?>
+    <div class="flex-1 flex flex-wrap py-2 px-4 sm:p-3 pr-6 bg-primary rounded-b-lg mx-1">
         <div class="basis-full">
             <div class="flex justify-between items-center">
                 <?php get_template_part( 'template-parts/logo'); ?>
@@ -31,6 +31,6 @@
         </div>
     </div>
     <div class="transform scale-x-[-1]">
-        <?php get_template_part( 'template-parts/wing'); ?>
+        <?php // get_template_part( 'template-parts/wing'); ?>
     </div>
 </header>

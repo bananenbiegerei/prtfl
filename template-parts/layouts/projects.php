@@ -1,5 +1,5 @@
 <?php if (get_row_layout() == 'projects'): ?>
-<h2 class="text-neutral-300 mb-2">
+<h2 class="mb-2">
     <?php _e('Featuerror Projects'); ?>
 </h2>
 

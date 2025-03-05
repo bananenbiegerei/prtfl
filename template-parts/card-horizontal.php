@@ -14,22 +14,18 @@
     </a>
     </div>
     <header class="basis-3/12 flex flex-col gap-2">
-        <div class="text-neutral-300 text-base sm:text-lg">
+        <div class="text-base sm:text-lg">
             <?php the_date() ?>
         </div>
-        <a class="pl-8" href="<?php the_permalink();?>">
+        <a href="<?php the_permalink();?>">
             <h2 class="text-base sm:text-lg"><?php the_title(); ?></h2>
         </a>
-        <div>
-        <a class="btn" href="<?php the_permalink();?>">
-            <?php _e('view', BB_TEXT_DOMAIN); ?>
-        </a>
+        <div class="basis-3/12 space-y-2">
+            <?php get_template_part( 'template-parts/single-taxonomies'); ?>
+            <?php get_template_part( 'template-parts/single-metas'); ?>
         </div>
     </header>
-    <div class="basis-3/12 space-y-2">
-    <?php get_template_part( 'template-parts/single-taxonomies'); ?>
-    <?php get_template_part( 'template-parts/single-metas'); ?>
-    </div>
+
     <div class="basis-5/12">
     <?php get_template_part( 'template-parts/single-relations-simple'); ?>
     </div>

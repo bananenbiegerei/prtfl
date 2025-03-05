@@ -1,4 +1,4 @@
-<div class="relative top-0 left-0 mt-desktop-header-height rounded-b-abcd flex flex-col space-y-4 gap-12 md:gap-24 sm:flex-row  px-8 py-12 bg-accent text-primary XXXclaim pt-mobile-header md:pt-[230px]">
+<div class="relative top-0 left-0 mt-desktop-header-height rounded-b-lg flex flex-col space-y-4 gap-12 md:gap-24 sm:flex-row  px-8 py-12 bg-accent text-primary XXXclaim pt-mobile-header md:pt-[230px]">
     <div class="basis-1/3">
         <h1 class="text-[clamp(2rem,5vw,10rem)] leading-abcd max-w-xl flex flex-col">
             <span class=""><?php _e('accessible', BB_TEXT_DOMAIN); ?></span>

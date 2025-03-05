@@ -1,9 +1,9 @@
 </main>
-<footer class="flex w-full">
+<footer class="flex w-full px-1 mt-1">
 <div class="transform scale-y-[-1]">
-        <?php get_template_part('template-parts/wing'); ?>
+        <?php // get_template_part('template-parts/wing'); ?>
     </div>
-    <div class="flex-1 bg-primary p-4 flex flex-col justify-between rounded-t-abcd sm:min-h-[160px]">
+    <div class="flex-1 bg-accent text-primary p-4 flex flex-col justify-between rounded-t-lg sm:min-h-[160px]">
     <div class="sm:flex gap-2">
         <div class="flex-1">
             <p class="mb-0">
@@ -30,7 +30,7 @@
     </div>
     </div>
     <div class="transform scale-x-[-1] scale-y-[-1]">
-        <?php get_template_part('template-parts/wing'); ?>
+        <?php // get_template_part('template-parts/wing'); ?>
     </div>
 </footer>
 </div><!-- x-data init container -->
