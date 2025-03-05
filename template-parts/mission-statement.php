@@ -1,4 +1,4 @@
-<div id="mission-statement" class="bg-white rounded-abcd p-12 sm:p-24">
+<div id="mission-statement" class="container">
     <!-- Swiper -->
     <div class="swiper">
         <div class="flex gap-4 items-center">
@@ -11,17 +11,14 @@
             </div>
         </div>
         <div class="swiper-wrapper">
-            <div class="swiper-slide">
+            <div class="swiper-slide w-2/3">
                 <?php get_template_part( 'template-parts/mission-statement-1'); ?>
             </div>
-            <div class="swiper-slide">
+            <div class="swiper-slide w-2/3">
                 <?php get_template_part( 'template-parts/mission-statement-2'); ?>
             </div>
-            <div class="swiper-slide">
+            <div class="swiper-slide w-2/3">
                 <?php get_template_part( 'template-parts/mission-statement-3'); ?>
-            </div>
-            <div class="swiper-slide">
-                <?php get_template_part( 'template-parts/mission-statement-4'); ?>
             </div>
         </div>
     </div>

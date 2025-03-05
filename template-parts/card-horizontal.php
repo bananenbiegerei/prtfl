@@ -14,7 +14,7 @@
     </a>
     </div>
     <header class="basis-3/12 flex flex-col gap-2">
-        <div class="text-neutral-500 text-base sm:text-lg">
+        <div class="text-neutral-300 text-base sm:text-lg">
             <?php the_date() ?>
         </div>
         <a class="pl-8" href="<?php the_permalink();?>">

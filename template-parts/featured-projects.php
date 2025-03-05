@@ -14,7 +14,7 @@ $args = array(
 );
 $latest_project_query = new WP_Query($args);
 if ($latest_project_query->have_posts()) : ?>
-<div class="px-6 sm:px-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 pb-48">
+<div class="px-6 sm:px-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 pb-48">
     <?php while ($latest_project_query->have_posts()) : $latest_project_query->the_post();
     $konstellation = get_post_meta(get_the_ID(), 'konstellation', true);
 ?>

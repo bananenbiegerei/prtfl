@@ -88,3 +88,6 @@ cite {
 sup {
 	@apply text-[0.33em] -top-[1.5em] bg-black text-white px-2 rounded-full border border-black hover:cursor-pointer;
 }
+em {
+	@apply bg-primary px-1 pr-2;
+}

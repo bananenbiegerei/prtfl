@@ -112,7 +112,7 @@ var swiper_mobile = new Swiper('.mobile-gallery', {
 
 var swiper_mobile = new Swiper('#mission-statement .swiper', {
     slidesPerView: 1,
-    spaceBetween: 0,
+    spaceBetween: 60,
     pagination: {
         el: '.swiper-pagination',
         type: 'fraction',
@@ -122,5 +122,22 @@ var swiper_mobile = new Swiper('#mission-statement .swiper', {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
     },
-    autoHeight: true,
+    autoHeight: false,
+    autoplay: {
+        delay: 3000,
+        disableOnInteraction: true,
+    },
+    speed: 5000,
+    // effect: "coverflow",
+    //   grabCursor: true,
+    //   centeredSlides: true,
+    //   slidesPerView: "auto",
+    //   coverflowEffect: {
+    //     rotate: 70,
+    //     stretch: 0,
+    //     depth: 100,
+    //     modifier: 1,
+    //     slideShadows: false,
+    //   },
+    //   loop: false,
 });
