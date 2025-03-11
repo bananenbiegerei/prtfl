@@ -1,17 +1,17 @@
-<div class="flex gap-8 py-8">
+<div class="flex gap-8 py-8 isotope-item w-full <?= $category_classes; ?>">
     <div class="basis-2/12">
-    <a class="max-w-44 h-auto relative transform-gpu hover:scale-[1.025] transition duration-500"
-        href="<?php the_permalink();?>">
-        <div class="aspect-w-4 aspect-h-3">
-            <?php if (has_post_thumbnail()) {
-                        echo get_the_post_thumbnail(get_the_ID(), 'large', array('class' => 'rounded-abcd shadow-lg w-full h-full object-cover mb-4 realtive z-10'));
+        <a class="max-w-44 h-auto relative transform-gpu transition duration-500"
+            href="<?php the_permalink();?>">
+            <div class="aspect-w-4 aspect-h-3">
+                <?php if (has_post_thumbnail()) {
+                        echo get_the_post_thumbnail(get_the_ID(), 'large', array('class' => 'rounded-xl shadow-abcd w-full h-full object-cover mb-4 realtive z-10'));
                     }
             ?>
-        </div>
-        <div
-            class="absolute top-0 left-0 h-full bg-gradient-to-t from-black to-transparent rounded-abcd w-full z-20 transition-opacity duration-500 opacity-25 hover:opacity-80">
-        </div>
-    </a>
+            </div>
+            <div
+                class="absolute top-0 left-0 h-full bg-gradient-to-t from-black to-transparent rounded-xl w-full z-20 transition-opacity duration-500 opacity-25 hover:opacity-80">
+            </div>
+        </a>
     </div>
     <header class="basis-3/12 flex flex-col gap-2">
         <div class="text-base sm:text-lg">
@@ -27,6 +27,6 @@
     </header>
 
     <div class="basis-5/12">
-    <?php get_template_part( 'template-parts/single-relations-simple'); ?>
+        <?php get_template_part( 'template-parts/single-relations-simple'); ?>
     </div>
 </div>

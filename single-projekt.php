@@ -1,4 +1,4 @@
-<?php get_header('single'); ?>
+<?php get_header(); ?>
 <article class="container-fluid grid grid-cols-12 gap-4 pt-12">
     <div class="col-span-8">
         <?php get_template_part('template-parts/swiper-desktop-gallery'); ?>

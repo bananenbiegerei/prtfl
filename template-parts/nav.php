@@ -8,7 +8,7 @@
     <?php endif; */ ?>
     <?php if ( get_field('link_to_website') ) : ?>
     <a href="<?php echo get_field('link_to_website'); ?>" target="_blank"
-        class="btn btn-outline btn-xs h-6"><?php _e('Website', BB_TEXT_DOMAIN); ?> <svg
+        class="!border-accent !text-accent -translate-y-2 !bg-primary btn btn-outline btn-xs h-6"><?php _e('Website', BB_TEXT_DOMAIN); ?> <svg
             xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 32 32">
             <path fill="currentColor" d="M10 6v2h12.59L6 24.59L7.41 26L24 9.41V22h2V6z" />
         </svg></a>
@@ -22,7 +22,7 @@
                         'theme_location' => 'top',
                         'container' => false,
                         'items_wrap' => '<ul class="flex gap-2 sm:gap-0 sm:flex-col leading-tight items-end">%3$s</ul>',
-                        'link_before' => '<span class="sm:text-lg hover:bg-primary-50 px-2 rounded-full transition">',
+                        'link_before' => '<span class="sm:text-lg border border-transparent hover:border hover:border-accent px-2 rounded-full transition">',
                         'link_after' => '</span>',
                     ]); ?>
 </nav>
