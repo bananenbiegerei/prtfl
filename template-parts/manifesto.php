@@ -1,5 +1,5 @@
-<div class="bg-neutral-50 p-12 mx-10 rounded-abcd">
-<div class="flex gap-8 rounded-abcd">
+<div class="bg-neutral-50 p-12 mx-10 rounded-lg">
+<div class="flex gap-8 rounded-lg">
     <div class="basis-1/2">
         <h2 class="text-neutral-400">what we do</h2>
         <h3>take our work seriously</h3>

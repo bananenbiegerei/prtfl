@@ -1,4 +1,4 @@
-<div class="bg-white rounded-abcd p-24" x-data="{ open1: false, open2: false, open3: false, res1: false }">
+<div class="bg-white rounded-lg p-24" x-data="{ open1: false, open2: false, open3: false, res1: false }">
     <div class="flex gap-4">
         <div class="basis-2/3">
             <div>

@@ -52,7 +52,7 @@ module.exports = {
             boxShadow: {
                 'custom-accent-ring': '0 0 10px 2px rgba(237, 137, 54, 1), 0 0 0 2px rgba(237, 137, 54, 1)',
                 'text-stroke': '0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black',
-                'abcd': '0px 0px 20px 10px rgba(0, 0, 0, 0.1)',
+                'abcd': '0px 0px 16px 10px rgba(0, 0, 0, 0.07)',
             },
             height: {
                 'single-full-header': 'calc(100vh - 5rem)',

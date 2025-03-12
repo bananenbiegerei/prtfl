@@ -1,4 +1,4 @@
-<div class="rounded-abcd overflow-hidden shadow-abcd bg-white">
+<div class="rounded-lg overflow-hidden shadow-abcd bg-white">
 <div class="swiper desktop-gallery">
 <div class="text-xs flex justify-center border-b mb-0 items-center">
     <div class="flex gap-2 items-center">

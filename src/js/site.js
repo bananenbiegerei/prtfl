@@ -141,3 +141,8 @@ var swiper_mobile = new Swiper('#mission-statement .swiper', {
     //   },
     //   loop: false,
 });
+
+var swiper_related_projects = new Swiper('.related-projects-swiper', {
+    effect: "cards",
+    grabCursor: true,
+});
