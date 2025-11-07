@@ -2,7 +2,7 @@
     <div class="flex gap-4">
         <div class="basis-2/3">
             <div>
-                <p class="text-lg sm:text-xl">
+                <p class="mb-0">
                     <?php _e('We are a <sup x-on:click="res1 = !res1">1</sup>human network of people realizing websites and all kinds of digital products. Solid, reliable, scalable, flexible. After ten years in the business, we know what we are doing, and on top of that, we know what we are not doing. That’s how we keep enjoying our work while earning our income. Don’t hesitate to contact us; we love working with people.', BB_TEXT_DOMAIN); ?>
                 </p>
                 <button class="btn btn-ghost btn-secondary" x-on:click="open1 = !open1">
@@ -16,7 +16,7 @@
                 </button>
             </div>
             <div x-show="open1" x-transition>
-                <p class="text-lg sm:text-xl">
+                <p class="mb-0">
                     <?php _e('Please be aware that we produce — figuratively speaking — tailor-made suits. No wobbly H&M stuff. As our name suggests, we consider Accessibility, Beauty, Customization, and the Digital nature of our products. Since the start of our professional work, we have collected data on how long it takes to build a website. It is still surprising to us that it is so labor-intensive. But at least we are realistic.', BB_TEXT_DOMAIN); ?>
                 </p>
                 <button class="btn btn-ghost btn-secondary" x-on:click="open2 = !open2">
@@ -29,7 +29,7 @@
                 </button>
             </div>
             <div x-show="open2" x-transition>
-                <p class="text-lg sm:text-xl">
+                <p class="mb-0">
                     <?php _e('Use us as a partner to help you figure out what you need and how to achieve that. It’s 2024; there are plenty of tools out there that can help you make a website. But that doesn’t mean the website will make sense or help you! These factors are outside the scope of technologies and visual appearance. That’s where we are really effective, with the time and skills to build those concepts.', BB_TEXT_DOMAIN); ?>
                 </p>
                 <button class="btn btn-ghost btn-secondary" x-on:click="open3 = !open3">
@@ -43,7 +43,7 @@
                 </button>
             </div>
             <div x-show="open3" x-transition>
-                <p class="text-lg sm:text-xl">
+                <p class="mb-0">
                     <?php _e('Yes, we do a lot of website projects with WordPress. That doesn’t mean we are restricted to that technology! It just means we know it very well, and quite frankly, that is the most frequent reason developers diss other technologies. Also, we want to give the buzzword "network" real meaning. We work as a network because we want to work as freely as possible. No agency lifestyle, no overhead, no being forced to work crazy hours for some kind of boss. Yes, we live with the disadvantage of clients thinking we can’t deliver the work they need because of the stories agencies have told them over the years. We believe our work speaks for itself.', BB_TEXT_DOMAIN); ?>
                 </p>
                 <button class="btn btn-ghost btn-secondary" x-on:click="open1 = false; open2 = false; open3 = false">

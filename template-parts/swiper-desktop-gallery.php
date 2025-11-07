@@ -1,6 +1,6 @@
 <div class="rounded-lg overflow-hidden shadow-abcd bg-white">
 <div class="swiper desktop-gallery">
-<div class="text-xs flex justify-center border-b mb-0 items-center">
+<div class="text-xs flex justify-center border-b mb-0 items-center bg-neutral-900 text-neutral-100 border-neutral-900">
     <div class="flex gap-2 items-center">
     <svg class="h-10 w-10" xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 32 32">

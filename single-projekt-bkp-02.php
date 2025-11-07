@@ -13,10 +13,10 @@
         </div>
         <div class="basis-1/3">
             <div class="relative">
-                <?php get_template_part( 'template-parts/single-taxonomies'); ?>
-                <?php get_template_part( 'template-parts/single-metas'); ?>
-                <?php get_template_part( 'template-parts/single-client'); ?>
-                <?php get_template_part( 'template-parts/single-related-projects'); ?>
+                <?php get_template_part( 'template-parts/project-taxonomies'); ?>
+                <?php get_template_part( 'template-parts/project-metas'); ?>
+                <?php get_template_part( 'template-parts/project-client'); ?>
+                <?php get_template_part( 'template-parts/project-related-projects'); ?>
             </div>
         </div>
     </div>

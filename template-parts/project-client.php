@@ -4,7 +4,7 @@
 	<?php setup_postdata( $post ); ?>
     <div>
 	<p class="text-xs mb-0 italic"><?php _e('Client:', BB_TEXT_DOMAIN) ?></p>
-	<h3 class="text-sm"><?php the_title(); ?></h3>
+	<h3 class="text-sm max-w-[200px]"><?php the_title(); ?></h3>
 	</div>
 	<?php wp_reset_postdata(); ?>
 <?php endif; ?>

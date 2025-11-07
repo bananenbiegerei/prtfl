@@ -1,6 +1,6 @@
 <div class="sm:flex gap-4" x-data="{ res1: true, res2: false, res3: false }">
     <div class="basis-2/3">
-        <p class="text-lg sm:text-xl">
+        <p class="mb-0">
             <?php _e("We are a human <span class='hyphens-none inline-block'>network<sup x-on:click='res1 = !res1; res2 = false; res3 = false' :class=\"{ 'bg-white text-black': res1 }\">1</sup></span> of people realizing websites and all kinds of digital products. Reliable, scalable and specialized in their domain. After ten years in the business, we know what we are <span class='hyphens-none inline-block'>doing <sup x-on:click='res2 = !res2; res1 = false; res3 = false' :class=\"{ 'bg-white text-black': res2 }\">2</sup>,</span> and we know what we are not <span class='hyphens-none inline-block'>doing <sup x-on:click='res3 = !res3; res1 = false; res2 = false' :class=\"{ 'bg-white text-black': res3 }\">3</sup>.</span> That’s how we keep enjoying our work while earning our income. Don’t hesitate to contact us; we love working with people.", BB_TEXT_DOMAIN); ?>
         </p>
     </div>

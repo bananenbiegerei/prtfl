@@ -1,6 +1,6 @@
 <div class="rounded-lg overflow-hidden shadow-abcd bg-white">
     <div class="swiper tablet-gallery h-auto relative">
-    <div class="text-xs flex justify-center p-2 border-b mb-0 gap-2 items-center">
+    <div class="text-xs flex justify-center p-2 border-b mb-0 gap-2 items-center bg-neutral-900 text-neutral-100 border-neutral-900">
         <div>
         <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 32 32">
             <path fill="currentColor" d="M19 24v2h-6v-2z" />

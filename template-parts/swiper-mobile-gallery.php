@@ -1,6 +1,6 @@
 <div class="bg-white shadow-abcd rounded-lg overflow-hidden">
     <div class="swiper mobile-gallery">
-        <div class="text-xs flex mb-0 justify-center border-b gap-2 items-center p-2">
+        <div class="text-xs flex mb-0 justify-center border-b gap-2 items-center p-2 bg-neutral-900 text-neutral-100 border-neutral-900">
             <div>
                 <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 32 32">
                     <path fill="currentColor"
