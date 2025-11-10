@@ -1,6 +1,6 @@
 <?php get_header('front'); ?>
 <div class="p-4 text-5xl leading-none lowercase">
-    <h1 class="inline" data-opacity-trigger data-opacity-highlight><?php the_title(); ?> of: <span class="">abcd<span class="font-logotype">.works</span></h1> – <span class="ticker" data-opacity-trigger data-opacity-highlight>studio
+    <h1 class="inline"><?php the_title(); ?> of: <span class="">abcd<span class="font-logotype">.works</span></h1> – <span class="ticker">studio
         for digital products. accessible, beautiful, custom, digital<span class="font-logotype">.work</span></span>
     <span class="px-2 italic border border-black rounded-full">featured projects</span>
     <span><?php get_template_part('template-parts/featured-projects'); ?></span>
