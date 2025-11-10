@@ -159,6 +159,7 @@ class OpacityController {
 
         // Listen for elements with data-opacity-trigger attribute
         document.addEventListener('mouseenter', (e) => {
+            if (!e.target || typeof e.target.closest !== 'function') return;
             const trigger = e.target.closest('[data-opacity-trigger]');
             if (trigger) {
                 console.log('Opacity trigger activated:', trigger);
@@ -167,15 +168,13 @@ class OpacityController {
         }, true);
 
         document.addEventListener('mouseleave', (e) => {
+            if (!e.target || typeof e.target.closest !== 'function') return;
             const trigger = e.target.closest('[data-opacity-trigger]');
             if (trigger) {
                 console.log('Opacity trigger deactivated');
                 this.resetOpacity();
             }
         }, true);
-
-        // Also listen for a custom class being added/removed
-        this.observeClassChanges();
     }
 
     setOpacity(activeElement) {
@@ -203,11 +202,13 @@ class OpacityController {
 
                 if (shouldStayBright) {
                     element.style.opacity = '1';
-                    element.style.transition = 'opacity 0.3s ease';
+                    element.style.filter = 'none';
+                    element.style.transition = 'opacity 0.3s ease, filter 0.3s ease';
                     element.style.pointerEvents = 'auto';
                 } else {
                     element.style.opacity = opacityValue;
-                    element.style.transition = 'opacity 0.3s ease';
+                    element.style.filter = 'blur(8px)';
+                    element.style.transition = 'opacity 0.3s ease, filter 0.3s ease';
                     element.style.pointerEvents = 'none';
                 }
             });
@@ -222,6 +223,7 @@ class OpacityController {
 
         this.affectedElements.forEach(element => {
             element.style.opacity = '1';
+            element.style.filter = 'none';
             element.style.pointerEvents = 'auto';
         });
 

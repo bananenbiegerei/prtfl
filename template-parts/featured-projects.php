@@ -17,7 +17,7 @@ if ($latest_project_query->have_posts()) : ?>
 <?php while ($latest_project_query->have_posts()) : $latest_project_query->the_post();
     $konstellation = get_post_meta(get_the_ID(), 'konstellation', true);
 ?>
-• <?php include locate_template('template-parts/card.php');?>
+<?php include locate_template('template-parts/card.php');?>
 <?php
     endwhile; ?>
 <?php wp_reset_postdata();
