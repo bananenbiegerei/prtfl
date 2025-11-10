@@ -17,26 +17,17 @@ if ($latest_project_query->have_posts()) :
     while ($latest_project_query->have_posts()) : $latest_project_query->the_post();
     $konstellation = get_post_meta(get_the_ID(), 'konstellation', true);
 ?>
-<div class="gap-4 px-4 sm:flex">
-    <div>
-        <?php if (has_post_thumbnail()) { ?>
+    <?php if (has_post_thumbnail()) { ?>
         <?php
-                echo get_the_post_thumbnail(get_the_ID(), 'large', array('class' => 'rounded-lg shadow-abcd group-hover/card:shadow-xl transition w-full h-full object-cover realtive z-10'));
-            ?>
-        <?php } ?>
-    </div>
-    <div class="">
-        <h2 class="text-4xl text-accent"><?php _e('featured project', BB_TEXT_DOMAIN); ?></h2>
-        <a class="before:absolute before:content-[''] before:inset-0 z-10" href="<?php the_permalink();?>">
-            <h2 class="text-base sm:text-4xl"><?php the_title(); ?></h2>
-        </a>
-
-        <p class="mb-0 text-base text-accent"><?= wp_strip_all_tags($konstellation); ?></p>
-        <div class="text-base">
-            <?php echo get_the_date('F Y'); ?>
-        </div>
-    </div>
-</div>
+        echo get_the_post_thumbnail(get_the_ID(), 'two-columns', array('class' => 'rounded-lg shadow-abcd inline h-16 w-auto'));
+        ?>
+    <?php } ?>
+    <a class="link" href="<?php the_permalink();?>"><h3 class="inline"><?php the_title(); ?></h3></a>
+        <?php if($konstellation): ?>
+        <p class="inline"> / <?= wp_strip_all_tags($konstellation); ?>, </p>
+        <?php endif; ?>
+        <span><?php echo get_the_date('F Y'); ?>
+        </span>
 <?php
     endwhile;
     wp_reset_postdata();

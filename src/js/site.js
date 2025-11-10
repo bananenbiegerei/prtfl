@@ -146,3 +146,91 @@ var swiper_related_projects = new Swiper('.related-projects-swiper', {
     effect: "cards",
     grabCursor: true,
 });
+
+// Opacity Control System
+class OpacityController {
+    constructor() {
+        this.activeElement = null;
+        this.init();
+    }
+
+    init() {
+        console.log('OpacityController initialized');
+
+        // Listen for elements with data-opacity-trigger attribute
+        document.addEventListener('mouseenter', (e) => {
+            const trigger = e.target.closest('[data-opacity-trigger]');
+            if (trigger) {
+                console.log('Opacity trigger activated:', trigger);
+                this.setOpacity(trigger);
+            }
+        }, true);
+
+        document.addEventListener('mouseleave', (e) => {
+            const trigger = e.target.closest('[data-opacity-trigger]');
+            if (trigger) {
+                console.log('Opacity trigger deactivated');
+                this.resetOpacity();
+            }
+        }, true);
+
+        // Also listen for a custom class being added/removed
+        this.observeClassChanges();
+    }
+
+    setOpacity(activeElement) {
+        this.activeElement = activeElement;
+        const opacityValue = activeElement.dataset.opacityValue || '0.3';
+        const excludeSelector = activeElement.dataset.opacityExclude || '';
+        const targetSelector = activeElement.dataset.opacityTarget || '';
+        const targetContainer = activeElement.dataset.opacityContainer || '';
+        const highlightSelf = activeElement.dataset.opacityHighlight !== undefined; // New option
+
+        let elements = [];
+
+        // Mode 0: Highlight only self - dim ALL siblings
+        if (highlightSelf) {
+            console.log('Highlight self mode: dimming all siblings');
+            const parentContainer = activeElement.parentElement;
+            if (!parentContainer) return;
+
+            const allSiblings = Array.from(parentContainer.children);
+
+            allSiblings.forEach(element => {
+                // Only the active element stays bright
+                const shouldStayBright = element === activeElement ||
+                                        (excludeSelector && element.matches(excludeSelector));
+
+                if (shouldStayBright) {
+                    element.style.opacity = '1';
+                    element.style.transition = 'opacity 0.3s ease';
+                    element.style.pointerEvents = 'auto';
+                } else {
+                    element.style.opacity = opacityValue;
+                    element.style.transition = 'opacity 0.3s ease';
+                    element.style.pointerEvents = 'none';
+                }
+            });
+
+            this.affectedElements = allSiblings;
+            return; // Exit early
+        }
+    }
+
+    resetOpacity() {
+        if (!this.affectedElements) return;
+
+        this.affectedElements.forEach(element => {
+            element.style.opacity = '1';
+            element.style.pointerEvents = 'auto';
+        });
+
+        this.activeElement = null;
+        this.affectedElements = null;
+    }
+}
+
+// Initialize the opacity controller when DOM is ready
+document.addEventListener('DOMContentLoaded', () => {
+    window.opacityController = new OpacityController();
+});
