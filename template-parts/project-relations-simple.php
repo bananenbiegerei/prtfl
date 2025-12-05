@@ -39,12 +39,11 @@ $related_projects = new WP_Query($args);
 $item_count = 0;
 $rotation = 0;
 if ($related_projects->have_posts()) : ?>
-<section>
-    <div class="group">
-        <h2 class="text-sm mb-1"><?php _e('Andere Projekte für: ', BB_TEXT_DOMAIN) ?> <?= $client_title ?></h2>
-        <ul class="list-inside grid grid-cols-3 gap-1">
+<section class="bg-red-500 group">
+        <h2 class="mb-1 text-sm"><?php _e('Andere Projekte für: ', BB_TEXT_DOMAIN) ?> <?= $client_title ?></h2>
+        <ul class="grid grid-cols-3 gap-1 list-inside">
             <?php while ($related_projects->have_posts()) : $related_projects->the_post(); ?>
-            <li class="flex gap-1 bg-gray-100 p-2 rounded-sm">
+            <li class="flex gap-1 p-2 bg-gray-100 rounded-sm">
                 <?php if (has_post_thumbnail()) {
                 echo get_the_post_thumbnail(get_the_ID(), 'two-columns', array('class' => 'rounded-sm max-w-[70px]'));
                 } ?>
@@ -52,13 +51,8 @@ if ($related_projects->have_posts()) : ?>
                     <?php the_title(); ?>
                 </h3>
             </li>
-            <?php
-        $rotation += 5;
-        $item_count++;
-        ?>
             <?php endwhile; ?>
         </ul>
-    </div>
     <?php wp_reset_postdata(); // Reset the global post object
 endif;
 ?>

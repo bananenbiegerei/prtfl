@@ -1,5 +1,9 @@
 <?php
 
+// Disable Gutenberg editor globally
+add_filter('use_block_editor_for_post', '__return_false', 10);
+add_filter('use_block_editor_for_post_type', '__return_false', 10);
+
 // Load localization functions
 // Usage: `__('my example text', BB_TEXT_DOMAIN)`
 // String translations can be edited with [Poedit](https://poedit.net)

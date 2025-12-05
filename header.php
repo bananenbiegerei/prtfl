@@ -9,7 +9,7 @@
                         wp_nav_menu([
                                 'theme_location' => 'top',
                                 'container' => false,
-                                'menu_class' => 'flex text-sm gap-4 lowercase text-base text-black font-mono',
+                                'menu_class' => 'flex text-sm gap-4  text-base text-black font-mono',
                                 'fallback_cb' => false,
                         ]);
                         ?>
@@ -18,4 +18,4 @@
                 <a href="<?php echo esc_url(home_url('/')); ?>">abcd.<span class="font-logotype">works</span></a>
                 </div>
         </header>
-        <main class="flex-1 ml-4 md:ml-12 main-content" id="swup">
+        <main class="flex-1 ml-8 main-content" id="swup">

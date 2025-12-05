@@ -1,0 +1,15 @@
+// Swiper progress bar pagination customization
+// Increase specificity by doubling class name to override default Swiper styles
+.swiper .swiper-pagination-progressbar.swiper-pagination-progressbar {
+    @apply h-[1px] bg-black/10 top-auto bottom-0 left-0 w-full;
+}
+
+.swiper .swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
+    @apply bg-primary;
+}
+
+// Alternative positioning - uncomment if you want it at the top
+// .swiper-pagination-progressbar {
+//     top: 0;
+//     bottom: auto;
+// }

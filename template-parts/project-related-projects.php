@@ -1,29 +1,20 @@
-<?php $related_projects = get_field( 'related_projects' );?>
-<?php if ( $related_projects ) :
-    $rotation = -15;
-    ?>
-<h4 class="text-xs"><?php _e('related projects:'); ?></h4>
-<div class="grid grid-cols-2 gap-1">
-    <?php foreach ( $related_projects as $post ) : ?>
-    <?php setup_postdata ( $post ); ?>
-    <div class="flex items-center justify-center rounded-sm bg-white">
-        <div class="relative">
-            <?php if (has_post_thumbnail()) { ?>
+<?php
+    $related_projects = get_field('related_projects');
+    if ($related_projects) : ?>
+    <h3 class="block mb-2">Related Projects:</h3>
+    <ul class="grid grid-cols-6 gap-4 text-primary">
+        <?php foreach ($related_projects as $related_project) : ?>
+        <li>
+            <a href="<?php echo get_permalink($related_project->ID); ?>"
+                class="">
                 <?php
-                        echo get_the_post_thumbnail(get_the_ID(), 'small', array('class' => 'rounded-lg'));
+                    if (has_post_thumbnail($related_project->ID)) {
+                        echo get_the_post_thumbnail($related_project->ID, 'medium', array('class' => 'rounded shadow-md mb-2'));
+                    }
                     ?>
-            <?php } ?>
-            <header class="absolute bottom-0 w-full h-full left-0 bg-gradient-to-t from-black/100 to-transparent p-2 rounded z-10 text-white flex flex-col justify-end">
-                <div class="text-base">
-                <?php echo get_the_date('F Y'); ?>
-                </div>
-                <a class="before:absolute before:content-[''] before:inset-0 z-10" href="<?php the_permalink();?>">
-                    <h3 class="text-base"><?php the_title(); ?></h3>
-                </a>
-            </header>
-        </div>
-    </div>
-    <?php endforeach;?>
-</div>
-<?php wp_reset_postdata(); ?>
+                <span class="link"><?php echo get_the_title($related_project->ID); ?></span>
+            </a>
+        </li>
+        <?php endforeach; ?>
+    </ul>
 <?php endif; ?>

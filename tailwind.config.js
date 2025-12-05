@@ -10,11 +10,11 @@ module.exports = {
 	],
 	theme: {
 		screens: {
-			sm: '400px',
+			sm: '460px',
 			md: '768px',
 			lg: '1024px',
 			xl: '1280px',
-			'2xl': '1536px'
+			'2xl': '1536px',
 		},
 		fontSize: {
 			xs: '0.75rem', // 12px
@@ -185,6 +185,12 @@ module.exports = {
 					900: '#332b00',
 					950: '#1a1600',
 				},
+			},
+			spacing: {
+				specialscreen: 'calc(100vh - 2rem)', // 2rem = height of footer
+			},
+			minHeight: {
+				specialscreen: 'calc(100vh - 2rem)',
 			},
 		},
 	},
