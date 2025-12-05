@@ -2,25 +2,20 @@
 <html <?php language_attributes(); ?> class="h-full no-js">
 
 <?php get_template_part('head'); ?>
-<?php
-if (is_front_page()) {
-    $color_scheme = 'yellow-theme';
-} elseif (is_page_template('templates/template-work.php')) {
-    $color_scheme = 'lime-theme';
-} elseif (is_page('profile')) {
-    $color_scheme = 'cyan-theme';
-} else {
-    $color_scheme = 'gray-theme';
-}
-?>
-<body <?php body_class($color_scheme); ?>>
-    <div class="flex min-h-screen flex-col justify-between" x-data="{ isScrolled: false }" x-init="
-    window.addEventListener('scroll', () => {
-        isScrolled = window.scrollY > 10;
-    })">
-        <?php get_template_part('template-parts/header-inner'); ?>
-        <?php if (is_front_page()) : ?>
-        <?php else : ?>
-            <div class="h-mobile-header sm:h-desktop-header"></div>
-        <?php endif; ?>
-        <main class="main-content flex-1 transition-fade" id="swup">
+<body <?php body_class('flex flex-col h-full min-h-screen'); ?>>
+        <header class="fixed -left-[100vh] top-0 w-[100vh] z-50 origin-top-right -rotate-90 h-8 flex items-center px-4 justify-between">
+                <nav class="text-primary whitespace-nowrap" aria-label="<?php esc_attr_e('Top Menu', 'BB_TEXT_DOMAIN'); ?>">
+                        <?php
+                        wp_nav_menu([
+                                'theme_location' => 'top',
+                                'container' => false,
+                                'menu_class' => 'flex text-sm gap-4 lowercase text-base text-black font-mono',
+                                'fallback_cb' => false,
+                        ]);
+                        ?>
+                </nav>
+                <div>
+                <a href="<?php echo esc_url(home_url('/')); ?>">abcd.<span class="font-logotype">works</span></a>
+                </div>
+        </header>
+        <main class="flex-1 ml-4 md:ml-12 main-content" id="swup">

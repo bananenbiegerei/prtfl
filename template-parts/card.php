@@ -1,4 +1,10 @@
-<span>•
-<?php if (has_post_thumbnail()) { ?>
-<?php echo get_the_post_thumbnail(get_the_ID(), 'two-columns', array('class' => 'rounded-lg shadow-abcd inline h-24 w-auto border')); ?>
-<?php } ?><a class="mx-2 link" href="<?php the_permalink();?>"><h3 class="inline"><?php the_title(); ?></h3></a></span>
+<article class="flex items-start gap-4 leading-none group text-primary">
+        <?php if (has_post_thumbnail()) { ?>
+            <?php echo get_the_post_thumbnail(get_the_ID(), 'two-columns', array('class' => 'w-auto mr-2 rounded md:rounded-lg shadow-md border transition-transform group-hover:scale-105 h-[1em]')); ?>
+        <?php } ?>
+    <a class=""
+       href="<?php the_permalink(); ?>"
+       aria-label="<?php echo esc_attr(get_the_title()); ?>">
+        <h3 class="inline transition-colors leading-thight group-hover:text-primary-700 link"><?php the_title(); ?></h3>
+    </a>
+</article>

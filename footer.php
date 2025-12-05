@@ -1,14 +1,14 @@
 </main>
-<footer class="hidden">
-    footer
+<footer class="flex items-center h-12 ml-12">
     <nav>
-        <?php wp_nav_menu([
+        <?php
+        wp_nav_menu([
         'theme_location' => 'footer',
         'container' => false,
-        'items_wrap' => '<ul class="flex items-end gap-2 leading-tight sm:gap-0 sm:flex-col">%3$s</ul>',
-        'link_before' => '<span class="sm:text-lg">',
-        'link_after' => '</span>',
-        ]); ?>
+        'menu_class' => 'flex text-sm gap-4 lowercase text-base text-black font-mono',
+        'fallback_cb' => false,
+        ]);
+        ?>
     </nav>
 </footer>
 <?php wp_footer(); ?>

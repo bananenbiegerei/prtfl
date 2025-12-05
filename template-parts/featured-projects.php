@@ -14,15 +14,22 @@ $args = array(
 );
 $latest_project_query = new WP_Query($args);
 if ($latest_project_query->have_posts()) : ?>
-<?php while ($latest_project_query->have_posts()) : $latest_project_query->the_post();
+<h2 class="inline italic text-primary">featured projects:</h2>
+<ul class="inline-flex flex-wrap">
+    <?php while ($latest_project_query->have_posts()) : $latest_project_query->the_post();
     $konstellation = get_post_meta(get_the_ID(), 'konstellation', true);
 ?>
-<?php include locate_template('template-parts/card.php');?>
-<?php
+    <li class="mr-8"><?php include locate_template('template-parts/card.php');?></li>
+    <?php
     endwhile; ?>
-<?php wp_reset_postdata();
-else :
-    ?>
+    <li class="text-primary">
+        <a class="flex items-center mr-2" href="">all projects
+            <svg xmlns="http://www.w3.org/2000/svg" class="ml-1 w-[0.75em] h-auto border border-primary rounded-full" viewBox="0 0 32 32"><path fill="currentColor" d="m18 6l-1.43 1.393L24.15 15H4v2h20.15l-7.58 7.573L18 26l10-10z"/></svg>
+        </a>
+    </li>
+</ul>
 <?php
-endif;
-?>
+    wp_reset_postdata();
+else : ?>
+    <!-- No featured projects found -->
+<?php endif; ?>

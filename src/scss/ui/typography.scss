@@ -9,6 +9,7 @@ body * {
 // label {
 // 	@apply leading-tight text-base lg:text-lg mb-4;
 // }
-a.link {
-	@apply underline transition underline-offset-8 decoration-1;
+a.link,
+.link {
+	@apply underline transition underline-offset-4 decoration-1 decoration-inherit;
 }
