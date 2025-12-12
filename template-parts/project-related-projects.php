@@ -1,8 +1,9 @@
 <?php
     $related_projects = get_field('related_projects');
     if ($related_projects) : ?>
-    <h3 class="block mb-2">Related Projects:</h3>
-    <ul class="grid grid-cols-6 gap-4 text-primary">
+    <div class="col-span-12 ">
+        <h3 class="mb-2">Related Projects:</h3>
+    <ul class="grid grid-cols-6 gap-8 text-primary">
         <?php foreach ($related_projects as $related_project) : ?>
         <li>
             <a href="<?php echo get_permalink($related_project->ID); ?>"
@@ -17,4 +18,5 @@
         </li>
         <?php endforeach; ?>
     </ul>
+    </div>
 <?php endif; ?>

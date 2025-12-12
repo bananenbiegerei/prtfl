@@ -181,7 +181,7 @@
 
 	/* btn variants */
 	&-ghost {
-		@apply border border-transparent bg-transparent text-accent shadow-none outline-accent hover:bg-transparent hover:border-accent hover:border;
+		@apply border border-transparent bg-transparent text-primary shadow-none outline-primary hover:bg-transparent hover:border-primary hover:border;
 
 		&.btn-active {
 			@apply bg-primary-600 border-opacity-0 bg-opacity-20;

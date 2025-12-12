@@ -8,6 +8,13 @@
     @apply bg-primary;
 }
 
+// Navigation button styling
+.swiper-button-prev svg,
+.swiper-button-next svg {
+    @apply h-6 w-6;
+    @apply text-primary;
+}
+
 // Alternative positioning - uncomment if you want it at the top
 // .swiper-pagination-progressbar {
 //     top: 0;

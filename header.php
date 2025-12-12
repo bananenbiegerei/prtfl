@@ -3,6 +3,20 @@
 
 <?php get_template_part('head'); ?>
 <body <?php body_class('flex flex-col h-full min-h-screen'); ?>>
+        <div class="fixed top-0 left-0 grid hidden w-full h-full grid-cols-12 gap-8 px-8 opacity-10 -z-10">
+                <div class="bg-red-100"></div>
+                <div class="bg-red-100"></div>
+                <div class="bg-red-100"></div>
+                <div class="bg-red-100"></div>
+                <div class="bg-red-100"></div>
+                <div class="bg-red-100"></div>
+                <div class="bg-red-100"></div>
+                <div class="bg-red-100"></div>
+                <div class="bg-red-100"></div>
+                <div class="bg-red-100"></div>
+                <div class="bg-red-100"></div>
+                <div class="bg-red-100"></div>
+        </div>
         <header class="fixed -left-[100vh] top-0 w-[100vh] z-50 origin-top-right -rotate-90 h-8 flex items-center px-4 justify-between">
                 <nav class="text-primary whitespace-nowrap" aria-label="<?php esc_attr_e('Top Menu', 'BB_TEXT_DOMAIN'); ?>">
                         <?php
