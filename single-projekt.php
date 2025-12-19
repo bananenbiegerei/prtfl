@@ -36,7 +36,7 @@ $has_metas = $arbeitskonstellation || $client || $link_to_website || $year || $s
         <?php else : ?>
         <!-- Layout WITHOUT metas: content only, centered and wider -->
             <?php if (get_the_content()) : ?>
-            <p class="max-w-4xl pr-4 mx-auto mb-16 text-xl leading-10 text-center text-primary">
+            <p class="mb-8 text-xl leading-10 text-primary">
                 <?php echo wp_strip_all_tags(get_the_content()); ?>
             </p>
             <?php endif; ?>

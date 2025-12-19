@@ -11,15 +11,13 @@ $args = array(
     'posts_per_page' => -1,
 );
 $projects_query = new WP_Query($args); ?>
-<section class="p-4">
-<ul class="inline-flex flex-wrap text-xl leading-none">
+<ul class="grid grid-cols-1 gap-8 my-4 mr-4 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-6">
 <?php if ($projects_query->have_posts()) :
     while ($projects_query->have_posts()) : $projects_query->the_post(); ?>
-        <?php include locate_template('template-parts/card-small.php'); ?>
+        <?php include locate_template('template-parts/card.php'); ?>
     <?php endwhile;
     wp_reset_postdata();
 else : ?>
 <?php endif; ?>
 </ul>
-</section>
 <?php get_footer(); ?>

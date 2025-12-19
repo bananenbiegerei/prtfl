@@ -1,4 +1,5 @@
-<div class="p-4 mb-16 swiper mobile-gallery">
+<?php if ( get_field('mobile_gallery') ) : ?>
+    <div class="p-4 mb-16 swiper mobile-gallery">
     <div class="swiper-wrapper">
         <?php
         $images = get_field('mobile_gallery');
@@ -14,3 +15,4 @@
     </div>
     <?php get_template_part('template-parts/swiper-nav'); ?>
 </div>
+<?php endif; ?>

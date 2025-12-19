@@ -15,11 +15,11 @@ $args = array(
 $latest_project_query = new WP_Query($args);
 if ($latest_project_query->have_posts()) : ?>
 <h2 class="inline italic text-primary">featured projects:</h2>
-<ul class="inline-flex flex-wrap">
+<ul class="inline-flex flex-wrap gap-1">
     <?php while ($latest_project_query->have_posts()) : $latest_project_query->the_post();
     $konstellation = get_post_meta(get_the_ID(), 'konstellation', true);
 ?>
-    <li class="mr-8"><?php include locate_template('template-parts/card.php');?></li>
+    <li class="mr-8"><?php include locate_template('template-parts/card-horizontal.php');?></li>
     <?php
     endwhile; ?>
     <li class="text-primary">
