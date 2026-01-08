@@ -12,12 +12,19 @@ $has_metas = $arbeitskonstellation || $client || $link_to_website || $year || $s
 ?>
 <article class="grid grid-cols-12 gap-8 mr-8">
     <div class="col-span-2 project-title-container">
-        <div class="flex items-end px-4 origin-top-left project-title w-specialscreen">
+        <div class="flex items-end w-full px-4 origin-top-left project-title">
             <h1 class="leading-none text-primary sm:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl"><?php the_title(); ?></h1>
         </div>
     </div>
     <div class="col-span-10 mb-36">
-        <?php get_template_part('template-parts/swiper-desktop-gallery'); ?>
+        <?php
+        // Check if desktop_gallery exists, otherwise use fallback gallery
+        if (get_field('desktop_gallery')) {
+            get_template_part('template-parts/swiper-desktop-gallery');
+        } elseif (get_field('gallery')) {
+            get_template_part('template-parts/swiper-gallery-fallback');
+        }
+        ?>
     </div>
     <div class="col-span-6">
         <?php if ($has_metas) : ?>
@@ -43,7 +50,12 @@ $has_metas = $arbeitskonstellation || $client || $link_to_website || $year || $s
         <?php endif; ?>
     </div>
     <div class="col-span-6">
-        <?php get_template_part('template-parts/swiper-mobile-gallery'); ?>
+        <?php
+        // Only show mobile gallery if it exists (no fallback for mobile)
+        if (get_field('mobile_gallery')) {
+            get_template_part('template-parts/swiper-mobile-gallery');
+        }
+        ?>
     </div>
     <?php get_template_part('template-parts/project-related-projects'); ?>
 </article>

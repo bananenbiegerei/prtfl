@@ -73,7 +73,11 @@ document.addEventListener('DOMContentLoaded', function() {
         const containerElement = document.querySelector('.project-title-container');
 
         if (titleElement && containerElement) {
-            // Get the width of the container
+            // Get the height of the container
+            const containerHeight = containerElement.getBoundingClientRect().height;
+            // Set the title width to match the container height (since it's rotated)
+            titleElement.style.width = containerHeight + 'px';
+            // Get the width of the container for the transform
             const containerWidth = containerElement.getBoundingClientRect().width;
             // Set the title height to match the container width
             titleElement.style.height = containerWidth + 'px';
