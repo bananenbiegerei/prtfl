@@ -3,7 +3,7 @@
 
 <?php get_template_part('head'); ?>
 <body <?php body_class('flex flex-col h-full min-h-screen'); ?>>
-        <div class="fixed top-0 left-0 grid hidden w-full h-full grid-cols-12 gap-8 px-8 opacity-10 -z-10">
+        <div class="fixed top-0 left-0 grid hidden w-full h-full grid-cols-4 gap-2 pl-8 pr-2 md:px-8 md:grid-cols-8 lg:grid-cols-12 opacity-30 -z-10 md:gap-4 lg:gap-8">
                 <div class="bg-red-100"></div>
                 <div class="bg-red-100"></div>
                 <div class="bg-red-100"></div>
@@ -23,7 +23,7 @@
                         wp_nav_menu([
                                 'theme_location' => 'top',
                                 'container' => false,
-                                'menu_class' => 'flex text-sm gap-4  text-base text-black font-mono',
+                                'menu_class' => 'menu flex text-sm gap-4  text-base text-black font-mono',
                                 'fallback_cb' => false,
                         ]);
                         ?>

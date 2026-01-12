@@ -11,9 +11,9 @@ $technologies = get_field('technologies');
 $has_metas = $arbeitskonstellation || $client || $link_to_website || $year || $services || $technologies;
 ?>
 <article class="grid grid-cols-12 gap-8 mr-8">
-    <div class="col-span-2 project-title-container">
-        <div class="flex items-end w-full px-4 origin-top-left project-title">
-            <h1 class="leading-none text-primary sm:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl"><?php the_title(); ?></h1>
+    <div class="col-span-2 title-container overflow-hidden">
+        <div class="flex items-end w-full px-4 origin-top-left title">
+            <h1 class="leading-none text-primary text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl"><?php the_title(); ?></h1>
         </div>
     </div>
     <div class="col-span-10 mb-36">

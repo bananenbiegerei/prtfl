@@ -69,8 +69,9 @@ var swiper_related_projects = new Swiper('.related-projects-swiper', {
 });
 
 document.addEventListener('DOMContentLoaded', function() {
-        const titleElement = document.querySelector('.project-title');
-        const containerElement = document.querySelector('.project-title-container');
+        // Project title rotation
+        const titleElement = document.querySelector('.title');
+        const containerElement = document.querySelector('.title-container');
 
         if (titleElement && containerElement) {
             // Get the height of the container
@@ -83,6 +84,18 @@ document.addEventListener('DOMContentLoaded', function() {
             titleElement.style.height = containerWidth + 'px';
             // Rotate and translate on y-axis by negative container width
             titleElement.style.transform = `rotate(90deg) translateY(-${containerWidth}px)`;
+        }
+
+        // Works headline rotation
+        const worksHeadline = document.querySelector('.works-headline');
+        const worksContainer = document.querySelector('.works-headline-container');
+
+        if (worksHeadline && worksContainer) {
+            // Get the height of the headline
+            const headlineHeight = worksHeadline.getBoundingClientRect().height;
+            // Rotate 90deg from top left and move right by headline height
+            worksHeadline.style.transformOrigin = 'top left';
+            worksHeadline.style.transform = `rotate(90deg) translateX(${headlineHeight}px)`;
         }
 });
 
