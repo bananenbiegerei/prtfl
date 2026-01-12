@@ -17,7 +17,7 @@
                 <div class="bg-red-100"></div>
                 <div class="bg-red-100"></div>
         </div>
-        <header class="fixed -left-[100vh] top-0 w-[100vh] z-50 origin-top-right -rotate-90 h-8 flex items-center px-4 justify-between">
+        <header class="bg-white fixed -left-[100vh] top-0 w-[100vh] z-50 origin-top-right -rotate-90 h-8 flex items-center px-4 justify-between">
                 <nav class="text-primary whitespace-nowrap" aria-label="<?php esc_attr_e('Top Menu', 'BB_TEXT_DOMAIN'); ?>">
                         <?php
                         wp_nav_menu([

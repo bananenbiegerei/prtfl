@@ -50,7 +50,13 @@ document.addEventListener('alpine:init', () => {
     Alpine.data('projectsData', () => ({
         sortOrder: 'desc',
         selectedSector: '',
+        showTitle: false,
         projects: <?php echo wp_json_encode($projects_data); ?>,
+        init() {
+            window.addEventListener('scroll', () => {
+                this.showTitle = window.scrollY > 10;
+            });
+        },
         get filteredAndSortedProjects() {
             // Filter by sector first
             let filtered = this.projects;
@@ -71,15 +77,22 @@ document.addEventListener('alpine:init', () => {
     }))
 });
 </script>
-
-<div x-data="projectsData" class="grid grid-cols-4 gap-2 mt-4 mr-2 md:mr-8 md:gap-4 lg:gap-8 md:grid-cols-8 lg:grid-cols-12">
-    <div class="col-span-3 space-y-4 md:col-span-7 lg:col-span-11 ">
-        <?php include(get_template_directory() . '/template-parts/projects-filter.php'); ?>
-            <?php include(get_template_directory() . '/template-parts/projects-grid.php'); ?>
+<div x-data="projectsData" class="">
+    <div class="fixed top-0 z-50 flex items-center justify-between h-12 gap-4 transition-all duration-300 left-8 w-footer"
+        :class="showTitle ? 'bg-white/80 backdrop-blur' : ''">
+        <div class="basis-1/3">
+            <p class="text-base leading-none transition-opacity duration-300 text-primary" aria-hidden="true"
+                x-show="showTitle" x-transition:enter="transition ease-out duration-300"
+                x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100"><?php the_title(); ?>
+            </p>
+        </div>
+        <div class="basis-2/3">
+            <?php include(get_template_directory() . '/template-parts/projects-filter.php'); ?>
+        </div>
     </div>
-    <div class="overflow-hidden title-container ">
-        <div class="flex items-end w-full px-4 origin-top-left title">
-            <h1 class="text-xl leading-none text-primary lg:text-2xl xl:text-3xl 2xl:text-4xl"><?php the_title(); ?></h1>
+    <div class="grid grid-cols-4 gap-2 mr-2 mt-14 md:gap-4 lg:gap-8 md:grid-cols-8 lg:grid-cols-12">
+        <div class="col-span-4 space-y-4 md:col-span-8 lg:col-span-12">
+            <?php include(get_template_directory() . '/template-parts/projects-grid.php'); ?>
         </div>
     </div>
 </div>

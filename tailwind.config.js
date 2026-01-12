@@ -43,6 +43,9 @@ module.exports = {
 			bold: 500,
 		},
 		extend: {
+			width: {
+				footer: 'calc(100vw - 3rem)',
+			},
 			animation: {
 				wiggle: 'wiggle 0.3s ease-in-out infinite',
 			},

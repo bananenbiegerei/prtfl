@@ -1,6 +1,6 @@
 </main>
-<footer>
-    <nav class="flex items-center h-8 ml-8">
+<footer class="fixed bottom-0 flex items-center justify-between h-8 gap-4 pr-2 w-footer left-8 bg-white/80 backdrop-blur">
+    <nav class="flex items-center">
         <?php
         wp_nav_menu([
         'theme_location' => 'footer',
@@ -10,6 +10,7 @@
         ]);
         ?>
     </nav>
+    <p>test</p>
 </footer>
 <?php wp_footer(); ?>
 </body>
