@@ -1,7 +1,6 @@
 <?php
     // Fallback gallery for older projects
     $images = get_field('gallery');
-    var_dump($images);
     if ($images) : ?>
     <div class="relative p-4 swiper desktop-gallery">
         <div class="swiper-wrapper">
