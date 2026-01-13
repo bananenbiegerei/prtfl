@@ -7,7 +7,7 @@ get_header(); ?>
 
 <?php
 $args = array(
-    'post_type' => 'projekt',
+    'post_type' => 'project',
     'posts_per_page' => -1,
     'orderby' => 'date',
     'order' => 'DESC',

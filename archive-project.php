@@ -2,7 +2,7 @@
 get_header();
 
 $args = [
-	'post_type' => 'projekt',
+	'post_type' => 'project',
 	'posts_per_page' => -1,
 ];
 

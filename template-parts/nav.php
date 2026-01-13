@@ -3,7 +3,7 @@
     <h1>
         <?php the_title(); ?>
     </h1>
-    <?php /* if (is_single('projekt')) : ?>
+    <?php /* if (is_single('project')) : ?>
     Single
     <?php endif; */ ?>
     <?php if ( get_field('link_to_website') ) : ?>

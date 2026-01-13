@@ -18,7 +18,7 @@ $client_thumb = get_the_post_thumbnail($client_id, 'medium', array('class' => 'c
 
 // Step 2: Query for Projects with the same related client
 $args = array(
-    'post_type' => 'projekt', // Custom post type 'projects'
+    'post_type' => 'project', // Custom post type 'projects'
     'posts_per_page' => -1, // Retrieve all matching projects
     'post__not_in' => array(get_the_ID()), // Exclude the current post
     'meta_query' => array(

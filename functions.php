@@ -4,6 +4,17 @@
 add_filter('use_block_editor_for_post', '__return_false', 10);
 add_filter('use_block_editor_for_post_type', '__return_false', 10);
 
+// ACF JSON: Set save and load points
+add_filter('acf/settings/save_json', function($path) {
+    return get_stylesheet_directory() . '/acf-json';
+});
+
+add_filter('acf/settings/load_json', function($paths) {
+    unset($paths[0]);
+    $paths[] = get_stylesheet_directory() . '/acf-json';
+    return $paths;
+});
+
 // Load localization functions
 // Usage: `__('my example text', BB_TEXT_DOMAIN)`
 // String translations can be edited with [Poedit](https://poedit.net)

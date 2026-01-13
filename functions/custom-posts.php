@@ -84,7 +84,7 @@ add_action('init', function() {
         'delete_with_user' => false,
     ));
 
-    register_post_type('projekt', array(
+    register_post_type('project', array(
         'labels' => array(
             'name' => 'Projects',
             'singular_name' => 'Project',

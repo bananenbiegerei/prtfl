@@ -1,7 +1,7 @@
 <?php
 add_action('init', function() {
     register_taxonomy('service', array(
-        0 => 'projekt',
+        0 => 'project',
     ), array(
         'labels' => array(
             'name' => 'Services',
@@ -32,7 +32,7 @@ add_action('init', function() {
     ));
 
     register_taxonomy('sector', array(
-        0 => 'projekt',
+        0 => 'project',
     ), array(
         'labels' => array(
             'name' => 'Sectors',

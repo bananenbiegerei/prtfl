@@ -8,7 +8,7 @@
 
         // Query for other projects with the same client
         $args = array(
-            'post_type' => 'projekt',
+            'post_type' => 'project',
             'post_status' => 'publish',
             'posts_per_page' => -1,
             'post__not_in' => array(get_the_ID()), // Exclude current project
