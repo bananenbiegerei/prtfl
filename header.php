@@ -2,8 +2,8 @@
 <html <?php language_attributes(); ?> class="h-full no-js">
 
 <?php get_template_part('head'); ?>
-<body <?php body_class('flex flex-col h-full min-h-screen'); ?>>
-        <div class="fixed top-0 left-0 !hidden w-full h-full custom-grid -z-10">
+<body <?php body_class('flex flex-col h-full min-h-screen'); ?> x-data="{ showGrid: false }" @keydown.window.ctrl.g.prevent="showGrid = !showGrid" @keydown.window.meta.g.prevent="showGrid = !showGrid">
+        <div class="fixed top-0 left-0 w-full h-full bg-yellow-100 custom-grid -z-10 md:bg-gray-100 lg:bg-red-100 xl:bg-lime-100" :class="{ '!hidden': !showGrid }">
                 <div class="bg-red-100"></div>
                 <div class="bg-red-100"></div>
                 <div class="bg-red-100"></div>
