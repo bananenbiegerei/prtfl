@@ -24,9 +24,9 @@
         $related_query = new WP_Query($args);
 
         if ($related_query->have_posts()) : ?>
-<h2 class="max-w-lg">More projects from: <?php echo esc_html(get_the_title($client_id)); ?>
+<h2 class="max-w-lg lg:text-base">More projects from: <?php echo esc_html(get_the_title($client_id)); ?>
 </h2>
-<ul class="grid grid-cols-2 gap-4 lg:gap-8 lg:grid-cols-6 text-primary">
+<ul class="grid grid-cols-2 gap-4 lg:gap-8 lg:grid-cols-4 text-primary">
     <?php while ($related_query->have_posts()) : $related_query->the_post(); ?>
     <li class="relative">
             <?php

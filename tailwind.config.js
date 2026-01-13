@@ -19,18 +19,16 @@ module.exports = {
 			'2xl': '1536px',
 		},
 		fontSize: {
-			xs: '0.75rem', // 12px
-			sm: '0.75rem', // 12px
+			xs: '0.625rem', // 10px
+			sm: '0.8125rem', // 13px
 			base: '1rem', // 16px
-			lg: '1.75rem', // 28px
-			xl: '2.25rem', // 36px
+			lg: '1.375rem', // 22px
+			xl: '1.875rem', // 30px
 			'2xl': '2.25rem', // 36px
 			'3xl': '3.25rem', // 52px
 			'4xl': '4.25rem', // 68px
 			'5xl': '5.25rem', // 84px
 			'6xl': '6.25rem', // 100px
-			abcd: '4.5vw',
-			'abcd-md': '7vw',
 		},
 
 		fontFamily: {
