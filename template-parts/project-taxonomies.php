@@ -21,7 +21,7 @@
 <?php $services_terms = get_the_terms(get_the_ID(), 'service');if (!empty($services_terms) && !is_wp_error($services_terms)) : ?>
 <div class="flex flex-wrap gap-1">
     <?php foreach ($services_terms as $term) : ?>
-    <?php /* <a class="bg-primary text-accent px-4 py-1 rounded-full hover:shadow-lg transition text-sm"
+    <?php /* <a class="bg-primary text-accent px-4 py-1 rounded-full hover:shadow-md transition text-sm"
         href="<?php echo esc_url(get_term_link($term)); ?>"
         class="service-link"><?php echo esc_html($term->name); ?></a> */ ?>
         <span class="bg-primary text-accent px-4 py-1 rounded-full text-sm">

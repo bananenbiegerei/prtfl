@@ -32,4 +32,4 @@
                 <a href="<?php echo esc_url(home_url('/')); ?>">abcd.<span class="font-logotype">works</span></a>
                 </div>
         </header>
-        <main class="flex-1 bg-green-100/30 main-content" id="swup">
+        <main class="flex-1 main-content" id="swup">

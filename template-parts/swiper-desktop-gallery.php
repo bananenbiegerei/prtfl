@@ -5,7 +5,7 @@
         if ($images):
         foreach ($images as $image): ?>
         <div class="swiper-slide !w-[80%] h-auto">
-            <img class="border rounded-lg shadow-lg md:rounded-2xl" src="<?php echo esc_url($image['url']); ?>"
+            <img class="border rounded-lg shadow-md md:rounded-2xl" src="<?php echo esc_url($image['url']); ?>"
                 alt="<?php echo esc_attr($image['alt']); ?>" />
         </div>
         <?php endforeach;

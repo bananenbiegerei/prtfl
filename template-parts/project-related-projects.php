@@ -24,26 +24,20 @@
         $related_query = new WP_Query($args);
 
         if ($related_query->have_posts()) : ?>
-<div class="col-span-12 mb-8">
-    <h3 class="max-w-lg mb-2">More projects from: <?php echo esc_html(get_the_title($client_id)); ?>
-    </h3>
-    <ul class="grid grid-cols-6 gap-8 text-primary">
-        <?php while ($related_query->have_posts()) : $related_query->the_post(); ?>
-        <li>
-            <a href="<?php the_permalink(); ?>" class="">
-                <?php
+<h2 class="max-w-lg">More projects from: <?php echo esc_html(get_the_title($client_id)); ?>
+</h2>
+<ul class="grid grid-cols-2 gap-4 lg:gap-8 lg:grid-cols-6 text-primary">
+    <?php while ($related_query->have_posts()) : $related_query->the_post(); ?>
+    <li>
+        <a href="<?php the_permalink(); ?>" class="">
+            <?php
                     if (has_post_thumbnail()) {
-                        echo get_the_post_thumbnail(get_the_ID(), 'medium', array('class' => 'rounded shadow-md mb-2'));
+                        echo get_the_post_thumbnail(get_the_ID(), 'medium', array('class' => 'rounded shadow-md mb-2 border'));
                     }
                     ?>
-                <span class="link"><?php the_title(); ?></span>
-            </a>
-        </li>
-        <?php endwhile; ?>
-    </ul>
-</div>
-<?php
-        wp_reset_postdata();
-        endif;
-    endif;
-?>
+            <h3 class="link"><?php the_title(); ?></h3>
+        </a>
+    </li>
+    <?php endwhile; ?>
+</ul>
+<?php  wp_reset_postdata(); endif; endif; ?>
