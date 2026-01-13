@@ -17,7 +17,7 @@ $has_metas = $arbeitskonstellation || $client || $link_to_website || $year || $s
             </h1>
         </div>
     </div>
-    <div class="col-span-3 pt-4">
+    <div class="col-span-3 pt-4 md:col-span-6">
         <?php
         // Only show mobile gallery if it exists (no fallback for mobile)
         if (get_field('mobile_gallery')) {
@@ -25,7 +25,7 @@ $has_metas = $arbeitskonstellation || $client || $link_to_website || $year || $s
         }
         ?>
     </div>
-    <div class="col-span-4">
+    <div class="col-span-4 md:col-span-8">
         <?php if ($has_metas) : ?>
         <!-- Layout WITH metas: content and metas side by side or stacked -->
         <div class="mb-8">
@@ -48,7 +48,7 @@ $has_metas = $arbeitskonstellation || $client || $link_to_website || $year || $s
         <?php endif; ?>
         <?php endif; ?>
     </div>
-    <div class="col-span-4">
+    <div class="col-span-4 md:col-span-8">
         <?php
         // Check if desktop_gallery exists, otherwise use fallback gallery
         if (get_field('desktop_gallery')) {
@@ -58,7 +58,7 @@ $has_metas = $arbeitskonstellation || $client || $link_to_website || $year || $s
         }
         ?>
     </div>
-    <div class="col-span-4">
+    <div class="col-span-4 md:col-span-8">
         <?php get_template_part('template-parts/project-related-projects'); ?>
     </div>
 </article>

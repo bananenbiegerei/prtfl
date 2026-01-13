@@ -28,15 +28,13 @@
 </h2>
 <ul class="grid grid-cols-2 gap-4 lg:gap-8 lg:grid-cols-6 text-primary">
     <?php while ($related_query->have_posts()) : $related_query->the_post(); ?>
-    <li>
-        <a href="<?php the_permalink(); ?>" class="">
+    <li class="relative">
             <?php
                     if (has_post_thumbnail()) {
-                        echo get_the_post_thumbnail(get_the_ID(), 'medium', array('class' => 'rounded shadow-md mb-2 border'));
+                        echo get_the_post_thumbnail(get_the_ID(), 'medium', array('class' => 'rounded shadow-md mb-2 border w-full h-auto'));
                     }
                     ?>
-            <h3 class="link"><?php the_title(); ?></h3>
-        </a>
+            <h3 class="text-base md:text-lg"><a href="<?php the_permalink(); ?>" class="link before:absolute before:inset-0"><?php the_title(); ?></a></h3>
     </li>
     <?php endwhile; ?>
 </ul>

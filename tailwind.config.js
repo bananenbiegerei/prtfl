@@ -1,6 +1,8 @@
 module.exports = {
 	content: ['./**/*.php'],
 	safelist: [
+		'hidden',
+		'!hidden',
 		// {
 		//     pattern: /text-neutral-(50|100|200|300|400|500|600|700|800|900)/,
 		// },
