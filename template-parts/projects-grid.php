@@ -1,9 +1,4 @@
-<ul class="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6">
-    <li class="title-container">
-        <div class="flex items-end w-full px-4 origin-top-left title">
-            <h1 class="text-xl leading-none -translate-x-12 text-primary lg:text-2xl xl:text-3xl 2xl:text-4xl"><?php the_title(); ?></h1>
-        </div>
-    </li>
+<ul class="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
     <template x-for="project in filteredAndSortedProjects" :key="project.id">
         <li>
             <article class="relative flex flex-col items-start gap-4 leading-none group text-primary">

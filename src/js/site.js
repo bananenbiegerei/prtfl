@@ -85,25 +85,4 @@ document.addEventListener('DOMContentLoaded', function() {
             // Rotate and translate on y-axis by negative container width
             titleElement.style.transform = `rotate(90deg) translateY(-${containerWidth}px)`;
         }
-
-        // Works headline rotation
-        const worksHeadline = document.querySelector('.works-headline');
-        const worksContainer = document.querySelector('.works-headline-container');
-
-        if (worksHeadline && worksContainer) {
-            // Get the height of the headline
-            const headlineHeight = worksHeadline.getBoundingClientRect().height;
-            // Rotate 90deg from top left and move right by headline height
-            worksHeadline.style.transformOrigin = 'top left';
-            worksHeadline.style.transform = `rotate(90deg) translateX(${headlineHeight}px)`;
-        }
-});
-
-document.addEventListener('DOMContentLoaded', function () {
-	document.querySelectorAll('[data-phone]').forEach(function (el) {
-		const phoneSpan = el.querySelector('.phone-number');
-		if (phoneSpan) {
-			phoneSpan.textContent = atob(el.dataset.phone);
-		}
-	});
 });

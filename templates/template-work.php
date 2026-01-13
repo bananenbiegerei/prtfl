@@ -90,8 +90,14 @@ document.addEventListener('alpine:init', () => {
             <?php include(get_template_directory() . '/template-parts/projects-filter.php'); ?>
         </div>
     </div>
-    <div class="grid grid-cols-4 gap-2 mr-2 mt-14 md:gap-4 lg:gap-8 md:grid-cols-8 lg:grid-cols-12">
-        <div class="col-span-4 space-y-4 md:col-span-8 lg:col-span-12">
+    <div class="mt-14 custom-grid">
+        <div class="title-container">
+            <div class="flex items-end w-full px-4 origin-top-left title">
+                <h1 class="text-xl leading-none -translate-x-12 text-primary lg:text-2xl xl:text-3xl 2xl:text-4xl">
+                    <?php the_title(); ?></h1>
+            </div>
+        </div>
+        <div class="col-span-3 space-y-4 md:col-span-7 lg:col-span-11">
             <?php include(get_template_directory() . '/template-parts/projects-grid.php'); ?>
         </div>
     </div>

@@ -6,7 +6,7 @@
         <div class="swiper-wrapper">
             <?php foreach ($images as $image): ?>
             <div class="swiper-slide !w-[80%] h-auto">
-                <img class="w-full h-auto border shadow-lg rounded-2xl" src="<?php echo esc_url($image['url']); ?>"
+                <img class="w-full h-auto border shadow-lg rounded-lg md:rounded-2xl" src="<?php echo esc_url($image['url']); ?>"
                     alt="<?php echo esc_attr($image['alt']); ?>" />
             </div>
             <?php endforeach; ?>

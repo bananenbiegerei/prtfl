@@ -24,3 +24,6 @@ require_once(get_template_directory().'/functions/custom-taxonomies.php');
 
 // Define image sizes
 require_once get_template_directory() . '/functions/image-sizes.php';
+
+// ACF Options Page
+require_once get_template_directory() . '/functions/acf-options.php';
