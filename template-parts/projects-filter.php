@@ -18,7 +18,7 @@
                 :aria-expanded="open"
                 :aria-controls="$id('dropdown-sector')"
                 type="button"
-                class="relative flex items-center justify-between w-full gap-2 px-4 py-2 text-gray-800 bg-white border border-gray-200 rounded-lg shadow-sm whitespace-nowrap hover:bg-gray-50 hover:border-gray-200"
+                class="relative flex items-center justify-between w-full gap-2 px-2 py-1 text-gray-800 bg-white border border-gray-200 rounded-lg shadow-sm whitespace-nowrap hover:bg-gray-50 hover:border-gray-200"
             >
                 <span x-text="selectedLabel">All Sectors</span>
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-6 h-6">
@@ -38,7 +38,7 @@
                 <button
                     type="button"
                     @click="selectedSector = ''; close($refs.button)"
-                    class="px-2 lg:py-1.5 py-2 w-full flex items-center rounded-md transition-colors text-left text-gray-800 hover:bg-gray-50 focus-visible:bg-gray-50"
+                    class="flex items-center w-full px-2 py-1 text-left text-gray-800 transition-colors rounded-md hover:bg-gray-50 focus-visible:bg-gray-50"
                     :class="{ 'bg-gray-100': selectedSector === '' }"
                 >
                     All Sectors

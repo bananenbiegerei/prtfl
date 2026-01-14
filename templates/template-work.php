@@ -46,9 +46,13 @@ endif;
 ?>
 
 <?php
-$sectors_json = wp_json_encode(array_map(function($sector) {
-    return ['id' => $sector->term_id, 'name' => $sector->name];
-}, $sectors));
+$sectors_array = [];
+if (!is_wp_error($sectors) && !empty($sectors)) {
+    $sectors_array = array_values(array_map(function($sector) {
+        return ['id' => $sector->term_id, 'name' => $sector->name];
+    }, $sectors));
+}
+$sectors_json = wp_json_encode($sectors_array);
 ?>
 <script>
 document.addEventListener('alpine:init', () => {
@@ -66,11 +70,13 @@ document.addEventListener('alpine:init', () => {
         }
     }))
 
+    const sectorsData = <?php echo $sectors_json; ?>;
+
     Alpine.data('projectsData', () => ({
         sortOrder: 'desc',
         selectedSector: '',
         showTitle: false,
-        sectors: <?php echo $sectors_json; ?>,
+        sectors: sectorsData,
         projects: <?php echo wp_json_encode($projects_data); ?>,
         init() {
             window.addEventListener('scroll', () => {
@@ -79,7 +85,7 @@ document.addEventListener('alpine:init', () => {
         },
         get selectedLabel() {
             if (!this.selectedSector) return 'All Sectors'
-            const found = this.sectors.find(s => s.id == this.selectedSector)
+            const found = sectorsData.find(s => s.id == this.selectedSector)
             return found ? found.name : 'All Sectors'
         },
         get sortLabel() {
