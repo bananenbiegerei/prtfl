@@ -109,26 +109,18 @@ document.addEventListener('alpine:init', () => {
 });
 </script>
 <div x-data="projectsData" class="">
-    <div class="fixed top-0 z-50 flex items-center justify-between h-12 gap-4 transition-all duration-300 left-8 w-footer"
-        :class="showTitle ? 'bg-white/80 backdrop-blur' : ''">
+    <div class="fixed top-0 z-50 items-center justify-between gap-4 py-1 pr-8 transition-all duration-300 lg:flex lg:bottom-auto left-8 w-footer bg-white/80 backdrop-blur">
         <div class="basis-1/3">
-            <p class="text-base leading-none transition-opacity duration-300 text-primary" aria-hidden="true"
-                x-show="showTitle" x-transition:enter="transition ease-out duration-300"
-                x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100"><?php the_title(); ?>
-            </p>
+            <h1 class="mb-0 leading-none transition-all duration-300 text-primary"
+                :class="showTitle ? 'text-base' : 'text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl'"
+            ><?php the_title(); ?></h1>
         </div>
-        <div class="basis-2/3">
+        <div class="basis-3/5">
             <?php include(get_template_directory() . '/template-parts/projects-filter.php'); ?>
         </div>
     </div>
-    <div class="mt-14 custom-grid">
-        <div class="title-container">
-            <div class="flex items-end w-full px-4 origin-top-left title">
-                <h1 class="text-xl leading-none -translate-x-12 text-primary lg:text-2xl xl:text-3xl 2xl:text-4xl">
-                    <?php the_title(); ?></h1>
-            </div>
-        </div>
-        <div class="col-span-3 space-y-4 md:col-span-7 lg:col-span-11">
+    <div class="mt-16 custom-grid">
+        <div class="col-span-3 space-y-4 md:col-span-7 lg:col-span-12">
             <?php include(get_template_directory() . '/template-parts/projects-grid.php'); ?>
         </div>
     </div>
