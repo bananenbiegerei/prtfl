@@ -59,13 +59,12 @@ var swiper_mobile = new Swiper('.mobile-gallery', {
 	speed: 250,
 });
 
-var swiper_related_projects = new Swiper('.related-projects-swiper', {
-	effect: 'cards',
-	keyboard: {
-		enabled: true,
-		onlyInViewport: true,
-	},
+var swiper_featured_projects = new Swiper('.featured-projects-swiper', {
+	slidesPerView: 1.2,
+	spaceBetween: 16,
+	freeMode: true,
 	grabCursor: true,
+	autoHeight: true
 });
 
 document.addEventListener('DOMContentLoaded', function() {
