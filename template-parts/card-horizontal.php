@@ -1,4 +1,4 @@
-<article class="relative flex items-start gap-4 leading-none group text-primary">
+<article class="relative flex items-start leading-none md:gap-2 group text-primary">
         <?php if (has_post_thumbnail()) { ?>
             <?php echo get_the_post_thumbnail(get_the_ID(), 'two-columns', array('class' => 'w-auto mr-2 rounded md:rounded-lg shadow-md border transition-transform group-hover:scale-105 h-[1em]')); ?>
         <?php } ?>
