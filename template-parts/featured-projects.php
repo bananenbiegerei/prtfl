@@ -14,17 +14,19 @@ $args = array(
 );
 $latest_project_query = new WP_Query($args);
 if ($latest_project_query->have_posts()) : ?>
-<h2 class="inline text-primary">featured projects:</h2>
-<ul class="inline-flex flex-wrap gap-1">
+<ul class="inline-flex flex-wrap">
+    <li>
+        <h2 class="inline text-primary">featured projects:</h2>
+    </li>
     <?php while ($latest_project_query->have_posts()) : $latest_project_query->the_post();
     $konstellation = get_post_meta(get_the_ID(), 'konstellation', true);
 ?>
     <li class="mr-4 md:mr-8"><?php include locate_template('template-parts/card-horizontal.php');?></li>
     <?php
     endwhile; ?>
-    <li class="text-primary">
-        <a class="flex items-center px-2 mr-2 transition border rounded-full md:px-4 border-primary hover:bg-primary/10" href="<?php echo esc_url(get_permalink(1879)); ?>">all projects
-            <svg xmlns="http://www.w3.org/2000/svg" class="ml-1 w-[0.75em] h-auto border border-primary rounded-full" viewBox="0 0 32 32"><path fill="currentColor" d="m18 6l-1.43 1.393L24.15 15H4v2h20.15l-7.58 7.573L18 26l10-10z"/></svg>
+    <li class="text-white">
+        <a class="flex items-center p-2 mr-2 transition border rounded-full md:p-4 bg-primary hover:bg-primary/90" href="<?php echo esc_url(get_permalink(1879)); ?>">all projects
+            <svg xmlns="http://www.w3.org/2000/svg" class="ml-1 w-[0.75em] h-auto" viewBox="0 0 32 32"><path fill="currentColor" d="m18 6l-1.43 1.393L24.15 15H4v2h20.15l-7.58 7.573L18 26l10-10z"/></svg>
         </a>
     </li>
 </ul>

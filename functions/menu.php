@@ -8,3 +8,11 @@ add_action('init', function () {
 	];
 	register_nav_menus($locations);
 });
+
+// Add classes to menu links for the 'top' and 'footer' menu locations
+add_filter('nav_menu_link_attributes', function ($atts, $item, $args) {
+	if ($args->theme_location === 'top' || $args->theme_location === 'footer') {
+		$atts['class'] = isset($atts['class']) ? $atts['class'] . ' btn btn-xs btn-ghost' : 'btn btn-xs btn-ghost';
+	}
+	return $atts;
+}, 10, 3);

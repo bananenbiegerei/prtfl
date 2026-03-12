@@ -34,9 +34,9 @@
 
     <?php if ($link_to_website) : ?>
     <div class="mb-4">
-        <a class="btn btn-outline" href="<?php echo esc_url($link_to_website); ?>" target="_blank"
+        <a class="btn" href="<?php echo esc_url($link_to_website); ?>" target="_blank"
             class="inline-flex items-center gap-1 text-primary hover:text-primary-700">
-            <strong>Visit Website</strong>
+            Visit Website
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 32 32">
                 <path fill="currentColor" d="M10 6v2h12.59L6 24.59L7.41 26L24 9.41V22h2V6z" />
             </svg>

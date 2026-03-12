@@ -11,7 +11,7 @@ $technologies = get_field('technologies');
 $has_metas = $arbeitskonstellation || $client || $link_to_website || $year || $services || $technologies;
 ?>
 <article class="custom-grid">
-    <div class="overflow-hidden md:col-span-2 title-container max-h-[80vh] min-h-[50vh]">
+    <div class="md:col-span-2 title-container max-h-[80vh] min-h-[50vh]">
         <div class="flex items-end w-full px-4 origin-top-left title">
             <h1 class="mb-0 text-lg leading-none text-primary md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl"><?php the_title(); ?>
             </h1>
@@ -30,7 +30,7 @@ $has_metas = $arbeitskonstellation || $client || $link_to_website || $year || $s
         <!-- Layout WITH metas: content and metas side by side or stacked -->
         <div class="mb-8">
             <?php if (get_the_content()) : ?>
-            <p class="mb-8 text-lg leading-tight md:text-xl text-primary">
+            <p class="mb-8 text-base leading-tight md:text-lg md:text-xl text-primary">
                 <?php echo wp_strip_all_tags(get_the_content()); ?>
             </p>
             <?php endif; ?>

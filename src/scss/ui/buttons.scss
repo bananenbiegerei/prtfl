@@ -16,11 +16,8 @@
 	}
 
 	&.btn-xs {
-		@apply px-1.5 py-0.5 text-xs;
+		@apply py-0.5 text-sm;
 
-		svg {
-			@apply icon-xs;
-		}
 	}
 
 	&.btn-sm {
@@ -75,7 +72,7 @@
 // Styled
 // hover + active color changes around 4-5 steps
 .btn {
-	@apply gap-2 no-underline font-sans border rounded-full text-sm;
+	@apply gap-2 no-underline font-mono border rounded-full text-base;
 	animation: button-pop var(--animation-btn, 0.25s) ease-out;
 
 	&:active:hover,
@@ -86,7 +83,7 @@
 
 	/* default btn */
 	& {
-		@apply border-black bg-black text-white outline-black no-underline hover:border-black/80 hover:bg-black/80;
+		@apply border-primary bg-primary text-white outline-primary no-underline hover:border-primary/80 hover:bg-primary/80;
 
 		&.btn-active {
 			@apply border-primary-500 bg-primary-500;
@@ -181,7 +178,7 @@
 
 	/* btn variants */
 	&-ghost {
-		@apply border border-transparent bg-transparent text-primary shadow-none outline-primary hover:bg-transparent hover:border-primary hover:border;
+		@apply border border-transparent bg-white text-primary shadow-none outline-primary hover:bg-white hover:border-primary hover:border;
 
 		&.btn-active {
 			@apply bg-primary-600 border-opacity-0 bg-opacity-20;
@@ -360,5 +357,13 @@
 
 	100% {
 		transform: scale(1);
+	}
+}
+
+.current-menu-item {
+	.btn {
+		& {
+			@apply bg-primary text-white border-primary;
+		}
 	}
 }

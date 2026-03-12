@@ -15,5 +15,5 @@ h1, h2, h3, h4, h5, h6 {
 // }
 a.link,
 .link {
-	@apply underline transition underline-offset-2 decoration-1 decoration-inherit;
+	@apply underline transition underline-offset-4 md:underline-offset-2 decoration-1 decoration-inherit;
 }

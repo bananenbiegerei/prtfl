@@ -4,6 +4,9 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Alpine.js cloak */
+[x-cloak] { display: none !important; }
+
 /* UI Basic components */
 @import './ui/fonts';
 @import './ui/typography';

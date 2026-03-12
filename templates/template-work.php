@@ -55,74 +55,28 @@ if (!is_wp_error($sectors) && !empty($sectors)) {
 $sectors_json = wp_json_encode($sectors_array);
 ?>
 <script>
-document.addEventListener('alpine:init', () => {
-    Alpine.data('dropdown', () => ({
-        open: false,
-        toggle() {
-            if (this.open) return this.close()
-            this.$refs.button.focus()
-            this.open = true
-        },
-        close(focusAfter) {
-            if (!this.open) return
-            this.open = false
-            focusAfter && focusAfter.focus()
-        }
-    }))
-
-    const sectorsData = <?php echo $sectors_json; ?>;
-
-    Alpine.data('projectsData', () => ({
-        sortOrder: 'desc',
-        selectedSector: '',
-        showTitle: false,
-        sectors: sectorsData,
-        projects: <?php echo wp_json_encode($projects_data); ?>,
-        init() {
-            window.addEventListener('scroll', () => {
-                this.showTitle = window.scrollY > 10;
-            });
-        },
-        get selectedLabel() {
-            if (!this.selectedSector) return 'All Sectors'
-            const found = sectorsData.find(s => s.id == this.selectedSector)
-            return found ? found.name : 'All Sectors'
-        },
-        get sortLabel() {
-            return this.sortOrder === 'desc' ? 'Newest First' : 'Oldest First'
-        },
-        get filteredAndSortedProjects() {
-            let filtered = this.projects;
-            if (this.selectedSector && this.selectedSector !== '') {
-                filtered = this.projects.filter(project =>
-                    project.sectors.includes(parseInt(this.selectedSector))
-                );
-            }
-            return [...filtered].sort((a, b) => {
-                if (this.sortOrder === 'desc') {
-                    return b.timestamp - a.timestamp;
-                }
-                return a.timestamp - b.timestamp;
-            });
-        }
-    }))
-});
+window.projectsPageData = {
+    sectors: <?php echo $sectors_json; ?>,
+    projects: <?php echo wp_json_encode($projects_data); ?>
+};
 </script>
-<div x-data="projectsData" class="">
-    <div class="fixed top-0 z-50 items-center justify-between gap-4 py-1 pr-8 transition-all duration-300 lg:flex lg:bottom-auto left-8 w-footer bg-white/80 backdrop-blur">
-        <div class="basis-1/3">
-            <h1 class="mb-0 leading-none transition-all duration-300 text-primary"
-                :class="showTitle ? 'text-base' : 'text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl'"
-            ><?php the_title(); ?></h1>
-        </div>
-        <div class="basis-3/5">
+<div x-data="projectsData">
+    <div
+        class="fixed top-0 z-50 items-center transition-all duration-300 h-14 left-8 w-footer bg-white/80 backdrop-blur md:flex">
+        <div class="w-1/2">
             <?php include(get_template_directory() . '/template-parts/projects-filter.php'); ?>
         </div>
     </div>
-    <div class="mt-16 custom-grid">
-        <div class="col-span-3 space-y-4 md:col-span-7 lg:col-span-12">
+    <div class="custom-grid mt-14">
+        <div class="col-span-4 md:col-span-8 lg:col-span-10">
             <?php include(get_template_directory() . '/template-parts/projects-grid.php'); ?>
         </div>
+        <div class="md:col-span-2 title-container max-h-[80vh] min-h-[50vh]">
+        <div class="flex items-end w-full px-4 origin-top-left title">
+            <h1 class="sticky mb-0 text-lg leading-none text-primary md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl"><?php the_title(); ?>
+            </h1>
+        </div>
+    </div>
     </div>
 </div>
 <?php get_footer(); ?>

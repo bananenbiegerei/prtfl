@@ -12,7 +12,6 @@
 		"jsxSingleQuote": true
 	},
 	"devDependencies": {
-		"@achamaro/tailwindcss-iconify-icon": "^0.3.0",
 		"@prettier/plugin-php": "^0.19.4",
 		"@tailwindcss/aspect-ratio": "^0.4.2",
 		"@tailwindcss/forms": "^0.5.2",
@@ -46,6 +45,7 @@
 		"build": "gulp build"
 	},
 	"dependencies": {
+		"@swup/fade-theme": "^2.0.2",
 		"@swup/fragment-plugin": "^1.0.0",
 		"jquery": "^3.5.1",
 		"scrollmirror": "^0.0.2",
