@@ -1,82 +1,11 @@
 import * as TW from './tailwindhelpers';
-
 import Alpine from 'alpinejs';
-// import Swiper bundle with all modules installed
 import Swiper from 'swiper/bundle';
 
-import Swup from 'swup';
-import SwupFadeTheme from '@swup/fade-theme';
-
+// Make Alpine available globally for inline component definitions
 window.Alpine = Alpine;
 
-// Register Alpine components before starting
-document.addEventListener('alpine:init', () => {
-	// Projects page component - reads data fresh on each init()
-	Alpine.data('projectsData', () => ({
-		sortOrder: 'desc',
-		selectedSector: '',
-		showTitle: false,
-		sectors: [],
-		projects: [],
-		init() {
-			// Read data fresh when component initializes
-			const data = window.projectsPageData || { sectors: [], projects: [] };
-			this.sectors = data.sectors;
-			this.projects = data.projects;
-
-			window.addEventListener('scroll', () => {
-				this.showTitle = window.scrollY > 10;
-			});
-		},
-		get selectedLabel() {
-			if (!this.selectedSector) return 'All Sectors';
-			const found = this.sectors.find(s => s.id == this.selectedSector);
-			return found ? found.name : 'All Sectors';
-		},
-		get sortLabel() {
-			return this.sortOrder === 'desc' ? 'Newest First' : 'Oldest First';
-		},
-		get filteredAndSortedProjects() {
-			let filtered = this.projects;
-			if (this.selectedSector && this.selectedSector !== '') {
-				filtered = this.projects.filter(project =>
-					project.sectors.includes(parseInt(this.selectedSector))
-				);
-			}
-			return [...filtered].sort((a, b) => {
-				if (this.sortOrder === 'desc') {
-					return b.timestamp - a.timestamp;
-				}
-				return a.timestamp - b.timestamp;
-			});
-		}
-	}));
-
-	// Dropdown component
-	Alpine.data('dropdown', () => ({
-		open: false,
-		toggle() {
-			if (this.open) return this.close();
-			this.$refs.button.focus();
-			this.open = true;
-		},
-		close(focusAfter) {
-			if (!this.open) return;
-			this.open = false;
-			focusAfter && focusAfter.focus();
-		}
-	}));
-});
-
-Alpine.start();
-
-// Initialize Swup with fade transition
-const swup = new Swup({
-	containers: ['#swup'],
-	plugins: [new SwupFadeTheme()]
-});
-
-// Function to initialize Swipers
+// Function to init Swipers
 function initSwipers() {
 	if (document.querySelector('.desktop-gallery')) {
 		new Swiper('.desktop-gallery', {
@@ -137,26 +66,23 @@ function initSwipers() {
 	}
 }
 
-// Function to initialize project title rotation
+// Function to init title rotation
 function initTitleRotation() {
-	// Use requestAnimationFrame to ensure layout is calculated
-	requestAnimationFrame(() => {
-		const titleElement = document.querySelector('.title');
-		const containerElement = document.querySelector('.title-container');
+	const titleElement = document.querySelector('.title');
+	const containerElement = document.querySelector('.title-container');
 
-		if (titleElement && containerElement) {
-			const containerHeight = containerElement.getBoundingClientRect().height;
-			const containerWidth = containerElement.getBoundingClientRect().width;
+	if (titleElement && containerElement) {
+		const containerHeight = containerElement.getBoundingClientRect().height;
+		const containerWidth = containerElement.getBoundingClientRect().width;
 
-			titleElement.style.width = containerHeight + 'px';
-			titleElement.style.height = containerWidth + 'px';
-			titleElement.style.transform = `rotate(90deg) translateY(-${containerWidth}px)`;
-		}
-	});
+		titleElement.style.width = containerHeight + 'px';
+		titleElement.style.height = containerWidth + 'px';
+		titleElement.style.transform = `rotate(90deg) translateY(-${containerWidth}px)`;
+	}
 }
 
-// Initialize on first page load
-document.addEventListener('DOMContentLoaded', function() {
+// Init on page load
+document.addEventListener('DOMContentLoaded', function () {
 	initSwipers();
 	initTitleRotation();
 });

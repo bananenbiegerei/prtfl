@@ -55,10 +55,56 @@ if (!is_wp_error($sectors) && !empty($sectors)) {
 $sectors_json = wp_json_encode($sectors_array);
 ?>
 <script>
-window.projectsPageData = {
-    sectors: <?php echo $sectors_json; ?>,
-    projects: <?php echo wp_json_encode($projects_data); ?>
-};
+document.addEventListener('alpine:init', () => {
+    Alpine.data('projectsData', () => ({
+        sortOrder: 'desc',
+        selectedSector: '',
+        showTitle: false,
+        sectors: <?php echo $sectors_json; ?>,
+        projects: <?php echo wp_json_encode($projects_data); ?>,
+        init() {
+            window.addEventListener('scroll', () => {
+                this.showTitle = window.scrollY > 10;
+            });
+        },
+        get selectedLabel() {
+            if (!this.selectedSector) return 'All Sectors';
+            const found = this.sectors.find(s => s.id == this.selectedSector);
+            return found ? found.name : 'All Sectors';
+        },
+        get sortLabel() {
+            return this.sortOrder === 'desc' ? 'Newest First' : 'Oldest First';
+        },
+        get filteredAndSortedProjects() {
+            let filtered = this.projects;
+            if (this.selectedSector && this.selectedSector !== '') {
+                filtered = this.projects.filter(project =>
+                    project.sectors.includes(parseInt(this.selectedSector))
+                );
+            }
+            return [...filtered].sort((a, b) => {
+                if (this.sortOrder === 'desc') {
+                    return b.timestamp - a.timestamp;
+                }
+                return a.timestamp - b.timestamp;
+            });
+        }
+    }));
+
+    Alpine.data('dropdown', () => ({
+        open: false,
+        toggle() {
+            if (this.open) return this.close();
+            this.$refs.button.focus();
+            this.open = true;
+        },
+        close(focusAfter) {
+            if (!this.open) return;
+            this.open = false;
+            focusAfter && focusAfter.focus();
+        }
+    }));
+});
 </script>
 <div x-data="projectsData">
     <div

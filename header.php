@@ -10,8 +10,9 @@ $bg_style = $background_image ? ' style="background-image: url(\'' . esc_url($ba
 ?>
 
 <body <?php body_class('flex flex-col h-full min-h-screen'); ?>
-    x-data="{ showGrid: false }" @keydown.window.ctrl.g.prevent="showGrid = !showGrid"
-    @keydown.window.meta.g.prevent="showGrid = !showGrid">
+    x-data="{ showGrid: localStorage.getItem('showGrid') === 'true' }"
+    @keydown.window.ctrl.g.prevent="showGrid = !showGrid; localStorage.setItem('showGrid', showGrid)"
+    @keydown.window.meta.g.prevent="showGrid = !showGrid; localStorage.setItem('showGrid', showGrid)">
     <div class="fixed top-0 left-0 w-full h-full bg-yellow-100 custom-grid -z-10 md:bg-gray-100 lg:bg-red-100 xl:bg-lime-100"
         :class="{ '!hidden': !showGrid }">
         <div class="bg-red-100"></div>
@@ -27,7 +28,20 @@ $bg_style = $background_image ? ' style="background-image: url(\'' . esc_url($ba
         <div class="bg-red-100"></div>
         <div class="bg-red-100"></div>
     </div>
-    <div id="swup" class="flex flex-col flex-1 min-h-screen bg-cover bg-center bg-no-repeat <?php echo esc_attr($color_scheme); ?>"<?php echo $bg_style; ?>>
+    <div class="fixed top-0 left-0 w-full h-full -z-10" :class="{ '!hidden': !showGrid }">
+        <p class="mx-8 my-3 leading-none opacity-10 text-custom-mobile md:text-custom">Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. Accusantium nihil ipsam, dicta voluptatibus culpa assumenda pariatur! Et odio nulla rem a
+            consequuntur, optio quibusdam totam corporis quis odit, nostrum consequatur.
+            Animi fuga consectetur aperiam quibusdam porro explicabo iure quaerat quis accusantium in! Maxime dolore
+            officiis minus explicabo, eos hic nemo aspernatur quisquam dicta quis quibusdam est voluptatibus ea earum
+            veritatis?
+            Illo, magni iure. Suscipit ab animi officiis obcaecati deleniti iste, numquam esse vero aliquid. Nisi natus
+            praesentium, nam quaerat tempora provident nihil accusantium harum repellat ipsum aspernatur, unde voluptas
+            fugit.</p>
+    </div>
+    <div id="swup"
+        class="flex flex-col flex-1 min-h-screen bg-cover bg-center bg-no-repeat <?php echo esc_attr($color_scheme); ?> transition-fade"
+        <?php echo $bg_style; ?>>
         <header
             class="fixed -left-[100vh] top-0 w-[100vh] z-50 origin-top-right -rotate-90 h-8 flex items-center gap-4 px-4 justify-between">
             <nav class="" aria-label="<?php esc_attr_e('Top Menu', 'BB_TEXT_DOMAIN'); ?>">
@@ -42,13 +56,14 @@ $bg_style = $background_image ? ' style="background-image: url(\'' . esc_url($ba
             </nav>
             <div class="flex items-center">
                 <?php if (is_singular('project')) : ?>
-                <a href="<?php echo esc_url(get_permalink(1879)); ?>" class="relative z-10 translate-x-4 btn btn-xs"><svg
-                        class="rotate-90" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+                <a href="<?php echo esc_url(get_permalink(1879)); ?>"
+                    class="relative z-10 translate-x-4 btn btn-xs"><svg class="rotate-90"
+                        xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
                         <path fill="currentColor" d="m14 26l1.41-1.41L7.83 17H28v-2H7.83l7.58-7.59L14 6L4 16z" />
                     </svg> <span class="mr-4">works overview</span></a>
                 <?php endif; ?>
-                <a class="btn btn-xs !gap-0 btn-ghost relative z-20" href="<?php echo esc_url(home_url('/')); ?>">wörk.<span
-                        class="font-logotype">work</span></a>
+                <a class="btn btn-xs !gap-0 btn-ghost relative z-20"
+                    href="<?php echo esc_url(home_url('/')); ?>">wörk.<span class="font-logotype">work</span></a>
             </div>
         </header>
         <main class="flex-1 main-content">
