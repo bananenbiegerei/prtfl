@@ -19,6 +19,11 @@
         </footer>
     </div>
 <?php wp_footer(); ?>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        if (window.Alpine) Alpine.start();
+    });
+</script>
 </body>
 
 </html>

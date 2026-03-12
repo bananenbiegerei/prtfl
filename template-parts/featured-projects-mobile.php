@@ -16,7 +16,7 @@ $latest_project_query = new WP_Query($args);
 if ($latest_project_query->have_posts()) : ?>
 <div class="-mr-8 featured-projects-mobile">
     <h2 class="inline text-primary">featured projects:</h2>
-    <div class="swiper featured-projects-swiper">
+    <div class="my-4 swiper featured-projects-swiper">
         <ul class="swiper-wrapper">
             <?php while ($latest_project_query->have_posts()) : $latest_project_query->the_post(); ?>
             <div class="swiper-slide">

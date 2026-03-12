@@ -1,8 +1,7 @@
 <?php get_header(); ?>
 <div class="mx-8 my-3 leading-none text-custom-mobile md:text-custom">
-    <h1 class="inline mb-0 leading-none text-primary"><?php the_title(); ?> of: wörk.work</h1>
-    <p class="inline text-accent"> – people
-        for digital products.</p><p class="inline text-accent"> accessible, beautiful, custom, digital.</p>
+    <h1 class="inline text-primary"><?php the_title(); ?> of: <span class="">wörk<span class="font-logotype">.work</span></h1><p class="inline leading-none text-accent"> – people
+        for digital products.</p><p class="inline leading-none text-accent"> accessible, beautiful, custom, digital.</p>
     <?php
     if (wp_is_mobile()) {
         get_template_part('template-parts/featured-projects-mobile');

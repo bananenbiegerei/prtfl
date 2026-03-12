@@ -1,10 +1,10 @@
-<article class="relative flex items-start leading-none md:gap-2 group text-primary">
+<article class="relative flex items-center p-0 m-0 md:gap-2 group">
         <?php if (has_post_thumbnail()) { ?>
-            <?php echo get_the_post_thumbnail(get_the_ID(), 'two-columns', array('class' => 'w-auto mr-2 rounded md:rounded-lg shadow-md border transition-transform group-hover:scale-105 h-[1.2em]')); ?>
+            <?php echo get_the_post_thumbnail(get_the_ID(), 'two-columns', array('class' => 'w-auto mr-2 rounded md:rounded-lg shadow-md border transition-transform group-hover:scale-105 h-[0.9em]')); ?>
         <?php } ?>
     <a class="before:absolute before:inset-0 before:z-10"
        href="<?php the_permalink(); ?>"
        aria-label="<?php echo esc_attr(get_the_title()); ?>">
-        <h3 class="inline mb-0 transition-colors leading-thight group-hover:text-primary-700 link"><?php the_title(); ?></h3>
+        <h3 class="inline mb-0 leading-none transition-colors leading-thight group-hover:text-primary-700 link"><?php the_title(); ?></h3>
     </a>
 </article>
